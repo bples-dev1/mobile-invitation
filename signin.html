@@ -25,7 +25,7 @@
 -->
 
 <link rel="stylesheet" href="https://img.bojagicard.com/jquery/swiper.435.min.css">
-<link rel="stylesheet" href="css/sign.css">
+<!-- <link rel="stylesheet" href="css/sign.css"> -->
 
 <script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery-1.7.2.min.js"></script>
 <script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery.cookie.min.js"></script>
@@ -914,17 +914,16 @@ $(function(){
 			<table cellspacing=0 cellpadding=0 height=50 width=100%>
 				<tr align=center>
 					<td align="left" id="top_logo_cell">
-						<img src="img/logo_w.png" width="128" onclick="location.href='index.php'" />
+						<img src="https://bojagicard.com/m/img/151004_01_01.png" height="26" onclick="location.href='index.php'" /></td>
 					</td>
-					
 					<td width=56 style="position: relative;" onclick="sample_menu('open')">
 						<div class="sample_pick_count" style="font-size: 9px; background-color: #fd4976; border-radius: 12px; line-height: 17px; height: 16px; width: 16px; position: absolute; right: -7px; top: 7px; color: white; text-align: center; opacity: 1; ">10</div>
-					
+						<img class="menu1_right_btns" src=https://bojagicard.com/m/img/170224_01_03.png?1642125910 height=21 />
 						<img class="menu_tips" id="menu_tip_sample" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 19px; display: none;" alt="삼각형팁" />
 					</td>
 					<td width=10></td>
 					<td width=30 style="position: relative;" onclick="my_menu('open')">
-						<img class="menu1_right_btns" src="https://bojagicard.com/m/img/170224_01_02.png" height="16" ondblclick="$('#mata_tag_setting_wrapper').toggle()" /> -->
+						<img class="menu1_right_btns" src="https://bojagicard.com/m/img/170224_01_02.png" height="16" ondblclick="$('#mata_tag_setting_wrapper').toggle()" />
 						<img class="menu_tips" id="menu_tip_mypage" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 6px; display: none;" alt="삼각형팁" />
 					</td>
 					<td width=12 onclick="my_menu('open')">&nbsp;</td>
@@ -1436,7 +1435,7 @@ function oauthed(site,unm,mail,img){
 
 
 <!-- 샘플메뉴 -->
-<script>
+<!-- <script>
 $(function() {
 
 	sample_cards_update()
@@ -1463,7 +1462,7 @@ function sample_cards_update() {
 
 }
 
-</script>
+</script> -->
 
 <div id="sample_menu" class="menu_layers" style="position: fixed; z-index: 50; display: none;">
 
@@ -1726,6 +1725,99 @@ function menu2toggle(){
 <!-- 페이지별 메뉴 끝 -->
 
 <!--로그인 폼 시작-->
+<style>
+    /* login */
+
+#login_form *{margin: 0;padding: 0; font-size:14px;}
+#login_form button{cursor: pointer;}
+#login_form{
+    padding:0 58px;
+}
+#login_form fieldset{
+    border:none;
+}
+#login_form legend{
+    font-size:18px;
+    padding-bottom:20px;
+}
+#login_form input::placeholder{
+    color:#a3a3a3;
+}
+#login_form .id_pass_input{
+    background: #fff; 
+    width: 100%; 
+    text-indent: 10px;
+}
+#login_form .id_input{margin-bottom:10px;}
+#login_form .pass_input{margin-bottom:20px;}
+
+#login_form .check_list{
+    width: 100%;
+    overflow: hidden;
+}
+
+#login_form .check_list li{
+    width: calc(100% / 2);
+    height: 15px;    
+}
+
+#login_form .list_align li:first-child{
+   float: left;
+   text-align: left;    
+  
+}
+
+#login_form .list_align li:last-child{
+   float: right;
+   text-align: right;
+}
+
+
+#login_form label{
+  display: inline-block;
+  height: 15px;
+  padding-left:8px;
+  font-size:13px;
+  color:#333;
+  line-height: 15px;
+}
+
+#login_form .btn_login{
+    width: 100%; height: 39px;
+    background: #3e6fef;
+    border:none;
+    border-radius: 30px;
+    color:#fff;
+    margin:20px 0 9px 0;
+}
+
+#login_form .find_list{overflow: hidden;}
+#login_form .find_list li{
+    width: calc(100% / 2 - 10px);    
+}
+#login_form .btn_find{
+    width: 100%;
+    height: 39px;
+    border-radius: 30px;
+    border:1px solid #aac6f5;
+    background: none;
+    color:#21252f;
+}
+
+#login_form p{
+    clear: both;
+    color:#333;
+    margin:50px 0 12px 0;
+}
+#login_form .btn_signup{
+    width: 100%;
+    height: 39px;
+    border-radius: 30px;
+    border:1px solid #3a74e0;
+    background-color: #fff;
+    color:#3e6fef;
+}
+</style>
 <div style="font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;">
 	<form action="" id="login_form">
 		<fieldset>
@@ -1836,11 +1928,11 @@ function menu2toggle(){
     }
 	</style> 
 	    <div class="site_bottom_sns_row">
-        <a class="sns_btn" target="_blank" href="https://facebook.com/bojagicard"><img src="./img/200615_01_01.png" /></a>
-        <a class="sns_btn" target="_blank" href="https://instagram.com/bojagicard/"><img src="./img/200615_01_02.png" /></a>
-        <a class="sns_btn" target="_blank" href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img src="./img/200615_01_05.png" /></a>
-        <a class="sns_btn" target="_blank" href="http://bojagi.net"><img src="./img/200615_01_03.png" /></a>
-        <a class="sns_btn" target="_blank" href="javascript://" id="pcmode"><img src="./img/200615_01_04.png" /></a>
+        <a class="sns_btn" target="_blank" href="https://facebook.com/bojagicard"><img src="https://bojagicard.com/m/img/200615_01_01.png" /></a>
+        <a class="sns_btn" target="_blank" href="https://instagram.com/bojagicard/"><img src="https://bojagicard.com/m/img/200615_01_02.png" /></a>
+        <a class="sns_btn" target="_blank" href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img src="https://bojagicard.com/m/img/200615_01_05.png" /></a>
+        <a class="sns_btn" target="_blank" href="http://bojagi.net"><img src="https://bojagicard.com/m/img/200615_01_03.png" /></a>
+        <a class="sns_btn" target="_blank" href="javascript://" id="pcmode"><img src="https://bojagicard.com/m/img/200615_01_04.png" /></a>
     </div>
 
 	<script>
@@ -1890,7 +1982,7 @@ function menu2toggle(){
         <div style="width: 300px; margin: auto; text-align: center;">
 		
             <div class="body_link_menu" id="bottom_company_info_btn">
-                사업자 정보 <img src="./img/151001_01_22_down.png" height="10" style="margin-left: 5px; margin-top: -6px;" />
+                사업자 정보 <img src="https://bojagicard.com/m/img/151001_01_22_down.png" height="10" style="margin-left: 5px; margin-top: -6px;" />
             </div>
         	<div class="body_link_menu" onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
         	    이용약관
@@ -2122,28 +2214,6 @@ $(function() {
 	$("iframe[name=google_conversion_frame]").css("bottom","-1px")
 
 })
-
-
-
-//회원 로그인이면 로그인정보 입력.
-$("input[name=unm]").val('이예솔')
-$("select[name=hand1]").val('010')
-$("input[name=hand2]").val('5617')
-$("input[name=hand3]").val('1371')
-$("input[name=eml1]").val('dpthf5977')
-$("select[name=eml2]").val('naver.com');
-
-if ($("select[name=eml2]").val() != "" )	{ //메일도메인 select 에 해당하는 값이면 입력처리.
-	$("select[name=eml2]").show()
-	$("input[name=eml3]").hide()
-	$("#eml2_self_cancel").hide()
-} else {	//메일도메인 직접입력으로 처리
-	$("select[name=eml2]").val('self').hide()
-	$("input[name=eml3]").show().val('naver.com')
-	$("#eml2_self_cancel").show()
-}
-
-
 
 </script>
 
