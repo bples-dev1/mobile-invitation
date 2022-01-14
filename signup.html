@@ -1729,31 +1729,30 @@ function menu2toggle(){
 
 <!-- 페이지별 메뉴 끝 -->
 
-<!--로그인 폼-->
-<div style="font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;">
-	<form action="" id="login_form">
-		<fieldset>
-		<legend> 로그인 / 회원가입</legend>
-		<input type="text" class="id_input id_pass_input" placeholder="아이디">
-		<input type="password" class="pass_input id_pass_input" placeholder="비밀번호">
-		
-		<ul class="check_list list_align">
-		<li><input type="checkbox" class="checkbox"> <label for="">아이디 저장하기</label></li>
-		<li><input type="checkbox" class="checkbox"> <label for="">로그인 유지하기</label></li>
-		</ul>	
+<!--회원가입 (변경되는 내용은 이곳에 입력)-->
+<div style="font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background-color: #f7f8f8;">
+	<h2>회원가입 후 자동으로 모바일 청첩장이 생성됩니다.</h2>
+	<div class="signup_wrap">
+		<form action="">
+			<fieldset>
+				<legend>회원정보 입력</legend>
 			
-		<button type="submit" class="btn_login">로그인</button>
+			<!-- <h3>회원정보 입력</h3> -->
+				<input type="text" placeholder="이름">
+				<div class="id_input_up">
+					<input type="text" placeholder="아이디"><button type="button">중복확인</button>
+				<p>
+					- 
+				</p>
+				</div>
+				
+				
+			</fieldset>
+		</form>
+	</div>
 
-		<ul class="find_list list_align">
-		<li><button type="button" class="btn_find">아이디 찾기</button></li>
-		<li> <button type="button" class="btn_find">비밀번호 찾기</button></li>
-		</ul>
-		<p>회원이 아니실 경우 먼저 가입을 해주세요.</p>
-		<button type="button" class="btn_signup">회원가입</button>
-		</fieldset>
-	</form>
 </div>
-<!--로그인폼 끝-->
+<!--회원가입 끝-->
 
 
 

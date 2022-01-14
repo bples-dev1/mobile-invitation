@@ -1,29 +1,5 @@
-/* 
-.wrap{
-    width: 100%;
-}
+/* login */
 
-.header{
-    width: 100%; height: 48px;
-}
-
-.header .back_btn{
-    width: 9px; height: 18px;
-    background: url("../images/back_arr.png")no-repeat;
-    background-size: 9px 18px;
-    text-indent: -99999px;
-    border:none;
-} */
-
-
-#top_logo_cell{
-
-    padding-left:24px;
-    background: url("../img/back_arr.png") no-repeat center left;
-    background-size: 9px 19px;
-}
-
-/* ·Î±×ÀÎ Æû */
 #login_form *{margin: 0;padding: 0; font-size:14px;}
 #login_form button{cursor: pointer;}
 #login_form{
