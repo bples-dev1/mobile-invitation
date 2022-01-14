@@ -1568,9 +1568,6 @@ function menu1_more() {
 
 
 
-
-
-
 <script>
 
 var swiper_1 = new Swiper('.swiper-container', {
@@ -1727,18 +1724,22 @@ function menu2toggle(){
 <!--회원가입 폼 시작-->
 	<!-- ★★★회원가입 style -->
 <style>
-
+	#signup_form *{
+		font-size:12px;
+	}
+	#signup_form{
+		font-size:13px;
+	}
 </style>
 
-<div style="font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;">
-	<div class="signup_wrap">
+<div style="font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8; font-size:11px;">
+	<div id="signup_form">
 		<h2>회원가입 후 자동으로 모바일 청첩장이 생성됩니다.</h2>
     
 		<form action="">
             <fieldset>
-                <legend>회원정보 입력</legend>
-            
-            <!-- <h3>회원정보 입력</h3> -->
+                            
+            <h3>회원정보 입력</h3>
                 <input type="text" placeholder="이름">
                 <div class="id_input_up">
                 <input type="text" placeholder="아이디"><button type="button">중복확인</button>
@@ -1764,6 +1765,28 @@ function menu2toggle(){
 					<option value="018">019</option>
 					<option value="018">050</option>
 				</select>
+				<input type="number">	
+				<input type="number">
+				<button type="submit">본인인증</button>	
+			</div>
+
+			<h3>개인정보 취급방침 및 이용약관</h3>
+			<div class="agree_wrap">
+				<div class="agree_list">
+					<p>개인 정보 취급 방침에 동의합니다.</p>
+					<div class="agree_hidden">
+						<p>‘주식회사 비플스’가 운영하는 보자기카드(www.bojagicard.com)는 (이하 ‘회사’는) 고객의 개인정보를 중요시하며,”정보통신망 이용촉진 및 정보보호”에 관한 법률을 준수하고 있습니다.<br>
+						회사는 개인정보취급방침을 통하여 고객님께서 제공시 하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</p>
+					</div>
+				</div>
+
+				<div class="agree_list">
+					<p>이용약관에 동의합니다.</p>
+				</div>
+				
+				<div class="agree_list">
+					<p>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</p>
+				</div>
 				
 			</div>
 
@@ -2481,148 +2504,3 @@ $('.zzim_btn').click(function(e) {  //Fill a bog with sample
 
 </body>
 </html>
-
-
-<!-- COUNTER START -->
-
-
-
-<!-- 분석스크립트 - 구글ADS  m 공통 (2021-07-19 17:25:42) -->
-<!-- Global site tag (gtag.js) - Google Ads: 1006263967 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1006263967"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-1006263967');
-</script>
-
-<!-- 분석스크립트 - 구글ADS  m 공통 END -->
-
-
-<!-- 분석스크립트 - 네이버  m 공통 (2020-03-31 14:35:00) -->
-<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript"> 
-if (!wcs_add) var wcs_add={};
-wcs_add["wa"] = "s_48e3094ecd7e";
-if (!_nasa) var _nasa={};
-wcs.inflow("bojagicard.com");
-wcs_do(_nasa);
-</script>
-
-<!-- 분석스크립트 - 네이버  m 공통 END -->
-
-
-<!-- 분석스크립트 - 카카오  m 공통 (2021-07-02 16:06:08) -->
-<!-- <script type="text/javascript" charset="UTF-8" src="https://t1.daumcdn.net/adfit/static/kp.js"></script>
-<script type="text/javascript">
-      kakaoPixel('8852559761428756555').pageView('1');
-</script> -->
-<!-- 분석스크립트 - 카카오  m 공통 END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Google 애널리틱스 -->
-
-
-
-
-<script>
-// 쇼핑몰
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-58399451-1', 'auto');
-ga('require','displayfeatures');
-ga('require', 'linkid', 'linkid.js');
-ga('send', 'pageview');
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<!-- Google 애널리틱스 -->
-
-
-
-
-
-<!-- 페이스북 -->
-<!-- Facebook Pixel Code 1 -->
-<!-- <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '442009885997301');
-fbq('track', "PageView");
-
-
-</script> -->
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=442009885997301&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-<!-- 페이스북 -->
-
-
-
-
-
-
-
-
-<!-- 다음 -->
-
-<!-- 다음DDN since 2017-03-24 -->
-<script type="text/javascript">
-    var roosevelt_params = {
-        retargeting_id:'GGTRCtsxcziKfaL-sMLk-Q00',
-        tag_label:'ePRHJHpFRmesOD6GQE_ohg'
-    };
-</script>
-<!-- <script type="text/javascript" src="https://adimg.daumcdn.net/rt/roosevelt.js" async></script> -->
-<!-- 다음DDN since 2017-03-24 -->
-
-<!-- 다음 -->
-
-
-
-
-
-
-<!-- 카카오 광고 -->
-<!-- 카카오 광고 -->
-
-
-
-
-
-
-
-
-
-<!-- COUNTER END -->
