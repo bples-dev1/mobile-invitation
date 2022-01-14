@@ -1932,7 +1932,7 @@ function menu2toggle(){
 	    <div class="site_bottom_sns_row">
         <a class="sns_btn" target="_blank" href="https://facebook.com/bojagicard"><img src="https://bojagicard.com/m/img/200615_01_01.png" /></a>
         <a class="sns_btn" target="_blank" href="https://instagram.com/bojagicard/"><img src="https://bojagicard.com/m/img/200615_01_02.png" /></a>
-        <a class="sns_btn" target="_blank" href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img src="./img/200615_01_05.png" /></a>
+        <a class="sns_btn" target="_blank" href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img src="https://bojagicard.com/m/img/200615_01_05.png" /></a>
         <a class="sns_btn" target="_blank" href="http://bojagi.net"><img src="https://bojagicard.com/m/img/200615_01_03.png" /></a>
         <a class="sns_btn" target="_blank" href="javascript://" id="pcmode"><img src="https://bojagicard.com/m/img/200615_01_04.png" /></a>
     </div>
@@ -1984,7 +1984,7 @@ function menu2toggle(){
         <div style="width: 300px; margin: auto; text-align: center;">
 		
             <div class="body_link_menu" id="bottom_company_info_btn">
-                사업자 정보 <img src="./img/151001_01_22_down.png" height="10" style="margin-left: 5px; margin-top: -6px;" />
+                사업자 정보 <img src="https://bojagicard.com/m/img/151001_01_22_down.png" height="10" style="margin-left: 5px; margin-top: -6px;" />
             </div>
         	<div class="body_link_menu" onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
         	    이용약관
@@ -2216,28 +2216,6 @@ $(function() {
 	$("iframe[name=google_conversion_frame]").css("bottom","-1px")
 
 })
-
-
-
-//회원 로그인이면 로그인정보 입력.
-$("input[name=unm]").val('이예솔')
-$("select[name=hand1]").val('010')
-$("input[name=hand2]").val('5617')
-$("input[name=hand3]").val('1371')
-$("input[name=eml1]").val('dpthf5977')
-$("select[name=eml2]").val('naver.com');
-
-if ($("select[name=eml2]").val() != "" )	{ //메일도메인 select 에 해당하는 값이면 입력처리.
-	$("select[name=eml2]").show()
-	$("input[name=eml3]").hide()
-	$("#eml2_self_cancel").hide()
-} else {	//메일도메인 직접입력으로 처리
-	$("select[name=eml2]").val('self').hide()
-	$("input[name=eml3]").show().val('naver.com')
-	$("#eml2_self_cancel").show()
-}
-
-
 
 </script>
 
