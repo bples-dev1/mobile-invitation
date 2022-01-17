@@ -1799,13 +1799,16 @@ function menu2toggle(){
 	}
 	#signup_form .pass_check{
 		width: 100%;
+		/* border:1px solid red; */
 	}
 	#signup_form .pass_check input{
 		width: 100%;
 	}
-	#signup_form .pass_check input:last-child{
+	.pass_check input:last-child{
 		margin-top:10px;
 		margin-bottom:10px;
+		color:red;
+		
 	}
 	#signup_form .self_comfirm{
 		width: 100%;
@@ -1892,8 +1895,11 @@ function menu2toggle(){
 		color:#ffffff;
 	}
 
-	#common_box_style{
+	.common_box_style{
+		height: 28px;
 		position: relative;
+		/* overflow: hidden; */
+		
 	}
 	.error_box{
 		width: 60%;
@@ -1901,12 +1907,13 @@ function menu2toggle(){
 		background-color: #ffffff;
 		position: absolute;
 		left:10px;
-		display: none;
+		top:-37px;
+		/* display: none; */
 	}
-	#common_box_style .error_box p{
+	.error_box p{
 		color: #ff2d55;
 	} 
-	#common_box_style .error_box p span{
+	.error_box p span{
 		display: inline-block;
 		width: 15px;height: 15px;
 		line-height: 16px;
@@ -1934,33 +1941,42 @@ function menu2toggle(){
                             
             <h3>회원정보 입력</h3>
 			 
-			<div class="name_box" id="common_box_style">
+			<div class="name_box">
 			<input type="text" class="name_box" placeholder="이름" required>
-			<div class="error_box" style="top: 1px;">
+			</div> <!--name_box-->
+			<div class="common_box_style">
+			<div class="error_box">
 				<p><span>!</span> 필수 입력 정보입니다.</p>				
 			</div>	<!--error_box-->
-			</div>
-			<div class="id_box"  id="common_box_style">  
-            <input type="text" placeholder="아이디"><button type="button" class="btn_overlapcheck">중복확인</button>
-			<div class="error_box" style="top: 12px;">
+		</div>
+			
+			
+			<div class="id_box">  
+            <input type="text" placeholder="아이디" required><button type="button" class="btn_overlapcheck">중복확인</button>
+		</div> <!--id_box-->
+
+		<div class="common_box_style">
+			<div class="error_box">
 				<p><span>!</span> 아이디 중복 확인을 해주세요.</p>				
 			</div>	<!--error_box-->
-			</div> <!--id_box-->
+		</div>			
 
                 <p class="id_description">
                     - 아이디는 모바일 청첩장의 주소가 됩니다<br>
 					 &nbsp;&nbsp; 예시) http://bojagicard.com/회원 아이디<br>
 					- 가입 후 수정이 불가하며, 대문자는 사용할 수 없습니다.
                 </p>
-               
-            <div class="pass_check" id="common_box_style">
-				<input type="password" placeholder="비밀번호">
-				<input type="password" placeholder="비밀번호확인">
+			
+            <div class="pass_check">
+				<input type="password" placeholder="비밀번호" required>
+				<input type="password" placeholder="비밀번호 확인" required>
+			</div> <!--pass_check-->
 
-				<div class="error_box" style="top: 1px;">
+				<div class="common_box_style">
+				<div class="error_box" style="top:-47px;">
 					<p><span>!</span> 입력 정보가 올바르지 않습니다.</p>				
-				</div>	<!--error_box-->
-			</div>    
+				</div>	<!--error_box-->	
+			</div> <!--common_box_style-->   
             
 			<div class="self_comfirm">
 				<select name="phone_number" id="phone_number" class="calc_comfirmbox">
@@ -2334,7 +2350,7 @@ function menu2toggle(){
 		$('.btn_signup').on('click', function(){
 
 			setTimeout(function(){
-                location.href="http://www.naver.com";
+                
 
             },2000);;
 
