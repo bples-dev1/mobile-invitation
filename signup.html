@@ -1725,7 +1725,8 @@ function menu2toggle(){
 <!--회원가입 폼 시작-->
 	<!-- ★★★회원가입 style -->
 <style>
-	.signup_title h2{
+	/* 회원가입 타이틀 제목 */
+	.join_title {
 		width: 100%; height: 67px;
 		font-size:12px;
 		font-weight: normal;
@@ -1737,7 +1738,8 @@ function menu2toggle(){
 		margin-bottom:23px;		
 	}
 
-	#signup_form{
+	/* 공통 내용 */
+	#join_form{
 		font-size:14px;
 		padding-left:24px;
 		padding-right:24px;
@@ -1745,19 +1747,16 @@ function menu2toggle(){
 		/* border:1px solid red; */
 		box-sizing: border-box;
 	}
-/* 
-	#signup_form form{
-		margin-left:20px; 
-		margin-right:20px;
-	} */
-	#signup_form fieldset{
-		border:none;
 
+	#join_form fieldset{
+		border:none;
 	}
-	#signup_form *{
+
+	#join_form *{
 		font-size:12px;
 	}
-	#signup_form input{
+
+	#join_form input{
 		width: 100%;
 		height: 38px;
 		background-color: #ffffff;
@@ -1766,7 +1765,8 @@ function menu2toggle(){
 		outline: none;
 		padding-left:10px;
 	}
-	#signup_form button{
+
+	#join_form button{
 		height: 38px;
 		border:1px solid #aac6f5;
 		width: 25%;
@@ -1775,54 +1775,93 @@ function menu2toggle(){
 		cursor: pointer;
 	}
 
-
-	#signup_form h3{
+	/* 회원정보, 개인정보 타이틀제목 */
+	#join_form h3{
 		font-weight: bold;
 		text-indent: 3px;
 		padding-bottom:10px;
 	} 
-	#signup_form .name_box{
+
+/* 회원정보입력 form */
+	#join_form .name_box{
 		width: 100%;
+		position: relative;
 	}
-	#signup_form .id_box{
+	#join_form .id_box{
 		width: 100%;
-		/* padding-top:10px; */
+		padding-top:10px;
+		position: relative;
 	}
-	#signup_form .id_box input{
+	#join_form .id_box input{
 		width: calc(75% - 2px);
 		margin-right:2px;
 	}
 
-	#signup_form .id_description{
+	#join_form .id_guide{
 		line-height: 16px;
 		padding-left:5px;
 	}
-	#signup_form .pass_check{
+	#join_form .pass_box{
 		width: 100%;
+		position: relative;
 		/* border:1px solid red; */
 	}
-	#signup_form .pass_check input{
+	#join_form .pass_box input{
 		width: 100%;
 	}
-	.pass_check input:last-child{
+	.pass_box input:nth-child(2){
 		margin-top:10px;
 		margin-bottom:10px;
 		color:red;
 		
 	}
-	#signup_form .self_comfirm{
+	.error_box{
+		width: 60%;
+		background-color: #ffffff;
+		position: absolute;
+		left:10px;
+		display: none;
+	}
+	#join_form .name_box .error_box{
+		top:10px;
+	}
+	#join_form .id_box .error_box{
+		top:20px;
+	}
+	#join_form .pass_box .error_box{
+		top:10px;
+	}
+	.error_box div{
+		color: #ff2d55;
+	} 
+	.error_box div span{
+		display: inline-block;
+		width: 15px;height: 15px;
+		line-height: 16px;
+		border-radius: 50%;
+		background-color: #ff2d55;
+		color:#ffffff;
+		text-align: center;
+		font-weight: bold;
+		font-size:12px;
+		margin-right:8px;
+	}
+
+	#join_form .phone_comfirm{
 		width: 100%;
 		/* border:1px solid red; */
 		padding-bottom:20px;
 	}
-	
-	#signup_form .self_comfirm .calc_comfirmbox{
+
+	/* 본인인증 공통 */
+	#join_form .phone_comfirm .calc_select{
 		width: calc(100% / 4 - 2px);
 		height: 38px;
 		box-sizing: border-box;
-		
 	}
-	#signup_form .self_comfirm #phone_number{
+
+	/* 본인인증*/
+	#join_form .phone_comfirm #phone_number_select {
 		background-color: #ffffff;
 		border-radius: 5px;
 		text-indent: 5px;
@@ -1833,22 +1872,23 @@ function menu2toggle(){
 		padding-right:16px;
 		outline:none;
 			}
-	#signup_form .self_comfirm #phone_number option{
+	#join_form .phone_comfirm #phone_number_select option{
 		background-color: #ffffff;
 	}
 
-	#signup_form .btn_comfirm{
+	#join_form .phone_comfirm .comfirm_btn{
 		float: right;
 	}
 
-	#signup_form .agree_wrap {
+	/* 개인정보 동의 */
+	#join_form .agree_wrap {
 		width: 100%;
 		margin-bottom:32px;
 		/* border:1px solid red; */
 		box-sizing: border-box;
 		
 	}
-	#signup_form .agree_wrap .agree_list{
+	#join_form .agree_wrap .agree_list{
 		width: 100%;
 		height: 38px;
 		border-radius: 5px;
@@ -1856,7 +1896,7 @@ function menu2toggle(){
 		background-color: #ffffff;
 		margin-top:10px;
 	}
-	#signup_form .agree_wrap .agree_list p{
+	#join_form .agree_wrap .agree_list p{
 		height: 16px;
 		padding-left:33px;
 		line-height: 16px;
@@ -1865,13 +1905,13 @@ function menu2toggle(){
 		background-position:  10px center;
 		background-size: 15px;
 	}
-	#signup_form .agree_wrap .agree_list p.on{
+	#join_form .agree_wrap .agree_list p.on{
 		background: url('img/check_on.png');
 		background-repeat:  no-repeat;
 		background-position:  10px center;
 		background-size: 15px;
 	}
-	#signup_form .agree_wrap .agree_hidden{
+	#join_form .agree_wrap .agree_hidden{
 		width: 100%; height: 150px;
 		line-height: 19px;
 		box-sizing: border-box;
@@ -1887,53 +1927,23 @@ function menu2toggle(){
 		
 	}
 
-	#signup_form .btn_signup{
+	#join_form .join_btn{
 		width: 100%;
 		height: 38px;
 		background-color: #3e6fef;
 		color:#ffffff;
 	}
 
-	.common_box_style{
-		height: 28px;
-		position: relative;
-		/* overflow: hidden; */
-		
-	}
-	.error_box{
-		width: 60%;
-		height: 28px; 
-		background-color: #ffffff;
-		position: absolute;
-		left:10px;
-		top:-37px;
-		/* display: none; */
-	}
-	.error_box p{
-		color: #ff2d55;
-	} 
-	.error_box p span{
-		display: inline-block;
-		width: 15px;height: 15px;
-		line-height: 16px;
-		border-radius: 50%;
-		background-color: #ff2d55;
-		color:#ffffff;
-		text-align: center;
-		font-weight: bold;
-		font-size:12px;
-		margin-right:8px;
-	}
+
 </style>
 	<!-- div 박스 기본세팅
 	font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;  -->
-<div style="font-size: 20px; text-align: center; padding-bottom: 40px; background: #f7f8f8;" >
-	
-	
-	<div class="signup_title">
-		<h2>회원가입 후 자동으로 모바일 청첩장이 생성됩니다.</h2>
+<div style="font-size: 20px;  padding-bottom: 40px; text-align: center; background: #f7f8f8;" >
+		
+	<div class="join_title">
+		회원가입 후 자동으로 모바일 청첩장이 생성됩니다.
 	</div>
-	<div id="signup_form">
+	<div id="join_form">
 		<div class="form_wrap">
 			<form action="">
             <!-- <fieldset> -->
@@ -1941,44 +1951,40 @@ function menu2toggle(){
             <h3>회원정보 입력</h3>
 			 
 			<div class="name_box">
-			<input type="text" class="name_box" placeholder="이름" required>
+				<input type="text" class="name" placeholder="이름" required>
+				<div class="error_box">
+					<div><span>!</span> 필수 입력 정보입니다.</div>				
+				</div>	<!--error_box -->
 			</div> <!--name_box-->
-			<div class="common_box_style">
-			<div class="error_box">
-				<p><span>!</span> 필수 입력 정보입니다.</p>				
-			</div>	<!--error_box-->
-		</div>
-			
-			
+					
 			<div class="id_box">  
-            <input type="text" placeholder="아이디" required><button type="button" class="btn_overlapcheck">중복확인</button>
-		</div> <!--id_box-->
+            	<input type="text" placeholder="아이디" required><button type="button" class="check_btn">중복확인</button>
 
-		<div class="common_box_style">
 			<div class="error_box">
-				<p><span>!</span> 아이디 중복 확인을 해주세요.</p>				
-			</div>	<!--error_box-->
-		</div> 	
-
-                <p class="id_description">
-                    - 아이디는 모바일 청첩장의 주소가 됩니다<br>
-					 &nbsp;&nbsp; 예시) http://bojagicard.com/회원 아이디<br>
-					- 가입 후 수정이 불가하며, 대문자는 사용할 수 없습니다.
-                </p>
+					<div><span>!</span> 아이디 중복 확인을 해주세요.</div>				
+			</div>	
+			<!--error_box-->
+			</div> 
+			<!--id_box-->
+	
+			<p class="id_guide">
+				- 아이디는 모바일 청첩장의 주소가 됩니다<br>
+					&nbsp;&nbsp; 예시) http://bojagicard.com/회원 아이디<br>
+				- 가입 후 수정이 불가하며, 대문자는 사용할 수 없습니다.
+			</p>
 			
-            <div class="pass_check">
+            <div class="pass_box">
 				<input type="password" placeholder="비밀번호" required>
 				<input type="password" placeholder="비밀번호 확인" required>
+			
+				<div class="error_box">
+					<div><span>!</span> 입력 정보가 올바르지 않습니다.</div>				
+				</div><!--error_box-->	
 			</div> <!--pass_check-->
-
-				<div class="common_box_style">
-				<div class="error_box" style="top:-47px;">
-					<p><span>!</span> 입력 정보가 올바르지 않습니다.</p>				
-				</div>	<!--error_box-->	
-			</div> <!--common_box_style-->   
+		 
             
-			<div class="self_comfirm">
-				<select name="phone_number" id="phone_number" class="calc_comfirmbox">
+			<div class="phone_comfirm">
+				<select name="phone_number" id="phone_number_select" class="calc_select">
 					<option value="010">010</option>
 					<option value="011">011</option>
 					<option value="016">016</option>
@@ -1987,9 +1993,9 @@ function menu2toggle(){
 					<option value="018">019</option>
 					<option value="018">050</option>
 				</select>
-				<input type="number" name="middle_num" class="calc_comfirmbox">	
-				<input type="number" name="last_num" class="calc_comfirmbox">
-				<button type="button" class="btn_comfirm calc_comfirmbox">본인인증</button>	
+				<input type="number" name="middle_num" class="calc_select">	
+				<input type="number" name="last_num" class="calc_select">
+				<button type="button" class="comfirm_btn calc_select">본인인증</button>	
 			</div>
 		<!-- </fieldset> -->
 		</form>
@@ -2305,10 +2311,10 @@ function menu2toggle(){
 			</div>
 
 		</div><!--agree_wrap end-->
-			<button type=submit class="btn_signup">회원가입</button>
+			<button type=submit class="join_btn">회원가입</button>
 		
 
-    </div><!--signup_form-->
+    </div><!--join_form-->
 
 </div>
 
@@ -2343,15 +2349,16 @@ function menu2toggle(){
 		//회원가입을 클릭시 이름, 아이디, 비번 입력했는지 검토 후 정확하지 않은경우 에러메시지 출력
 		//이름 필수 입력 정보입니다.
 		//아이디  아이디 중복확인을 해주세요
-		//패스워드 입력정보가 올바르지 앟습니다
+		//패스워드 입력정보가 올바르지 않습니다
 
 		var error_box = document.querySelector('.error_box');
-		$('.btn_signup').on('click', function(){
+		$('.join_btn').on('click', function(){
 
+			$('.error_box').fadeIn();
+			
 			setTimeout(function(){
-                
-
-            },2000);;
+				$('.error_box').fadeOut();
+            },1500);;
 
 		});
 
