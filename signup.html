@@ -882,7 +882,7 @@ $(function(){
 
 <!-- main_wrapper -->
 <div id=mask style="position: fixed; background-color: #000000; left: 0; top: 0; width: 0; height: 0; opacity: 0.7; z-index: 99;" onclick="zip_close('')"></div>
-<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff;  max-width:380px;  ">
+<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff; max-width: 380px; ">
 <div id=tops style="z-index: 40;">
 <!-- 최상단 -->
 
@@ -1764,7 +1764,7 @@ function menu2toggle(){
 		padding-right:24px;
 		text-align: left;
 		/* border:1px solid red; */
-		box-sizing: border-box;
+		
 	}
 
 	#join_form fieldset{
@@ -1773,6 +1773,7 @@ function menu2toggle(){
 
 	#join_form *{
 		font-size:12px;
+		box-sizing: border-box;
 	}
 
 	#join_form input{
@@ -1909,50 +1910,50 @@ function menu2toggle(){
 		
 	}
 	#join_form .agree_wrap .agree_list{
+		
 		width: 100%;
 		height: 38px;
 		border-radius: 5px;
 		border:1px solid #dddddd;
 		background-color: #ffffff;
 		margin-top:10px;
+		padding-top:10px;
+		cursor: pointer;
 	}
-	#join_form .agree_wrap .agree_list p{
+	#join_form .agree_wrap .agree_list span{
+		display: inline-block;
+		width: 100%;
 		padding-left:33px;
 		background: url('img/check_off.png');
 		background-repeat:  no-repeat;
 		background-position:  10px top;
 		background-size: 14px 14px;
 		/* border:1px solid red; */
-		margin-top:12px;
-		cursor: pointer;
+		vertical-align: middle;
 		position: relative;
+
 	}
 
-	#join_form .agree_wrap .agree_list p.on{
+	#join_form .agree_wrap .agree_list span.on{
 		background: url('img/check_on.png');
 		background-repeat:  no-repeat;
 		background-position:  10px top;
 		background-size: 14px 14px;
 	}
-	#join_form .agree_wrap .agree_list p::after{
-		content: '';
-		width: 13px; height: 7px;
-		background: url('img/arrow_down.png');
-		background-repeat: no-repeat;
-		background-size: 13px 7px;
-		position: absolute;
-		top: 4px; right: 10px;
-		transition:all 0.2s ease;
-	}	
-	#join_form .agree_wrap .agree_list p.on::after{
-		content: '';
-		transform: rotate(180deg);	
-	}	
+	#join_form .agree_wrap .agree_list img{
 	
-	#join_form .agree_wrap .agree_list:last-child p::after{
-		display: none;
+		/* border:1px solid red; */
+		margin-top:3px;
+		margin-right:10px;
+		width: 13px;height: 7px;
+		transition:all 0.2s ease;
+		
 	}
-
+	#join_form .agree_wrap .agree_list span.on img{
+		transform: rotate(180deg);	
+		
+	}
+	
 	#join_form .agree_wrap .agree_hidden{
 		width: 100%; height: 150px;
 		line-height: 19px;
@@ -1962,7 +1963,6 @@ function menu2toggle(){
 		font-size:12px;
 		overflow: auto;
 		margin-top:-1px;
-		
 		display: none;
 	}
 	pre{
@@ -1978,6 +1978,7 @@ function menu2toggle(){
 		width: 100%;
 		height: 38px;
 		background-color: #3e6fef;
+		border:none;
 		color:#ffffff;
 	}
 
@@ -2052,7 +2053,8 @@ function menu2toggle(){
 			<h3>개인정보 취급방침 및 이용약관</h3>
 		
 				<div class="agree_list">
-					<p>개인 정보 취급 방침에 동의합니다.</p>
+					<span>개인 정보 취급 방침에 동의합니다.<img src="img/arrow_down.png" alt="toggle button" align="right"></span>
+					
 				</div>
 
 			<div class="agree_hidden" alt="개인정보" >
@@ -2159,7 +2161,8 @@ function menu2toggle(){
 			</div><!--agree_hidden 개인정보-->
 
 			<div class="agree_list">
-				<p>이용약관에 동의합니다.</p>
+					<span> 이용약관에 동의합니다. <img src="img/arrow_down.png" alt="toggle button" align="right"> </span>
+					
 			</div>				
 			
 			<div class="agree_hidden" alt="이용약관">
@@ -2357,7 +2360,7 @@ function menu2toggle(){
 			</div><!--agree_hidden 이용약관-->
 
 			<div class="agree_list">
-				<p>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</p>
+				<span>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</span>
 			</div>
 
 		</div><!--agree_wrap end-->
@@ -2384,12 +2387,12 @@ function menu2toggle(){
 			//.agree_list > p 직계자식만 찾아서 하는 방식, children은 부모안의 p를 모두 탐색 해야하기 때문에 처리속도가 느릴 수 있음
 
 		$('.agree_list').on('click', function(){
-			var stat = $('p', this).attr('class')
+			var stat = $('span', this).attr('class')
 			if (stat == 'on') {
-				$('p', this).removeClass('on')
+				$('span', this).removeClass('on')
 				$(this).next().hide()
 			} else {
-				$('p', this).addClass('on')
+				$('span', this).addClass('on')
 				$(this).next().show()
 			}
 
