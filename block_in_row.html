@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline-block</title>
+</head>
+    <style>
+        .section{
+            width: 380px;
+            border:1px solid navy;
+            font-size:12px;
+           
+         
+        }
+        .listbox{
+            
+        }
+        .section .list{
+            display: inline-block;
+            width: calc( calc(100% - 20px) / 3 );
+            height: auto;
+            background: skyblue;
+            border:1px solid yellow;
+            /* vertical-align: text-top; */
+            position: relative;
+            bottom: 0;
+           
+
+        }
+        .list_top{
+            height: 100%;
+           border:1px solid blue;
+           position: relative;
+           top: 0; 
+           
+        }
+        .list_bottom{
+            height: auto;
+            /* display: inline-block; */
+            border: 1px solid black;
+            /* position: relative;
+            bottom: 0;left: 0; */
+  
+        }
+        .list div{
+            margin-bottom: 10px;
+        
+        }
+
+        .block_img{
+            border:1px solid red;
+         
+        }
+
+        .block_txt{
+            border:1px solid orange;
+          
+        }
+        .block_price{
+            border:1px solid green;
+        }
+
+        .block_form{
+            display: inline-block;
+            vertical-align: text-bottom; 
+            border:1px solid green;
+           
+        }
+
+        .list:nth-child(2) .block_form{
+            left: 33%;
+        }
+        .section img{
+            width: 40px;
+            padding-left:40px;
+        }
+
+        .list_bottmom{
+            
+        }
+    </style>
+<body>
+    
+    <div class="section">
+        <div class="list_box">
+
+            <div class="list">
+                <div class="list_top">
+                <div class="block_img">
+                    <img src="img/gift_bananamilk.png" alt="">
+                
+                </div>
+
+                <div class="block_txt">
+                빙그레 바나나맛 우유 240ml  빙그레 바나나맛 우유 240ml   빙그레 바나나맛 우유 240ml      빙그레 바나나맛 우유 240ml 빙그레 바나나맛 우유 240ml 빙그레 바나나맛 우유 240ml        
+                </div>
+                </div>
+                <div class="list_bottom">
+                    <div class="block_price">
+                    각 990원
+                    </div>
+
+                    <div class="block_form">
+                        <select name="select" id="">
+                            <option value="1개">1</option>
+                            <option value="2개">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="list_top">
+                <div class="block_img">
+                    <img src="img/gift_bananamilk.png" alt="">
+                
+                </div>
+
+                <div class="block_txt">
+                빙그레 바나나맛 우유 240ml            
+                </div>
+                </div>
+                <div class="list_bottom">
+                    <div class="block_price">
+                    각 990원
+                    </div>
+
+                    <div class="block_form">
+                        <select name="select" id="">
+                            <option value="1개">1</option>
+                            <option value="2개">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="list_top">
+                <div class="block_img">
+                    <img src="img/gift_bananamilk.png" alt="">
+                
+                </div>
+
+                <div class="block_txt">
+                빙그레 바나나맛 우유 240ml            
+                </div>
+                </div>
+                <div class="list_bottom">
+                    <div class="block_price">
+                    각 990원
+                    </div>
+
+                    <div class="block_form">
+                        <select name="select" id="">
+                            <option value="1개">1</option>
+                            <option value="2개">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+        </div>    
+    </div>
+</body>
+</html>

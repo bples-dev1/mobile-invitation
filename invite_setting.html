@@ -2011,34 +2011,46 @@
 				.window .header {
 					width: 380px;
 					top: 0px;
+					background-color:transparent;
 				}
 
 				#main_header {
 					opacity: 1;
 				}
+				.header_back img{
+					width: 10px; 
+					padding-top:15px;
+					padding-left:15px;
+				}
+				/* #top_logo_cell{
+					padding-left:45px;
+				} */
 			</style>
 			<div class="window">
 
 				<!-- header start -->
 				<div class="header" id="main_header">
 
-					<div class="burger-container">
+					<div class="header_back">
+						<img src="img/arrow_back.png" alt="뒤로가기">
+					</div>
+					
+					<!-- <div class="burger-container">
 						<div id="burger">
 							<div class="bar topBar"></div>
 							<div class="bar btmBar"></div>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="menu1_btns">
 
 						<table cellspacing=0 cellpadding=0 height=50 width=100%>
 							<tr align=center>
 								<td align="left" id="top_logo_cell">
-									<img src="https://bojagicard.com/m/img/151004_01_01.png" height="26"
-										onclick="location.href='index.php'" />
+									<img src="img/logo.png" height="26" onclick="location.href='index.php'" />
 								</td>
 								</td>
-								<td width=56 style="position: relative;" onclick="sample_menu('open')">
+								<!-- <td width=56 style="position: relative;" onclick="sample_menu('open')">
 									<div class="sample_pick_count"
 										style="font-size: 9px; background-color: #fd4976; border-radius: 12px; line-height: 17px; height: 16px; width: 16px; position: absolute; right: -7px; top: 7px; color: white; text-align: center; opacity: 1; ">
 										10</div>
@@ -2048,16 +2060,16 @@
 										src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9"
 										style="position: absolute; bottom: 0px; right: 19px; display: none;"
 										alt="삼각형팁" />
-								</td>
+								</td> -->
 								<td width=10></td>
-								<td width=30 style="position: relative;" onclick="my_menu('open')">
+								<!-- <td width=30 style="position: relative;" onclick="my_menu('open')">
 									<img class="menu1_right_btns" src="https://bojagicard.com/m/img/170224_01_02.png"
 										height="16" ondblclick="$('#mata_tag_setting_wrapper').toggle()" />
 									<img class="menu_tips" id="menu_tip_mypage"
 										src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9"
 										style="position: absolute; bottom: 0px; right: 6px; display: none;"
 										alt="삼각형팁" />
-								</td>
+								</td> -->
 								<td width=12 onclick="my_menu('open')">&nbsp;</td>
 							</tr>
 						</table>
@@ -2995,30 +3007,14 @@ function sample_cards_update() {
 
 				<!-- 페이지별 메뉴 끝 -->
 
-				<!--로그인 폼 시작-->
+				<!--모바일청첩장 설정 폼 시작-->
 
 				<style>
 					#page_wrapper {
 						background-color: #f7f8f8; 
 					}
 
-					.block>div:first-child {
-						/* 블록 타이틀 */
-						background-color: #f1f1f1;
-						height: 42px;
-						font-size: 12px;
-						font-weight: bold;
-                       
-					}
-
-					.block>div:last-child {
-						/* 블록 내용 */
-						background-color: #f7f8f8;
-						height: 42px;
-						margin-left: 24px;
-						margin-right: 24px;
-						font-size: 12px;
-					}
+					
 
 					.top_title {
 						width: 100%; height: 67px;
@@ -3039,6 +3035,82 @@ function sample_cards_update() {
 						-moz-box-sizing: border-box;
 						-webkit-box-sizing: border-box;
                     }
+					.section form *{
+						font-size:12px;
+						border-radius: 3px;
+					
+					}
+
+					.section select{
+						background:url('img/arrow_down.png');
+						background-repeat:no-repeat;
+						background-position: 90% center;
+						background-size:17px;
+					}
+
+					.section button{
+						color:#333;
+						height: 38px;
+						cursor: pointer;
+					}
+					.section input{
+						height: 38px;
+					}
+
+					div .radio_btn{
+						width: 15px;
+						height: 15px;
+						background: url("img/btn_radio_off.png")top;
+						background-repeat: no-repeat;
+						background-size: 15px;
+						border:none;
+						vertical-align: middle;
+						margin-right:6px;
+					}
+
+					div.on .radio_btn{
+						width: 15px;height: 15px;
+						background: url("img/btn_radio_on.png")center;
+						background-size: 15px;
+					}
+					.modify_btn{   
+						width: 32px;
+					}	
+					.prev_img{
+						width: 112px;
+					}
+					.prev_photo{
+						width: 100%;
+					}
+
+					.circle_span{
+						display:inline-block;
+                        width: 15px;
+                        height: 15px;
+                        line-height: 17px;
+                        background-color: #aac6f5;
+                        border-radius: 50%;
+                        text-align: center;
+                        vertical-align: middle;
+                        color:#ffffff;
+                        font-size: 11px;
+                        margin-bottom: 2px;
+                        margin-right:5px;
+					}
+
+					.slide {
+					height: 225px;
+					border: 1px solid navy;
+					margin-top:20px;
+					margin-bottom:20px;
+					}
+
+					.division_line{
+						margin-top:20px;
+						padding-top:10px;
+						border-top:1px solid #dddddd;
+					}
+
 
 					.section>div:first-child {
 						height: 44px;
@@ -3091,13 +3163,14 @@ function sample_cards_update() {
                         font-size:12px;
                     }
 
-                    .section > div:last-child .present_menu{
+                    .section > div:last-child .tab_menu{
                         width: 100%;
                         height: 38px;
                         font-size:0;
+						cursor: pointer;
                     }
                     
-                    .section > div:last-child .present_menu div{
+                    .section > div:last-child .tab_menu div{
                         display: inline-block;
                         width: calc(100% / 2);
                         /* width: calc( calc(100% - 6px) / 2 ); */
@@ -3108,55 +3181,83 @@ function sample_cards_update() {
                         color:#888888;
                         font-size:13px;
                     }
+                    .section > div:last-child .tab_menu div span{
+                        display: inline-block;
+                        width: 30px;
+                        height: 15px;
+                        line-height: 15px;
+                        border-radius: 20px;
+                        background-color: #cccccc;
+                        color:#ffffff;
+                        font-size:11px;
+                        vertical-align: middle;
+                        
+                    }
                     
-                    .section > div:last-child .present_menu div.on{
+                    .section > div:last-child .tab_menu div.on{
                         background-color: #ffffff;
                         color:#333333;
                         border:1px solid #aac6f5;                        
                     }
-                    .section > div:last-child .present_menu div:first-child{
+					.section > div:last-child .tab_menu div.on span{
+						background-color: #3e6fef;
+					}
+                    .section > div:last-child .tab_menu div:first-child{
                         border-radius: 3px 0 0 3px;
                     }
-                    .section > div:last-child .present_menu div:first-child.on{
+                    .section > div:last-child .tab_menu div:first-child.on{
                         border-radius: 3px 0 0 3px;
                     }
-                    .section > div:last-child .present_menu div:last-child{
+                    .section > div:last-child .tab_menu div:last-child{
                         border-radius: 0 3px 3px 0;
                         /* margin-left:-3px; */
                     }
-                    .section > div:last-child .present_menu div:last-child.on{
+                    .section > div:last-child .tab_menu div:last-child.on{
                         border-radius: 0 3px 3px 0;
                     }
                     
+
+					/* 선물설정 */
                     .section > div:last-child .present_list{
                         width: 100%;
+						height: 100%;
                         font-size:0;
                         padding-top:18px;
-                        border:1px solid red;
-                       
-                    }
-                    .section > div:last-child .present_list div{
+                        border:1px solid red;				
+					}
+                    
+					.section > div:last-child .present_list div{
                         text-align: center;
                     }
                   
                     .section > div:last-child .present_list .item{
                         display: inline-block;
                         width: calc( calc(100% - 20px) / 3 );
+						/* height: 100%; */
                         margin-right: 10px;
-                    }
+																						
+					}
+					.section > div:last-child .present_list .item .item_img{
+						
+						height: 130px;
+						
+					
+					}
+			
+					.item_bottom{
+						overflow: hidden;
+					}
                     .section > div:last-child .present_list .item img{
                         width: 47px;
                         text-align: center;
-                        padding-top:20px;                          
+                        padding-top:20px;    
+						
                     }
                     .section > div:last-child .present_list .item:last-child{
                         margin-right: 0;
                     }
-                   
-                    .section > div:last-child .present_list .item div:first-child{
-                        height: 130px;
-                    }
-
+             
+                    
                     /* 선물 이미지 배경색 변경 */
                     .section > div:last-child .present_list .item:first-child .item_img{
                         background-color: #e7e9dd;
@@ -3175,24 +3276,324 @@ function sample_cards_update() {
                         margin-bottom:10px;
                         line-height: 19px;
                         text-align: left;
+						border:1px solid red;
                     }
 
+					.section > div:last-child .present_list .item_price{
+						border:1px solid blue;
+						
+					}
                     .section > div:last-child .present_list .item_select{
                         width: 90%;
                         /* height: 22px; */
                         font-size:13px;
-                        border:1px solid green;
+                        /* border:1px solid green; */
                         text-align: left;
+						
                     }
 
                     .section > div:last-child .present_list .item_select select{
                         width: 90%;
                         height: 28px;
                         font-size:12px;
-                        border:1px solid red;
+                        /* border:1px solid red; */
+						
                     }
 
+                    .section > div:last-child .price_sum{
+                        text-decoration: underline;
+                        padding-top:12px;
+                        padding-bottom:18px;
+                    }
 
+                    .section > div:last-child .buy_btn{
+                        width: 100%;
+                        height: 38px;
+                        color:#ffffff;
+                        background-color: #3e6fef;
+                        font-size:13px;
+                        margin-bottom:22px;
+                        border-radius: 3px;
+                    }
+                    .section > div:last-child .present_like{
+                        width: 100%;
+                        padding-left:11px;
+                        padding-right:11px;
+                        padding-top:20px;
+                        padding-bottom:10px;
+                        background-color: #f0f0f0;
+                        
+                    }
+                    .section > div:last-child .present_like{
+                        font-size:14px;
+                        vertical-align: middle;
+                    }				
+					
+
+                    /* .section > div:last-child .present_like span{
+                        display:inline-block;
+                        width: 15px;
+                        height: 15px;
+                        line-height: 17px;
+                        background-color: #aac6f5;
+                        border-radius: 50%;
+                        text-align: center;
+                        vertical-align: middle;
+                        color:#ffffff;
+                        font-size: 11px;
+                        margin-bottom: 2px;
+                        margin-right:5px;
+                    } */
+                    .section > div:last-child .present_like p{
+                        font-size:13px;
+                        line-height: 20px;                    
+                        /* letter-spacing: 0.5px; */
+                        
+                    }
+                    .section > div:last-child .present_like p:last-child{
+                        margin-top:-4px;
+                    }
+
+					/* 테마설정  */
+					
+					/* 슬라이드 */
+
+					/* 슬라이드 내부 스타일, 실제 슬라이드 적용시 수정필요 
+					크기 및 슬라이드 공통설정은 상단 .slide에 있음 */
+
+					/* .invite_theme_list .theme_slide {
+					height: 225px;
+					border: 1px solid red;
+					} */
+			
+					
+					/* 테마 색상 선택 */
+					.invite_theme_list .theme_color{
+						overflow: hidden;					
+					}
+
+					.invite_theme_list .theme_color .color_choice {
+						border-top:1px solid #dddddd;
+						border-right:1px solid #dddddd;
+						border-left:1px solid #dddddd;
+						border-radius: 3px;			
+					}
+
+					.invite_theme_list .theme_color .color_choice div{						
+						height: 38px;
+						border-bottom:1px solid #dddddd;
+						background-color: #ffffff;
+						padding-left:10px;
+						padding-top: 9px;					
+					}
+
+					.color_choice div:first-child{
+						border-radius: 10px;
+						border-radius: 3px 3px 0 0;
+					}
+					.color_choice div:last-child{
+						border-bottom:1px solid red;
+						border-radius: 0 0 3px 3px;
+					}
+							
+					.invite_theme_list .theme_color .color_choice img{
+						display: inline-block;
+						vertical-align: middle;
+						/* margin-top:11px; */
+					}
+					.invite_theme_list .theme_color .color_choice span{
+						display: inline-block;
+						width: 22px;height: 22px;
+						vertical-align: middle;
+						border-radius: 50%;
+						/* margin-top:7px; */
+						margin-left:7px;
+						margin-right:7px;					
+					}
+
+					/* 색상 표 */
+					.color_choice div:first-child span{background: linear-gradient(#f1e7e6 50%, #b1d5e0 50%);}
+					.color_choice div:nth-child(2) span{background-color: #6662ab;}
+					.color_choice div:nth-child(3) span{background-color: #ffc46f;}
+					.color_choice div:nth-child(4) span{background-color: #65737e;}
+				
+					/* 스킨설정 */
+					.invite_skin_list {
+						width: 100%;
+					}
+					.invite_skin_list .invite_skin_photo{
+						width: 100%;			
+						font-size: 0;
+					}
+					.invite_skin_list .invite_skin_photo > div{
+					
+						width: calc( calc(100% - 20px) / 3 );
+						display: inline-block;
+						margin-right:10px;
+						
+					}
+					.invite_skin_list .invite_skin_photo > div:last-child{
+						margin-right:0;
+						
+					}
+					.invite_skin_list .invite_skin_photo > div div:last-child{
+						/* border:1px solid red; */
+						padding-top:15px;
+					}
+					.invite_skin_list .invite_skin_photo > div div:last-child img{
+						padding-left:10px;
+						padding-right:7px;
+						/* padding-top:15px; */
+						
+					} 
+				
+					.skin_photo_effect{
+						display: inline-block;
+						width: 100%;
+						/* border: 1px solid red; */
+						font-size:0;
+					}
+					.skin_photo_effect select{
+						font-size:12px;
+						width: calc( calc(100% - 17px) / 2 );
+						margin-right:17px;
+						padding-left:10px;
+					}						
+				
+
+				
+					.skin_photo_effect select:last-child{
+						margin-right:0;
+					}
+
+					/* 예식정보 */
+					.wedding_date{
+						/* border:1px solid red; */
+						font-size: 0;
+					}
+					.wedding_date input{
+						padding-left:10px;
+					}
+					
+					.wedding_date input:first-child{
+						border:1px solid #e8e8e8;
+						width: calc(100% - 10px);
+						height: 33px;
+						margin-right:10px;
+						
+						
+					}
+					.wedding_date div{
+						display: inline-block;
+						width: calc( calc(100% - 10px) / 2 );
+						/* border:1px solid green; */
+						vertical-align: text-top;
+					}
+					.wedding_date div:first-child{
+						margin-right:10px;
+					}
+					/* .wedding_date .time_select {
+						width: 50%;
+						border:1px solid red;
+					} */
+					
+					.wedding_date div:nth-child(2) select{
+					
+						border:1px solid #e8e8e8;
+						width: calc( calc(100% - 13px) / 2 );
+						height: 33px;
+					}
+					.wedding_date select:first-child{
+						margin-right:10px;
+					}
+
+					.wedding_date div:nth-child(3){
+						width: 100%;
+					} 
+					.wedding_date div:nth-child(3) input{
+						width: 100%;
+						margin-top:10px;	
+					}
+
+
+					/* 초대인사말 */
+					.invite_greeting input{
+						width: 100%;
+					}
+							
+					.invite_greeting .greeting_form button{
+						border:1px solid #c6d7fa;
+						background-color: #f3f5fa;
+						margin-top:10px;
+						margin-bottom: 10px;
+					}
+					
+					/* border, 여백 값 외 원형 문자 기본 스타일은 .circle_span 에 설정되어있음 */
+					.invite_greeting span{
+						border-radius: 50%;
+						margin-left:5px;
+					}
+				
+					.half_block {
+						font-size: 0;
+						/* border:1px solid red; */
+					}
+
+					.half_block div{
+						display: inline-block;
+                        width: calc(100% / 2);
+                        height: 38px;
+                        line-height: 38px;
+                        text-align: center;
+                        border:1px solid #dddddd;
+						background-color: #fff;
+                        color:#888888;
+                        font-size:13px;
+						vertical-align: middle;
+					}
+
+				
+					.greeting_form textarea{
+						width: 100%;
+						height: 150px;
+						background-color: #ffffff;
+						padding-top:10px;
+						padding-left:10px;
+						resize: none;
+					}
+
+					.groom{
+						width: 100%;
+						/* border:1px solid red; */
+						padding-top:20px;
+					}
+				
+					.groom_bride{
+						width: 100%;
+						font-size: 0;
+					}
+					
+					.groom_bride div {
+						display: inline-block;
+						width: calc( calc(100% - 20px) / 3 );
+						height: 38px;
+						vertical-align: bottom;
+						margin-top:10px;
+						margin-right:6px;
+						/* border:1px solid red; */
+					}
+
+					.groom_bride div:last-child{
+						line-height: 38px;
+						margin-right:0;
+					}
+					.groom_bride div select{
+						width: 100%;
+						background-color: #fff;
+					}
+					.groom_bride input{
+						background-color: #ffffff;
+					}
 				</style> 
 				
                 <!-- width: calc( calc(100% - 20px) / 3 ); -->
@@ -3202,12 +3603,12 @@ function sample_cards_update() {
 					<div class="top_title">
 						기능 사용을 원하지 않으실 경우, 체크 박스의 선택을 해제해 주세요
 					</div>			
+                    <!--top_title 끝-->
 
-
-					<!-- 섹션 -->
+					<!-- ============================================================= 선물하기 섹션 시작 -->
 					<div class="section">
 
-						<!-- 섹션 타이틀 -->
+						<!-- 선물하기 섹션 타이틀 시작-->
 						<div>
 							선물하기 설정
 							<div class="title_icon">
@@ -3218,89 +3619,120 @@ function sample_cards_update() {
 							</div>
 							<!-- 오른쪽 버튼 -->
 						</div>
-
+                        <!--선물하기 섹션 타이틀 끝-->
 
 						<div>
-							<!-- 섹션 내용 -->
+							<!-- 선물하기 섹션 내용 -->
                             <h3> 모바일 청첩장을 받는 분들께 작은 선물을 준비해 보세요. <br />
-                            (주문 상품 소진 후 다른 상품 구입 가s)</h3>
+                            (주문 상품 소진 후 다른 상품 구입 가능)</h3>
                         
-                            <div class="present_menu">
+                            <div class="tab_menu present_tab_menu">
                                 <div class="on">선물 설정</div>
-                                <div class="">이용 내역</div>
+                                <div class="">이용 내역 <span>100</span> </div>
                             </div>
-                            <!--present_menu-->
+                            <!--present_menu 끝-->
 
                             <div class="present_list">
                                 <div class="item">
-                                    <div class="item_img">
-                                    <img src="img/bananamilk.png" alt="bananamilk">
-                                    </div>
-                                    <div class="item_txt">
-                                            빙그레 바나나맛 우유 240ml<br />
-                                            각 990원
-                                    </div>
-                                    <div class="item_select">
-                                        <select name="select" id="present_select">
-                                            <option value="10">10개</option>
-                                            <option value="10">20개</option>
-                                            <option value="10">30개</option>
-                                        </select>
-                                    </div>
-                            <!--item_select-->
+									<div class="item_top">
+										<div class="item_img">
+											<img src="img/gift_bananamilk.png" alt="bananamilk">
+										</div>
+
+										<div class="item_txt">
+												빙그레 바나나맛 우유 240ml<br />
+												각 990원
+										</div>
+									</div>										
+										
+										<div class="item_select">
+											<select name="select" id="present_select">
+												<option value="10">10개</option>
+												<option value="10">20개</option>
+												<option value="10">30개</option>
+											</select>
+										</div>
+                                    <!--item_select-->
+								
                                 </div> 
-                                <!--item-->
+                                <!--item 1 -->
 
                                 <div class="item">
+									<div class="item_top">
                                     <div class="item_img">
-                                    <img src="img/cafelatte.png" alt="cafelatte">
+                                    <img src="img/gift_cafelatte.png" alt="cafelatte">
                                     </div>
+                               
                                     <div class="item_txt">
-                                            매일유업 마이 카페라떼 마일드 220ml<br />
-                                            각 1,500원
+                                            매일유업 마이 카페라떼 마일드 220ml <br />
+											각 1,500원                                          
                                     </div>
-                                    <div class="item_select">
-                                    <select name="select" id="present_Select">
-                                        <option value="10">10개</option>
-                                        <option value="10">20개</option>
-                                        <option value="10">30개</option>
-                                    </select>
+								</div>
+						
+																
+										<div class="item_select">
+										<select name="select" id="present_Select">
+											<option value="0">0개</option>
+											<option value="10">20개</option>
+											<option value="10">30개</option>
+										</select>
                                     </div> 
                                     <!--item_select-->
+								
                                 </div>
-                                <!--item-->
+                                <!--item 2 -->
 
                                 <div class="item">
                                     <div class="item_img">
-                                    <img src="img/starbucks.png" alt="starbucks">
+                                    <img src="img/gift_starbucks.png" alt="starbucks">
                                     </div>
+                               
                                     <div class="item_txt">
-                                            스타벅스 아이스 카페 아메리카도 Tall<br />
-                                            각 4,100원
+                                            스타벅스 아이스 카페 아메리카도 Tall <br />
+											각 4,100원
                                     </div>
-                                    <div class="item_select">
+									
+									<div class="item_select">
                                     <select name="select" id="present_Select">
-                                        <option value="10">10개</option>
+                                        <option value="10">0개</option>
                                         <option value="10">20개</option>
                                         <option value="10">30개</option>
                                     </select>
                                     </div>
                                 </div>
-                                <!--item-->
+                                <!--item 3 -->
+                              </div>
+                            <!--present_list 끝 -->
 
+                            <div class="price_sum">
+                                합 49,500원
                             </div>
-                            <!--present_list-->
+                            <!--price_sum 끝-->
 
-                              
-						</div>
+                            <button type="button" class="buy_btn">선택 선물 구입하기</button>
+                            
+                            <div class="present_like">
+                                <span class="circle_span">i</span> 선물하기, 이런 점이 좋아요!<br />
+                                <p>선물을 구입하면 모바일 청첩장에 다운로드 버튼이 생기며, 방문자가 기프티콘을 다운로드 받을 수 있습니다.</p>
+                                <p>
+                                    -  방문자 휴대폰 번호 당 1개 수령 가능 <br />
+                                    -  이용내역에서 구매 내역 및 선물 수령인 리스트 확인 가능<br />
+                                    -  받아가지 않은 선물은 100% 환불<br />
+                                </p>                                
+                            </div>      
+                         	<!--present_like 끝-->                              
+                        </div>
+                        <!--선물하기 섹션 내용 끝-->
 
 					</div>
+                    <!--선물하기 섹션 끝-->
 
+                    <!-- ============================================================= 테마설정 섹션 시작 -->
 					<div class="section">
 
 						<!-- 섹션 타이틀 -->
 						<div>
-							스킨 설정
+							테마 설정
 							<div class="title_icon">
 								<img src="img/settingcheck.png" alt="title-img" />
 							</div>
@@ -3309,18 +3741,633 @@ function sample_cards_update() {
 							</div>
 							<!-- 오른쪽 버튼 -->
 						</div>
+						<!--섹션 타이틀 끝-->
 
 						<!-- 섹션 내용 -->
 						<div>
-							섹션 내용
+							<h3> 청첩장 테마 선택 후 색상을 선택하세요. <br />
+								(선택 가능한 색상은 테마별 상이)</h3>
+								
+							<div class="invite_theme_list">
+								<div class="theme_slide slide">
+									<h2 style="text-align: center;">슬라이드이미지</h2>
+									<!-- <div>
+										<div><img class="prve_img" src="img/prev_theme_01.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
+											아름다운초대</div>
+									</div>
+
+									<div>
+										<div><img class="prve_img" src="img/prev_theme_02.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
+											매너있는 초대</div>
+									</div>
+									<div>
+										<div><img class="prve_img" src="img/prev_theme_03.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
+											정중한 초대</div>
+									</div> -->
+								</div> 
+								<!--theme_slide-->
+								<div class="division_line"></div>
+								<div class="theme_color">
+									<h3>테마 색상 선택</h3>
+								<div class="color_choice">									
+									<div class="on"><button type="button" class="radio_btn"></button><span></span> 베이지 + 블루</div>
+									<div><button type="button" class="radio_btn"></button><span></span> 퍼플</div>
+									<div><button type="button" class="radio_btn"></button><span></span> 옐로</div>
+									<div><button type="button" class="radio_btn"></button><span></span> 그레이</div>
+								</div>
+								<!--color_choice-->
+								</div>
+								<!--theme_color-->
+
+							</div>	
+							<!--invite_theme_list-->	
+						</div>
+						<!--섹션내용 끝-->
+					</div>
+					<!--테마설정 섹션 끝-->
+
+					<!-- ============================================================= 스킨설정 섹션 시작 -->
+					<div class="section">
+
+						<!-- 섹션 타이틀 -->
+						<div>
+							스킨 설정(필수)
+							<div class="title_icon">
+								<img src="img/settingcheck.png" alt="title-img" />
+							</div>
+							<div class="title_top_icon">
+								<img src="img/setting_top.png" alt="title-icon" />
+							</div>
+							<!-- 오른쪽 버튼 -->
+						</div>
+						<!--섹션 타이틀 끝-->
+
+						<!-- 섹션 내용 -->
+						<div>
+							<h3> 스킨 디자인을 선택하세요. <br />
+								디자인 스킨의 경우 선택한 테마 색상이 자동 적용됩니다.</h3>
+								
+								<div class="tab_menu">
+									<div class="on">청첩장 세트 스킨 <span>20</span></div>
+									<div class="">디자인 스킨 <span>34</span> </div>
+								</div>
+
+							<div class="invite_skin_list">
+								<div class="skin_slide slide">
+									<h2 style="text-align: center;">슬라이드이미지</h2>
+								<!-- <div>
+										<div><img class="prve_img" src="img/prev_skin_01.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
+											JEINA530</div>
+									</div>
+
+									<div>
+										<div><img class="prve_img" src="img/prev_skin_02.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
+											JEINA500</div>
+									</div>
+									<div>
+										<div><img class="prve_img" src="img/prev_skin_01.png" alt="테마 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
+											BNIEL498</div>
+									</div> -->
+								</div> 
+								<!--skin_slide-->
+
+								<div class="division_line"></div>
+								<div class="invite_skin_photo">
+									<h3>사진 선택 및 순서</h3>
+									<div>
+										<div><img class="prev_photo" src="img/prev_photo_01.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div>
+										<div><img class="prev_photo" src="img/prev_photo_02.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div>
+										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+								</div>
+								
+								<div class="division_line"></div>
+								<div class="skin_photo_effect">
+									<h3>사진효과</h3>
+									<select name="select" id="effect_select">
+										<option value="사진 효과 선택">사진효과 선택</option>
+										<option value="페이드"> 페이드</option>
+									</select>
+									<select name="select" id="effect_select">
+										<option value="사진 효과 선택">빠르기 선택</option>
+										<option value="페이드"> 0.5</option>
+									</select>
+								</div>
+								<!--invite_skin_photo-->
+
+							</div>	
+							<!--skin_setting-->	
+						</div>
+						<!--섹션내용 끝-->
+					</div>
+					<!--스킨설정 섹션 끝-->
+
+					<!-- ============================================================= 예식정보 섹션 시작 -->
+					<div class="section">
+
+						<!-- 섹션 타이틀 -->
+						<div>
+							예식 정보(필수)
+							<div class="title_icon">
+								<img src="img/settingcheck.png" alt="title-img" />
+							</div>
+							<div class="title_top_icon">
+								<img src="img/setting_top.png" alt="title-icon" />
+							</div>
+							<!-- 오른쪽 버튼 -->
+						</div>
+						<!--섹션 타이틀 끝-->
+
+						<!-- 섹션 내용 -->
+						<div>
+							<div class="wedding_info">
+
+							<div class="wedding_date">
+
+								<form action="">
+									<div>
+									<input type="date" name="day" value="2021-10-30">
+									</div>
+
+									<div>
+									<select name="hour" id="hour">
+										<option value="시간">시간</option>
+										<option value="1시">1시</option>
+										<option value="2시">2시</option>
+										<option value="3시">3시</option>
+										<option value="4시">4시</option>
+										<option value="5시">5시</option>
+									</select>
+									<select name="minute" id="minute">
+										<option value="분">분</option>
+										<option value="1분">1분</option>
+										<option value="2분">2분</option>
+										<option value="3분">3분</option>
+										<option value="4분">4분</option>
+										<option value="5분">5분</option>
+									</select>
+									</div>
+
+									<div>
+										<input type="text" placeholder="예식장명">
+										<input type="text" placeholder="층 / 홀 / 실">
+									</div>
+								</form>
+
+							</div>
+							<!--wedding_date-->
+							
+							
+						</div>
+						<!--wedding_info-->
+
+						</div>
+						<!--섹션내용 끝-->
+					</div>
+					<!--예식정보 섹션 끝-->
+
+					<div class="top_title">
+						[순서 변경]버튼으로 내용이 보여지는 순서를 바꿀 수 있습니다.
+					</div>	
+
+
+				<!-- ============================================================= 초대인사말 섹션 시작 -->
+				<div class="section">
+
+					<!-- 섹션 타이틀 -->
+					<div>
+						초대 인사말
+						<div class="title_icon">
+							<img src="img/settingcheck.png" alt="title-img" />
+						</div>
+						<div class="title_top_icon">
+							<img src="img/setting_top.png" alt="title-icon" />
+						</div>
+						<!-- 오른쪽 버튼 -->
+					</div>
+					<!--섹션 타이틀 끝-->
+
+					<!-- 섹션 내용 -->
+					<div>
+						<div class="invite_greeting">
+							
+							<div class="greeting_form">
+							<form action="">
+
+								<input type="text" placeholder="결혼합니다">
+								
+								<div>
+								<button type="button">인사말 샘플 보기</button> <span class="circle_span">i</span> 다양한 인사말 샘플을 제공합니다.
+								</div>
+
+								<div>
+								<textarea name="text" id="greeting_area" cols="30" rows="10" placeholder="인사말 내용 입력"></textarea>
+								</div>
+							</form>
+							</div>
+
+							<div class="division_line"></div>
+
+							<div>
+								<h3>혼주 및 신랑신부 정보</h3>
+								<div class="half_block">
+									<div class="on">
+										<button type="button" class="radio_btn"></button>
+										부모님 표기
+									</div>
+
+									<div>
+										<button type="button" class="radio_btn"></button>
+										<!-- <img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼"> -->
+										신랑신부만 표기
+									</div>
+							</div>
+
+							<div class="groom">
+								신랑 측
+									<form action="">
+									<div class=groom_bride>
+										<div><input type="text" placeholder="신랑 부"></div>
+										<div><input type="text" placeholder="신랑 모"></div>
+										<div>의</div>
+												
+									</div>
+
+									<div class="groom_bride">
+										<div>									
+											<select name="" id="">
+												<option value="관계">관계</option>
+												<option value="장녀">장녀</option>
+												<option value="차녀">차녀</option>
+												<option value="삼녀">삼녀</option>
+												<option value="사녀">사녀</option>
+												<option value="막내">막내</option>
+												<option value="딸">딸</option>
+												<option value="조카">조카</option>
+												<option value="질녀">질녀</option>
+												<option value="손녀">손녀</option>
+												<option value="없음">없음</option>
+												<option value="기타">기타</option>
+											</select>
+										</div>	
+										
+									<div><input type="text" placeholder="신랑 성"></div>
+									<div><input type="text" placeholder="신랑 이름"></div>
+								</div>
+								</form>
+								
+							</div>
+							<!--groom_form-->
+							<div class="groom">
+								신부 측
+									<form action="">
+									<div class=groom_bride>
+										<div><input type="text" placeholder="신랑 부"> </div>
+										<div><input type="text" placeholder="신랑 모"> </div>
+										<div>의</div>
+									</div>
+
+									<div class="groom_bride">
+										<div>
+										<select name="" id="">
+											<option value="관계">관계</option>
+											<option value="장녀">장녀</option>
+											<option value="차녀">차녀</option>
+											<option value="삼녀">삼녀</option>
+											<option value="사녀">사녀</option>
+											<option value="막내">막내</option>
+											<option value="딸">딸</option>
+											<option value="조카">조카</option>
+											<option value="질녀">질녀</option>
+											<option value="손녀">손녀</option>
+											<option value="없음">없음</option>
+											<option value="기타">기타</option>
+										</select>
+										</div>
+									<div><input type="text" placeholder="신랑 성"> </div>
+									<div><input type="text" placeholder="신랑 이름"></div>
+								</div>
+								</form>
+								
+							</div>
+							<!--groom_form-->
+
+							<div> 
+							<!--신랑신부 이름순서 시작-->
+								<h3>신랑 신부 이름 표기 순서 (모바일 청첩장 전체 적용)</h3>
+								<div class="half_block">
+									<div class="on">
+										<button type="button" class="radio_btn"></button>
+										신랑/신부 순
+									</div>
+
+									<div>
+										<button type="button" class="radio_btn"></button>
+										신부/신랑 순
+									</div>
+								</div>
+								<!--tab_menu 초대인사말-->
+							</div>
+							<!--신랑신부 이름순서 끝-->
 						</div>
 
+
+						</div>
+						<!--invite_greeting-->
+						
+					</div>	
+
 					</div>
+				<!--초대인사말 섹션 끝-->
+
+
+				
+				<!-- ============================================================= 축하연락처 섹션 시작 -->
+				<div class="section">
+
+					<!-- 섹션 타이틀 -->
+					<div>
+						축하 연락처
+						<div class="title_icon">
+							<img src="img/settingcheck.png" alt="title-img" />
+						</div>
+						<div class="title_top_icon">
+							<img src="img/setting_top.png" alt="title-icon" />
+						</div>
+						<!-- 오른쪽 버튼 -->
+					</div>
+					<!--섹션 타이틀 끝-->
+
+					<!-- 섹션 내용 -->
+					<div>
+						섹션 내용
+					</div>	
+
+					</div>
+				<!--축하 연락처 섹션 끝-->	
+
+
+
+					<!-- ============================================================= 달력 섹션 시작 -->
+					<div class="section">
+
+						<!-- 섹션 타이틀 -->
+						<div>
+							달력
+							<div class="title_icon">
+								<img src="img/settingcheck.png" alt="title-img" />
+							</div>
+							<div class="title_top_icon">
+								<img src="img/setting_top.png" alt="title-icon" />
+							</div>
+							<!-- 오른쪽 버튼 -->
+						</div>
+						<!--섹션 타이틀 끝-->
+	
+						<!-- 섹션 내용 -->
+						<div>
+							섹션 내용
+						</div>	
+	
+						</div>
+					<!--달력 섹션 끝-->	
+
+
+
+					<!-- ============================================================= 사진갤러리 섹션 시작 -->
+					<div class="section">
+
+						<!-- 섹션 타이틀 -->
+						<div>
+							사진갤러리
+							<div class="title_icon">
+								<img src="img/settingcheck.png" alt="title-img" />
+							</div>
+							<div class="title_top_icon">
+								<img src="img/setting_top.png" alt="title-icon" />
+							</div>
+							<!-- 오른쪽 버튼 -->
+						</div>
+						<!--섹션 타이틀 끝-->
+	
+						<!-- 섹션 내용 -->
+						<div>
+							섹션 내용
+						</div>	
+	
+						</div>
+					<!--사진갤러리 섹션 끝-->									
+
+
+					
+						<!-- ============================================================= 웨딩무비 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								웨딩 무비
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								섹션 내용
+							</div>	
+		
+							</div>
+						<!--웨딩무비 섹션 끝-->	
+
+
+						<!-- ============================================================= 오시는 길 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								오시는 길
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								섹션 내용
+							</div>	
+		
+							</div>
+						<!--오시는길 섹션 끝-->	
+
+
+
+						<!-- ============================================================= 안내사항 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								안내사항
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								섹션 내용
+							</div>	
+		
+							</div>
+						<!--안내사항 섹션 끝-->	
+
+
+
+						<!-- ============================================================= 축하의 마음 전하기 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								축하의 마음 전하기 (계좌번호)
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								섹션 내용
+							</div>	
+		
+							</div>
+						<!--축하의 마음 전하기 섹션 끝-->
+
+
+						
+						<!-- ============================================================= 축하의 마음 전하기 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								축하의 마음 전하기 (계좌번호)
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								섹션 내용
+							</div>	
+		
+							</div>
+						<!--축하의 마음 전하기 섹션 끝-->	
+
+
+						<!-- ============================================================= 축하 메시지 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								축하메시지
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								<h3>방문자에게서 축하 메시지를 받고, 상호 댓글을 남길 수 있습니다<br />
+									- 아래 예시 이미지를 참고해 주세요<br />
+									- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.</h3>
+							</div>	
+		
+							</div>
+						<!--축하의 마음 전하기 섹션 끝-->	
+
+
+						<!-- ============================================================= 예식일 연기 안내 섹션 시작 -->
+						<div class="section">
+
+							<!-- 섹션 타이틀 -->
+							<div>
+								예식일 연기 안내
+								<div class="title_icon">
+									<img src="img/settingcheck.png" alt="title-img" />
+								</div>
+								<div class="title_top_icon">
+									<img src="img/setting_top.png" alt="title-icon" />
+								</div>
+								<!-- 오른쪽 버튼 -->
+							</div>
+							<!--섹션 타이틀 끝-->
+		
+							<!-- 섹션 내용 -->
+							<div>
+								<h3>예식이 연기되었을 떄 사용할 수 있는 기능입니다.<br />
+									설정 시 알림용 공지 이미지가 생성되며, 모바일 청첩장 메인에 노출됩니다.</h3>
+									
+							</div>	
+		
+							</div>
+						<!--예식일 연기 안내 섹션 끝-->	
 
 				</div>
-				<!--모바일청첩장 설정 끝-->
+				<!--page_wrapper 모바일청첩장 설정 끝-->
 
+				<script>
+					$(function(){
 
+					});
+				</script>
 
 				<style>
 					.body_mid_menu {
@@ -3377,7 +4424,7 @@ function sample_cards_update() {
 					<div class=body_mid_menu onclick=location.href='review.php'>
 						이용후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
 					<div class=body_mid_menu onclick=location.href='event_view.php?event_no=7'>
-						셈플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
+						샘플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
 					</div>
 					<div class=body_mid_menu
 						onclick="$.cookie('product_sub_menu_show',0);location.href='insa.php?card_type=gb'">
