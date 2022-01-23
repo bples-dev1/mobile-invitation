@@ -882,7 +882,7 @@ $(function(){
 
 <!-- main_wrapper -->
 <div id=mask style="position: fixed; background-color: #000000; left: 0; top: 0; width: 0; height: 0; opacity: 0.7; z-index: 99;" onclick="zip_close('')"></div>
-<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff; max-width: 380px; ">
+<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff;  max-width:380px;  ">
 <div id=tops style="z-index: 40;">
 <!-- 최상단 -->
 
@@ -892,57 +892,41 @@ $(function(){
 <link rel="stylesheet" href="https://bojagicard.com/m/_head_menu1.css?hash=1635865200">
 <style>
 .window .header {
-	 width: 380px;  top:0px;
-	 background-color:transparent;
+	 width: 380px;     top:0px;
 }
 #main_header {
     opacity: 1;
 }
-#main_header {
-    opacity: 1;
-}
-.header_back img{
-	width: 10px; 
-	padding-top:15px;
-	padding-left:15px;
-}
-
-
 </style>
 <div class="window">
 
 	<!-- header start -->
 	<div class="header" id="main_header">
-
-		<div class="header_back">
-			<img src="img/arrow_back.png" alt="뒤로가기">
-		</div>
 	
-		<!-- <div class="burger-container">
+		<div class="burger-container">
 			<div id="burger">
 				<div class="bar topBar"></div>
 				<div class="bar btmBar"></div>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="menu1_btns">
 			
 			<table cellspacing=0 cellpadding=0 height=50 width=100%>
 				<tr align=center>
 					<td align="left" id="top_logo_cell">
-						<img src="img/logo.png" height="26" onclick="location.href='index.php'" />
+						<img src="https://bojagicard.com/m/img/151004_01_01.png" height="26" onclick="location.href='index.php'" /></td>
 					</td>
-					</td>
-					<!-- <td width=56 style="position: relative;" onclick="sample_menu('open')">
+					<td width=56 style="position: relative;" onclick="sample_menu('open')">
 						<div class="sample_pick_count" style="font-size: 9px; background-color: #fd4976; border-radius: 12px; line-height: 17px; height: 16px; width: 16px; position: absolute; right: -7px; top: 7px; color: white; text-align: center; opacity: 1; ">10</div>
 						<img class="menu1_right_btns" src=https://bojagicard.com/m/img/170224_01_03.png?1642125910 height=21 />
 						<img class="menu_tips" id="menu_tip_sample" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 19px; display: none;" alt="삼각형팁" />
-					</td> -->
+					</td>
 					<td width=10></td>
-					<!-- <td width=30 style="position: relative;" onclick="my_menu('open')">
+					<td width=30 style="position: relative;" onclick="my_menu('open')">
 						<img class="menu1_right_btns" src="https://bojagicard.com/m/img/170224_01_02.png" height="16" ondblclick="$('#mata_tag_setting_wrapper').toggle()" />
 						<img class="menu_tips" id="menu_tip_mypage" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 6px; display: none;" alt="삼각형팁" />
-					</td> -->
+					</td>
 					<td width=12 onclick="my_menu('open')">&nbsp;</td>
 				</tr>
 			</table>
@@ -1519,7 +1503,7 @@ function sample_cards_update() {
 
 
 
-<!-- 
+
 <script>
 function menu1_more() {
 
@@ -1580,7 +1564,7 @@ function menu1_more() {
 }());
 </script><!-- 페이지별 메뉴 시작 -->
 
- -->
+
 
 
 
@@ -1741,16 +1725,11 @@ function menu2toggle(){
 <!--회원가입 폼 시작-->
 	<!-- ★★★회원가입 style -->
 <style>
-	.join_wrap{
-		padding-bottom: 65px;
-		text-align: center; 
-		background: #f7f8f8;
-	}
 	/* 회원가입 타이틀 제목 */
 	.top_title {
-		width: 100%; height: 65px;
+		width: 100%; height: 67px;
 		font-size:12px;
-		line-height: 65px;
+		line-height: 67px;
 		text-align: center;
 		background-color: #e7eefd;
 		color:#3e6fef;
@@ -1764,7 +1743,7 @@ function menu2toggle(){
 		padding-right:24px;
 		text-align: left;
 		/* border:1px solid red; */
-		
+		box-sizing: border-box;
 	}
 
 	#join_form fieldset{
@@ -1773,7 +1752,6 @@ function menu2toggle(){
 
 	#join_form *{
 		font-size:12px;
-		box-sizing: border-box;
 	}
 
 	#join_form input{
@@ -1820,7 +1798,6 @@ function menu2toggle(){
 	#join_form .id_guide{
 		line-height: 16px;
 		padding-left:5px;
-		font-size:11px;
 	}
 	#join_form .pass_box{
 		width: 100%;
@@ -1910,50 +1887,28 @@ function menu2toggle(){
 		
 	}
 	#join_form .agree_wrap .agree_list{
-		
 		width: 100%;
 		height: 38px;
 		border-radius: 5px;
 		border:1px solid #dddddd;
 		background-color: #ffffff;
 		margin-top:10px;
-		padding-top:10px;
-		cursor: pointer;
 	}
-	#join_form .agree_wrap .agree_list span{
-		display: inline-block;
-		width: 100%;
+	#join_form .agree_wrap .agree_list p{
+		height: 16px;
 		padding-left:33px;
+		line-height: 16px;
 		background: url('img/check_off.png');
 		background-repeat:  no-repeat;
-		background-position:  10px top;
-		background-size: 14px 14px;
-		/* border:1px solid red; */
-		vertical-align: middle;
-		position: relative;
-
+		background-position:  10px center;
+		background-size: 15px;
 	}
-
-	#join_form .agree_wrap .agree_list span.on{
+	#join_form .agree_wrap .agree_list p.on{
 		background: url('img/check_on.png');
 		background-repeat:  no-repeat;
-		background-position:  10px top;
-		background-size: 14px 14px;
+		background-position:  10px center;
+		background-size: 15px;
 	}
-	#join_form .agree_wrap .agree_list img{
-	
-		/* border:1px solid red; */
-		margin-top:3px;
-		margin-right:10px;
-		width: 13px;height: 7px;
-		transition:all 0.2s ease;
-		
-	}
-	#join_form .agree_wrap .agree_list span.on img{
-		transform: rotate(180deg);	
-		
-	}
-	
 	#join_form .agree_wrap .agree_hidden{
 		width: 100%; height: 150px;
 		line-height: 19px;
@@ -1963,22 +1918,17 @@ function menu2toggle(){
 		font-size:12px;
 		overflow: auto;
 		margin-top:-1px;
+		padding-top:5px;
+		padding-right:8px;
+		padding-left:8px;
 		display: none;
-	}
-	pre{
-		white-space: pre-wrap;
-		/* padding-top:5px; */
-		padding-bottom: 5px;
-		padding-right:10px;
-		padding-left:10px;
-		font-size:11px;
+		
 	}
 
 	#join_form .join_btn{
 		width: 100%;
 		height: 38px;
 		background-color: #3e6fef;
-		border:none;
 		color:#ffffff;
 	}
 
@@ -1986,8 +1936,8 @@ function menu2toggle(){
 </style>
 	<!-- div 박스 기본세팅
 	font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;  -->
-
-<div class="join_wrap">
+<div style="font-size: 20px;  padding-bottom: 40px; text-align: center; background: #f7f8f8;" >
+		
 	<div class="top_title">
 		회원가입 후 자동으로 모바일 청첩장이 생성됩니다.
 	</div>
@@ -2050,28 +2000,312 @@ function menu2toggle(){
 	</div><!--form_wrap-->
 
 		<div class="agree_wrap">
-			<details>
-
 			<h3>개인정보 취급방침 및 이용약관</h3>
 		
-				<summary>
-					개인 정보 취급 방침에 동의합니다.<img src="img/arrow_down.png" alt="toggle button" align="right">
-				</summary>
+				<div class="agree_list">
+					<p>개인 정보 취급 방침에 동의합니다.</p>
+				</div>
 
-			
-<pre>‘주식회사 비플스’가 운영하는 보자기카드(www.bojagicard.com)는 (이하 ‘회사’는) 고객의 개인정보를 중요시하며,”정보통신망 이용촉진 및 정보보호”에 관한 법률을 준수하고 있습니다.
-회사는 개인정보취급방침을 통하여 고객님께서 제공시 하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+				<div class="agree_hidden" alt="개인정보" >
+				‘주식회사 비플스’가 운영하는 보자기카드(www.bojagicard.com)는 (이하 ‘회사’는) 고객의 개인정보를 중요시하며,”정보통신망 이용촉진 및 정보보호”에 관한 법률을 준수하고 있습니다.<br />
+				회사는 개인정보취급방침을 통하여 고객님께서 제공시 하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.<br />
+				<br />
+				회사는 개인정보 취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다. <br />
+				<br />
+				■ 수집하는 개인정보 항목<br />
+				<br />
+				   회사는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br />
+				<br />
+				   &omicron; 필수항목 : 이름 , 이메일, ID, 비밀번호 , 거주주소 , 휴대전화번호, 예식일<br />
+				   &omicron; 선택항목 : 신랑신부이름 및 양가 부모님 이름 등 상품제작시 기입정보<br />
+				   &omicron; 개인정보 수집방법 : 회원가입,샘플신청,주문서작성 <br />
+				<br />
+				■ 개인정보의 수집 및 이용목적<br />
+				<br />
+				   회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다..<br />
+				<br />
+				   &omicron; 서비스 제공에 관한 제작이행 및 배송서비스 콘텐츠 제공 및 물품제작, 배송등 <br />
+				   &omicron; 회원 관리 회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인<br />
+				   &omicron; 마케팅 및 광고용 자료 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계<br />
+				   &omicron; 회원대상 마케팅 활동<br />
+					  회사는 회원가입을 통해 등록된 회원에게 홍보성 메일 및 SMS메세지 등을 전송할 수 있으며,<br />
+					  회원은 이를 원치 않는 경우 메일 수신을 거부할 수 있습니다.<br />
+				<br />
+				■ 개인정보의 보유 및 이용기간<br />
+				<br />
+				   원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. <br />
+				   단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 <br />
+				   정한 일정한 기간 동안 회원정보를 보관합니다.<br />
+				<br />
+					보존 근거 : 전자상거래등에서의 소비자보호에 관한 법률<br />
+					보존 기간 : 5년<br />
+				<br />
+				   계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br />
+				   대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br />
+				   소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)<br />
+				<br />
+				■ 개인정보관리책임자에 관한 사항<br />
+				<br />
+				   회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만 및 열람 청구 등을 처리하기 위하여 아래와 같이 개인정보보호책임자를 두고 있습니다. <br />
+				   개인정보와 관련한 문의사항이 있으시면 아래의 개인정보 보호 책임자 또는 개인정보 보호 담당자에게 연락하여 주시기 바랍니다.<br />
+				   &omicron; 개인정보 보호 책임자<br />
+					  성명 : 박경영 차장<br />
+					  이메일 : kyungyoung@bojagicard.com<br />
+					  소속부서 : CS팀<br />
+				<br />
+				   &omicron; 개인정보 보호 담당자<br />
+					  성명 : 노동혁 과장<br />
+					  이메일 : noe@bojagicard.com<br />
+					  소속부서 : 개발팀<br />
+				<br />
+				■ 권익침해 구제방법<br />
+				<br />
+				   &omicron; 개인정보 침해신고센터 (한국인터넷진흥원 운영)<br />
+				   &period; 소관업무 : 개인정보 침해사실 신고, 상담 신청<br />
+				   &period; 전화 : (국번없이) 118 (ARS 내선 2번)<br />
+				   &period; 홈페이지 주소 : www.privacy.go.kr<br />
+				   &omicron; 경찰청 사이버테러대응센터<br />
+				   &period; 소관업무 : 해킹, 사기, 불법사이트 등 형사처벌 사안<br />
+				   &period; 전화 : (국번없이) 182<br />
+				   &period; 홈페이지 주소 : www.police.go.kr<br />
+				   <br />
+				■ 수집하는 개인정보 항목<br />
+				<br />
+				   회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br />
+				<br />
+				   &omicron; 수집항목 : 이름 ,  이메일, 비밀번호 , 자택 주소 , 휴대전화번호 , 이메일 <br />
+				   &omicron; 개인정보 수집방법 : 홈페이지(회원가입) <br />
+				<br />
+				■ 개인정보의 수집 및 이용목적<br />
+				<br />
+				   회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다..<br />
+				<br />
+				   &omicron; 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br />
+					  콘텐츠 제공 , 물품배송 또는 청구지 등 발송<br />
+				   &omicron; 회원 관리<br />
+					  회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 <br />
+					  비인가 사용 방지 , 가입 의사 확인<br />
+				   &omicron; 마케팅 및 광고용 자료<br />
+					  접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계<br />
+				   &omicron; 회원대상 마케팅 활동<br />
+					  회사는 회원가입을 통해 등록된 회원에게 홍보성 메일 및 쿠폰 등을 전송할 수 있으며,<br />
+					  회원은 이를 원치 않는 경우 메일 수신을 거부할 수 있습니다.<br />
+				<br />
+				■ 개인정보의 보유 및 이용기간<br />
+				<br />
+				   원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. <br />
+				   단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 <br />
+				   정한 일정한 기간 동안 회원정보를 보관합니다.<br />
+				<br />
+					보존 항목 : 이름 , 비밀번호<br />
+					보존 근거 : 전자상거래등에서의 소비자보호에 관한 법률<br />
+					보존 기간 : 5년<br />
+				<br />
+				   계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br />
+				   대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br />
+				   소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)
 
-회사는 개인정보 취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다. 
-
-■ 수집하는 개인정보 항목
-
-</pre>
-		</details>
-		</div><!--agree_hidden 이용약관-->
+			</div><!--agree_hidden 개인정보-->
 
 			<div class="agree_list">
-				<span>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</span>
+				<p>이용약관에 동의합니다.</p>
+			</div>				
+			
+			<div class="agree_hidden" alt="이용약관">
+				이 약관은 보자기카드(주식회사 비플스) (전자거래 사업자)가 운영하는 보자기카드(주식회사 비플스) 사이버 몰(이하 &quot;몰&quot;이라 한다)에서 제공하는 인터넷 관련 서비스(이하 &quot;서비스&quot;라 한다)를 이용함에 있어 사이버몰과 이용자의 권리&middot;의무 및 책임사항을 규정함을 목적으로 합니다.<br />
+				※「PC통신등을 이용하는 전자거래에 대해서도 그 성질에 반하지 않는한 이 약관을 준용합니다」<br />
+				<br />
+				<br />
+				제2조(정의)<br />
+				<br />
+				① &quot;몰&quot; 이란 보자기카드(주식회사 비플스)가 재화 또는 용역을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.<br />
+				② &quot;이용자&quot;란 &quot;몰&quot;에 접속하여 이 약관에 따라 &quot;몰&quot;이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.<br />
+				③ 회원'이라 함은 &quot;몰&quot;에 개인정보를 제공하여 회원등록을 한 자로서, &quot;몰&quot;의 정보를 지속적으로 제공받으며, &quot;몰&quot;이 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.<br />
+				④ 비회원'이라 함은 회원에 가입하지 않고 &quot;몰&quot;이 제공하는 서비스를 이용하는 자를 말합니다.<br />
+				<br />
+				<br />
+				제3조 (약관의 명시와 개정)<br />
+				<br />
+				① &quot;몰&quot;은 이 약관의 내용과 상호, 영업소 소재지, 대표자의 성명, 사업자등록번호, 연락처(전화, 팩스 ) 등을 이용자가 알 수 있도록 보자기카드(주식회사 비플스) 사이버몰의 초기 서비스화면(전면)에 게시합니다.<br />
+				② &quot;몰&quot;은 약관의규제등에관한법률, 전자거래기본법, 전자서명법, 정보통신망이용촉진등에관한법률, 방문판매등에관한법률, 소비자보호법 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br />
+				③ &quot;몰&quot;이 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 몰의 초기화면에 그 적용일자 7일이전부터 적용일자 전일까지 공지합니다.<br />
+				④ &quot;몰&quot;이 약관을 개정할 경우에는 그 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한 이용자가 개정약관 조항의 적용을 받기를 원하는 뜻을 제3항에 의한 개정약관의 공지기간내에 '몰&quot;에 송신하여 &quot;몰&quot;의 동의를 받은 경우에는 개정약관 조항이 적용됩니다.<br />
+				⑤ 이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 정부가 제정한 전자거래소비자보호지침 및 관계법령 또는 상관례에 따릅니다.<br />
+				<br />
+				<br />
+				제4조(서비스의 제공 및 변경)<br />
+				<br />
+				① &quot;몰&quot;은 다음과 같은 업무를 수행합니다.<br />
+				1. 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결<br />
+				2. 구매계약이 체결된 재화 또는 용역의 배송<br />
+				3. 기타 &quot;몰&quot;이 정하는 업무<br />
+				<br />
+				② &quot;몰&quot;은 재화의 품절 또는 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화&middot;용역의 내용을 변경할 수 있습니다. 이 경우에는 변경된 재화&middot;용역의 내용 및 제공일자를 명시하여 현재의 재화&middot;용역의 내용을 게시한 곳에 그 제공일자 이전 7일부터 공지합니다.<br />
+				③ &quot;몰&quot;이 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화의 품절 또는 기술적 사양의 변경등의 사유로 변경할 경우에는 &quot;몰&quot;은 이로 인하여 이용자가 입은 손해를 배상합니다. 단, &quot;몰&quot;에 고의 또는 과실이 없는 경우에는 그러하지 아니합니다.<br />
+				<br />
+				<br />
+				제5조(서비스의 중단)<br />
+				<br />
+				① &quot;몰&quot;은 컴퓨터 등 정보통신설비의 보수점검&middot;교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.<br />
+				② 제1항에 의한 서비스 중단의 경우에는 &quot;몰&quot;은 제8조에 정한 방법으로 이용자에게 통지합니다.<br />
+				③ &quot;몰&quot;은 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 단 &quot;몰&quot;에 고의 또는 과실이 없는 경우에는 그러하지 아니합니다.<br />
+				<br />
+				<br />
+				제6조(회원가입)<br />
+				<br />
+				① 이용자는 &quot;몰&quot;이 정한 가입 양식에 따라 회원정보를 기입한 후 이 약관에 동의한다는 의사표시를 함으로서 회원가입을 신청합니다.<br />
+				② &quot;몰&quot;은 제1항과 같이 회원으로 가입할 것을 신청한 이용자 중 다음 각호에 해당하지 않는 한 회원으로 등록합니다.<br />
+				1. 가입신청자가 이 약관 제7조제3항에 의하여 이전에 회원자격을 상실한 적이 있는 경우, 다만 제7조제3항에 의한 회원자격 상실후 3년이 경과한 자로서 &quot;몰&quot;의 회원재가입 승낙을 얻은 경우에는 예외로 한다.<br />
+				2. 등록 내용에 허위, 기재누락, 오기가 있는 경우<br />
+				3. 기타 회원으로 등록하는 것이 &quot;몰&quot;의 기술상 현저히 지장이 있다고 판단되는 경우<br />
+				③ 회원가입계약의 성립시기는 &quot;몰&quot;의 승낙이 회원에게 도달한 시점으로 합니다.<br />
+				④ 회원은 제15조제1항에 의한 등록사항에 변경이 있는 경우, 즉시 전자우편 기타 방법으로 &quot;몰&quot;에 대하여 그 변경사항을 알려야 합니다.<br />
+				<br />
+				<br />
+				제7조(회원 탈퇴 및 자격 상실 등)<br />
+				<br />
+				① 회원은 &quot;몰&quot;에 언제든지 탈퇴를 요청할 수 있으며 &quot;몰&quot;은 즉시 회원탈퇴를 처리합니다.<br />
+				② 회원이 다음 각호의 사유에 해당하는 경우, &quot;몰&quot;은 회원자격을 제한 및 정지시킬 수 있습니다.<br />
+				1. 가입 신청시에 허위 내용을 등록한 경우<br />
+				2. &quot;몰&quot;을 이용하여 구입한 재화&middot;용역 등의 대금, 기타 &quot;몰&quot;이용에 관련하여 회원이 부담하는 채무를 기일에 지급하지 않는 경우<br />
+				3. 다른 사람의 &quot;몰&quot; 이용을 방해하거나 그 정보를 도용하는 등 전자거래질서를 위협하는 경우<br />
+				4. &quot;몰&quot;을 이용하여 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하는 경우<br />
+				③ &quot;몰&quot;이 회원 자격을 제한&middot;정지 시킨후, 동일한 행위가 2회이상 반복되거나 30일이내에 그 사유가 시정되지 아니하는 경우 &quot;몰&quot;은 회원자격을 상실시킬 수 있습니다.<br />
+				④ &quot;몰&quot;이 회원자격을 상실시키는 경우에는 회원등록을 말소합니다. 이 경우 회원에게 이를 통지하고, 회원등록 말소전에 소명할 기회를 부여합니다.<br />
+				<br />
+				<br />
+				제8조(회원에 대한 통지)<br />
+				<br />
+				① &quot;몰&quot;이 회원에 대한 통지를 하는 경우, 회원이 &quot;몰&quot;에 제출한 전자우편 주소로 할 수 있습니다.<br />
+				② &quot;몰&quot;은 불특정다수 회원에 대한 통지의 경우 1주일이상 &quot;몰&quot; 게시판에 게시함으로서 개별 통지에 갈음할 수 있습니다.<br />
+				<br />
+				<br />
+				제9조(구매신청)<br />
+				<br />
+				&quot;몰&quot;이용자는 &quot;몰&quot;상에서 이하의 방법에 의하여 구매를 신청합니다.<br />
+				1. 성명, 주소, 전화번호 입력<br />
+				2. 재화 또는 용역의 선택<br />
+				3. 결제방법의 선택<br />
+				4. 이 약관에 동의한다는 표시(예, 마우스 클릭)<br />
+				<br />
+				<br />
+				제10조 (계약의 성립)<br />
+				<br />
+				① &quot;몰&quot;은 제9조와 같은 구매신청에 대하여 다음 각호에 해당하지 않는 한 승낙합니다.<br />
+				1. 신청 내용에 허위, 기재누락, 오기가 있는 경우<br />
+				2. 미성년자가 담배, 주류등 청소년보호법에서 금지하는 재화 및 용역을 구매하는 경우<br />
+				3. 기타 구매신청에 승낙하는 것이 &quot;몰&quot; 기술상 현저히 지장이 있다고 판단하는 경우<br />
+				② &quot;몰&quot;의 승낙이 제12조제1항의 수신확인통지형태로 이용자에게 도달한 시점에 계약이 성립한 것으로 봅니다.<br />
+				<br />
+				<br />
+				제11조(지급방법)<br />
+				<br />
+				&quot;몰&quot;에서 구매한 재화 또는 용역에 대한 대금지급방법은 다음 각호의 하나로 할 수 있습니다.<br />
+				1. 계좌이체<br />
+				2. 신용카드결제<br />
+				3. 온라인무통장입금<br />
+				4. 전자화폐에 의한 결제<br />
+				5. 수령시 대금지급 등<br />
+				<br />
+				<br />
+				제12조(수신확인통지&middot;구매신청 변경 및 취소)<br />
+				<br />
+				① &quot;몰&quot;은 이용자의 구매신청이 있는 경우 이용자에게 수신확인통지를 합니다.<br />
+				② 수신확인통지를 받은 이용자는 의사표시의 불일치등이 있는 경우에는 수신확인통지를 받은 후 즉시 구매신청 변경 및 취소를 요청할 수 있습니다.<br />
+				③ &quot;몰&quot;은 배송전 이용자의 구매신청 변경 및 취소 요청이 있는 때에는 지체없이 그 요청에 따라 처리합니다.<br />
+				<br />
+				<br />
+				제13조(배송)<br />
+				<br />
+				&quot;몰&quot;은 이용자가 구매한 재화에 대해 배송수단, 수단별 배송비용 부담자, 수단별 배송기간 등을 명시합니다. 만약 &quot;몰&quot;의 고의&middot;과실로 약정 배송기간을 초과한 경우에는 그로 인한 이용자의 손해를 배상합니다.<br />
+				<br />
+				<br />
+				제14조(환급, 반품 및 교환)<br />
+				<br />
+				① &quot;몰&quot;은 이용자가 구매신청한 재화 또는 용역이 품절등의 사유로 재화의 인도 또는 용역의 제공을 할 수 없을 때에는 지체없이 그 사유를 이용자에게 통지하고, 사전에 재화 또는 용역의 대금을 받은 경우에는 대금을 받은 날부터 3일이내에, 그렇지 않은 경우에는 그 사유발생일로부터 3일이내에 계약해제 및 환급절차를 취합니다.<br />
+				② 다음 각호의 경우에는 &quot;몰&quot;은 배송된 재화일지라도 재화를 반품받은 다음 영업일 이내에 이용자의 요구에 따라 즉시 환급, 반품 및 교환 조치를 합니다. 다만 그 요구기한은 배송된 날로부터 20일 이내로 합니다.<br />
+				1. 배송된 재화가 주문내용과 상이하거나 &quot;몰&quot;이 제공한 정보와 상이할 경우<br />
+				2. 배송된 재화가 파손, 손상되었거나 오염되었을 경우<br />
+				3. 재화가 광고에 표시된 배송기간보다 늦게 배송된 경우<br />
+				4. 방문판매등에관한법률 제18조에 의하여 광고에 표시하여야 할 사항을 표시하지 아니한 상태에서 이용자의 청약이 이루어진 경우<br />
+				<br />
+				<br />
+				제15조(개인정보보호)<br />
+				<br />
+				① &quot;몰&quot;은 이용자의 정보수집시 구매계약 이행에 필요한 최소한의 정보를 수집합니다.<br />
+				다음 사항을 필수사항으로 하며 그 외 사항은 선택사항으로 합니다.<br />
+				1. 성명<br />
+				2. 주소<br />
+				3. 전화번호<br />
+				4. 희망ID(회원의 경우)<br />
+				5. 비밀번호(회원의 경우)<br />
+				② &quot;몰&quot;이 이용자의 개인식별이 가능한 개인정보를 수집하는 때에는 반드시 당해 이용자의 동의를 받습니다.<br />
+				③ 제공된 개인정보는 당해 이용자의 동의없이 목적외의 이용이나 제3자에게 제공할 수 없으며, 이에 대한 모든 책임은 &quot;몰&quot;이 집니다. 다만, 다음의 경우에는 예외로 합니다.<br />
+				1. 배송업무상 배송업체에게 배송에 필요한 최소한의 이용자의 정보(성명, 주소, 전화번호)를 알려주는 경우<br />
+				2. 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우<br />
+				④ &quot;몰&quot;이 제2항과 제3항에 의해 이용자의 동의를 받아야 하는 경우에는 개인정보관리 책임자의 신원(소속, 성명 및 전화번호 기타 연락처), 정보의 수집목적 및 이용목적, 제3자에 대한 정보제공 관련사항(제공받는자, 제공목적 및 제공할 정보의 내용)등 정보통신망이용촉진등에관한법률 제16조제3항이 규정한 사항을 미리 명시하거나 고지해야 하며 이용자는 언제든지 이 동의를 철회할 수 있습니다.<br />
+				⑤ 이용자는 언제든지 &quot;몰&quot;이 가지고 있는 자신의 개인정보에 대해 열람 및 오류정정을 요구할 수 있으며 &quot;몰&quot;은 이에 대해 지체없이 필요한 조치를 취할 의무를 집니다. 이용자가 오류의 정정을 요구한 경우에는 &quot;몰&quot;은 그 오류를 정정할 때까지 당해 개인정보를 이용하지 않습니다.<br />
+				⑥ &quot;몰&quot;은 개인정보 보호를 위하여 관리자를 한정하여 그 수를 최소화하며 신용카드, 은행계좌 등을 포함한 이용자의 개인정보의 분실, 도난, 유출, 변조 등으로 인한 이용자의 손해에 대하여 모든 책임을 집니다.<br />
+				⑦ &quot;몰&quot; 또는 그로부터 개인정보를 제공받은 제3자는 개인정보의 수집목적 또는 제공받은 목적을 달성한 때에는 당해 개인정보를 지체없이 파기합니다.<br />
+				<br />
+				<br />
+				제16조(&quot;몰&quot;의 의무)<br />
+				<br />
+				① &quot;몰은 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고, 안정적으로 재화&middot;용역을 제공하는 데 최선을 다하여야 합니다.<br />
+				② &quot;몰&quot;은 이용자가 안전하게 인터넷 서비스를 이용할 수 있도록 이용자의 개인정보(신용정보 포함)보호를 위한 보안 시스템을 갖추어야 합니다.<br />
+				③ &quot;몰&quot;이 상품이나 용역에 대하여 「표시&middot;광고의공정화에관한법률」 제3조 소정의 부당한 표시&middot;광고행위를 함으로써 이용자가 손해를 입은 때에는 이를 배상할 책임을 집니다.<br />
+				④ &quot;몰&quot;은 이용자가 원하지 않는 영리목적의 광고성 전자우편을 발송하지 않습니다.<br />
+				<br />
+				<br />
+				제17조( 회원의 ID 및 비밀번호에 대한 의무)<br />
+				<br />
+				① 제15조의 경우를 제외한 ID와 비밀번호에 관한 관리책임은 회원에게 있습니다.<br />
+				② 회원은 자신의 ID 및 비밀번호를 제3자에게 이용하게 해서는 안됩니다.<br />
+				③ 회원이 자신의 ID 및 비밀번호를 도난당하거나 제3자가 사용하고 있음을 인지한 경우에는 바로 &quot;몰&quot;에 통보하고 &quot;몰&quot;의 안내가 있는 경우에는 그에 따라야 합니다.<br />
+				<br />
+				<br />
+				제18조(이용자의 의무)<br />
+				<br />
+				이용자는 다음 행위를 하여서는 안됩니다.<br />
+				1. 신청 또는 변경시 허위내용의 등록<br />
+				2. &quot;몰&quot;에 게시된 정보의 변경<br />
+				3. &quot;몰&quot;이 정한 정보 이외의 정보(컴퓨터 프로그램 등)의 송신 또는 게시<br />
+				4. &quot;몰&quot; 기타 제3자의 저작권 등 지적재산권에 대한 침해<br />
+				5. &quot;몰&quot; 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위<br />
+				6. 외설 또는 폭력적인 메시지&middot;화상&middot;음성 기타 공서양속에 반하는 정보를 몰에 공개 또는 게시하는 행위<br />
+				<br />
+				<br />
+				제19조(연결&quot;몰&quot;과 피연결&quot;몰&quot; 간의 관계)<br />
+				<br />
+				① 상위 &quot;몰&quot;과 하위 &quot;몰&quot;이 하이퍼 링크(예: 하이퍼 링크의 대상에는 문자, 그림 및 동화상 등이 포함됨)방식 등으로 연결된 경우, 전자를 연결 &quot;몰&quot;(웹 사이트)이라고 하고 후자를 피연결 &quot;몰&quot;(웹사이트)이라고 합니다.<br />
+				② 연결 &quot;몰&quot;은 피연결 &quot;몰&quot;이 독자적으로 제공하는 재화&middot;용역에 의하여 이용자와 행하는 거래에 대해서 보증책임을지지 않는다는 뜻을 연결 &quot;몰&quot;의 사이트에서 명시한 경우에는 그 거래에 대한 보증책임을지지 않습니다.<br />
+				<br />
+				<br />
+				제20조(저작권의 귀속 및 이용제한)<br />
+				<br />
+				① &quot;몰&quot;이 작성한 저작물에 대한 저작권 기타 지적재산권은 &quot;몰&quot;에 귀속합니다.<br />
+				② 이용자는 &quot;몰&quot;을 이용함으로써 얻은 정보를 &quot;몰&quot;의 사전 승낙없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안됩니다.<br />
+				③ &quot;몰&quot;내에서 작성된 이용후기의 저작권은 &quot;몰&quot;에 귀속되며, 사전동의 없이 &quot;몰&quot;에 의해 재배포될 수 있습니다.<br />
+				<br />
+				<br />
+				<br />
+				제21조(분쟁해결)<br />
+				<br />
+				① &quot;몰&quot;은 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상처리하기 위하여 피해보상처리기구를 설치&middot;운영합니다.<br />
+				② &quot;몰&quot;은 이용자로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한 경우에는 이용자에게 그 사유와 처리일정을 즉시 통보해 드립니다.<br />
+				③ &quot;몰&quot;과 이용자간에 발생한 분쟁은 전자거래기본법 제28조 및 동 시행령 제15조에 의하여 설치된 전자거래분쟁조정위원회의 조정에 따를 수 있습니다.<br />
+				<br />
+				<br />
+				제22조(재판권 및 준거법)<br />
+				<br />
+				① &quot;몰&quot;과 이용자간에 발생한 전자거래 분쟁에 관한 소송은 민사소송법상의 관할법원에 제기합니다.<br />
+				② &quot;몰&quot;과 이용자간에 제기된 전자거래 소송에는 한국법을 적용합니다.<br />
+				
+				
+			</div><!--agree_hidden 이용약관-->
+
+			<div class="agree_list">
+				<p>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</p>
 			</div>
 
 		</div><!--agree_wrap end-->
@@ -2084,6 +2318,32 @@ function menu2toggle(){
 
 <script>
 	$(function(){
+		// $('.agree_list').on('click', function(){
+		// 	var stat = $(this).children('p').prop('class')
+		// 	console.log($(this).children('p').prop('class'))
+		// 	if (stat == 'on') {
+		// 		$(this).children('p').removeClass('on')
+		// 		$(this).next().hide()
+		// 	} else {
+		// 		$(this).children('p').addClass('on')
+		// 		$(this).next().show()
+		// 	}
+			// $('.agree_list > p').blahasdasd
+			//.agree_list > p 직계자식만 찾아서 하는 방식, children은 부모안의 p를 모두 탐색 해야하기 때문에 처리속도가 느릴 수 있음
+
+		$('.agree_list').on('click', function(){
+			var stat = $('p', this).attr('class')
+			if (stat == 'on') {
+				$('p', this).removeClass('on')
+				$(this).next().hide()
+			} else {
+				$('p', this).addClass('on')
+				$(this).next().show()
+			}
+
+		});
+		// .agree_list 이벤트 끝
+
 		//회원가입을 클릭시 이름, 아이디, 비번 입력했는지 검토 후 정확하지 않은경우 에러메시지 출력
 		//이름 필수 입력 정보입니다.
 		//아이디  아이디 중복확인을 해주세요
@@ -2143,7 +2403,7 @@ function menu2toggle(){
 	<div class=body_mid_menu onclick=location.href='review.php'> 
 		이용후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
 	<div class=body_mid_menu onclick=location.href='event_view.php?event_no=7'> 
-		샘플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> 
+		셈플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> 
 	</div>
 	<div class=body_mid_menu onclick="$.cookie('product_sub_menu_show',0);location.href='insa.php?card_type=gb'" > 
 		인사말검색 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>

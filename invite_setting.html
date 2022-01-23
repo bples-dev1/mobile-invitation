@@ -3038,7 +3038,6 @@ function sample_cards_update() {
 					.section form *{
 						font-size:12px;
 						border-radius: 3px;
-					
 					}
 
 					.section select{
@@ -3046,15 +3045,21 @@ function sample_cards_update() {
 						background-repeat:no-repeat;
 						background-position: 90% center;
 						background-size:17px;
+						padding-left:10px;
 					}
 
 					.section button{
 						color:#333;
 						height: 38px;
 						cursor: pointer;
+						border-radius: 3px;
+						font-size:12px;
 					}
 					.section input{
 						height: 38px;
+						border-radius: 3px;
+						font-size:12px;
+						padding-left:10px;
 					}
 
 					div .radio_btn{
@@ -3072,6 +3077,17 @@ function sample_cards_update() {
 						width: 15px;height: 15px;
 						background: url("img/btn_radio_on.png")center;
 						background-size: 15px;
+					}
+
+					.checkbox_btn{
+						width: 15px;
+						height: 15px;
+						background: url("img/check_off.png")top;
+						background-repeat: no-repeat;
+						background-size: 15px;
+						border:none;
+						vertical-align: middle;
+						margin-right:6px;
 					}
 					.modify_btn{   
 						width: 32px;
@@ -3152,8 +3168,8 @@ function sample_cards_update() {
 						background-color: #f7f8f8;
                         padding-top:20px;
                         padding-bottom:34px;
-						margin-left: 24px;
-						margin-right: 24px;
+						padding-left: 24px;
+						padding-right: 24px;
 						font-size: 12px;
 						color: #333333;
 					}
@@ -3223,7 +3239,7 @@ function sample_cards_update() {
 						height: 100%;
                         font-size:0;
                         padding-top:18px;
-                        border:1px solid red;				
+                        /* border:1px solid red;				 */
 					}
                     
 					.section > div:last-child .present_list div{
@@ -3240,8 +3256,6 @@ function sample_cards_update() {
 					.section > div:last-child .present_list .item .item_img{
 						
 						height: 130px;
-						
-					
 					}
 			
 					.item_bottom{
@@ -3443,8 +3457,7 @@ function sample_cards_update() {
 					.invite_skin_list .invite_skin_photo > div div:last-child img{
 						padding-left:10px;
 						padding-right:7px;
-						/* padding-top:15px; */
-						
+						/* padding-top:15px; */						
 					} 
 				
 					.skin_photo_effect{
@@ -3479,30 +3492,31 @@ function sample_cards_update() {
 						border:1px solid #e8e8e8;
 						width: calc(100% - 10px);
 						height: 33px;
-						margin-right:10px;
-						
-						
+						margin-right:10px;										
 					}
+
 					.wedding_date div{
 						display: inline-block;
 						width: calc( calc(100% - 10px) / 2 );
 						/* border:1px solid green; */
 						vertical-align: text-top;
 					}
+
 					.wedding_date div:first-child{
 						margin-right:10px;
 					}
+
 					/* .wedding_date .time_select {
 						width: 50%;
 						border:1px solid red;
 					} */
 					
-					.wedding_date div:nth-child(2) select{
-					
+					.wedding_date div:nth-child(2) select{					
 						border:1px solid #e8e8e8;
 						width: calc( calc(100% - 13px) / 2 );
 						height: 33px;
 					}
+
 					.wedding_date select:first-child{
 						margin-right:10px;
 					}
@@ -3510,11 +3524,11 @@ function sample_cards_update() {
 					.wedding_date div:nth-child(3){
 						width: 100%;
 					} 
+
 					.wedding_date div:nth-child(3) input{
 						width: 100%;
 						margin-top:10px;	
 					}
-
 
 					/* 초대인사말 */
 					.invite_greeting input{
@@ -3562,6 +3576,9 @@ function sample_cards_update() {
 						resize: none;
 					}
 
+					.phone_wrap:last-child{
+						margin-top:20px;
+					}
 					.groom{
 						width: 100%;
 						/* border:1px solid red; */
@@ -3594,6 +3611,83 @@ function sample_cards_update() {
 					.groom_bride input{
 						background-color: #ffffff;
 					}
+
+					.phone_messege{
+						/* border:1px solid red; */
+					}			
+					.groom_phone_list{
+						display: inline-block;
+						width: 100%;
+						/* border:1px solid green; */
+						font-size: 0;
+					
+					}
+
+					.groom_phone_list div{
+						display: inline-block;
+						/* width: calc( calc(100% - 20px) / 2 ); */
+						width: calc(100% / 2 - 5px);
+						vertical-align: top;
+						border-radius: 3px;
+					}
+					.groom_phone_list div:first-child{
+						margin-right:10px;
+						/* border:1px solid navy; */
+						height: 38px;
+					}
+					.groom_phone_list div:first-child div {
+						width: calc( calc(100% - 10px) / 2 );
+						/* background: skyblue; */
+					
+					}
+
+					.groom_phone_list input{
+						width: 100%;
+						height: 38px;
+						background-color: #ffffff;
+					}
+					.groom_phone_list button{
+						width: 100%;
+						height: 38px;
+						border:none;
+						border-radius: 3px;
+					}
+					.groom_phone_list div:first-child div input{
+						background-color: transparent;
+					}
+
+					.groom_phone_list > div:last-child div{						
+						width: 100%;
+						/* border:1px solid yellow; */
+						} 
+
+					.groom_phone_list div button{
+						height: 38px;
+						border:1px solid #dddddd;
+						background: url("img/check_off.png")no-repeat 10px center;
+						background-color: #ffffff;;
+						background-size: 15px;
+						font-size: 12px;
+						padding-left:30px;
+								
+					}
+
+					.groom_phone_list div > div:last-child{
+						height: 38px;
+						/* border:1px solid green; */
+					}
+
+
+					
+					/* 달력	 */
+					.calendar_section > div{
+						text-align: center;
+					}
+					.calendar_section img{
+						width: 158px;
+					}
+
+				
 				</style> 
 				
                 <!-- width: calc( calc(100% - 20px) / 3 ); -->
@@ -4033,10 +4127,10 @@ function sample_cards_update() {
 									<div><input type="text" placeholder="신랑 성"></div>
 									<div><input type="text" placeholder="신랑 이름"></div>
 								</div>
-								</form>
-								
+								</form>							
 							</div>
-							<!--groom_form-->
+							<!--groom_form-->				
+
 							<div class="groom">
 								신부 측
 									<form action="">
@@ -4071,6 +4165,8 @@ function sample_cards_update() {
 							</div>
 							<!--groom_form-->
 
+							<div class="division_line"></div>
+							
 							<div> 
 							<!--신랑신부 이름순서 시작-->
 								<h3>신랑 신부 이름 표기 순서 (모바일 청첩장 전체 적용)</h3>
@@ -4118,9 +4214,103 @@ function sample_cards_update() {
 					<!--섹션 타이틀 끝-->
 
 					<!-- 섹션 내용 -->
-					<div>
-						섹션 내용
+
+				<div>
+
+					<div class="phone_wrap">
+						신랑 측
+						<div class="phone_messege">
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">신랑</button></div>
+									<div><input type="text" placeholder="신랑 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>
+							
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">부</button></div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>		
+
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">모</button></div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>		
+								
 					</div>	
+					<!--phone_messege-->	
+					</div>
+					<!--신랑 측-->
+
+					<div class="phone_wrap">
+						신부 측
+						<div class="phone_messege">
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">신부</button></div>
+									<div><input type="text" placeholder="신랑 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>
+							
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">부</button></div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>		
+
+							<div class="groom_phone_list">								
+								<div>
+									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
+									<div><button type="button">모</button></div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+								
+								<div>
+									<div><input type="text" placeholder="- 없이 입력"></div>          
+								</div>
+							</div>		
+								
+					</div>	
+					<!--phone_messege-->	
+					</div>
+
+
+				</div>	
+				
+					
+							
+						
+					
 
 					</div>
 				<!--축하 연락처 섹션 끝-->	
@@ -4132,6 +4322,7 @@ function sample_cards_update() {
 
 						<!-- 섹션 타이틀 -->
 						<div>
+							
 							달력
 							<div class="title_icon">
 								<img src="img/settingcheck.png" alt="title-img" />
@@ -4142,15 +4333,24 @@ function sample_cards_update() {
 							<!-- 오른쪽 버튼 -->
 						</div>
 						<!--섹션 타이틀 끝-->
-	
+
 						<!-- 섹션 내용 -->
 						<div>
-							섹션 내용
-						</div>	
-	
+							<div class="calendar_section">
+								<h3>
+									- 달력은 아래 예시 이미지를 참고해 주세요. <br />
+									- 예식 정보에 입력하신 예식일자를 기준으로 표기됩니다.<br />
+									- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.
+								</h3>
+								
+								<div>
+									<img src="img/prev_calendar.png" alt="달력 이미지">
+								</div>
+							</div>
 						</div>
-					<!--달력 섹션 끝-->	
-
+						<!--섹션내용 끝-->
+					</div>
+					<!--예식정보 섹션 끝-->
 
 
 					<!-- ============================================================= 사진갤러리 섹션 시작 -->
@@ -4197,7 +4397,22 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								섹션 내용
+								<div>
+									<h3>
+										모바일 초대 영상 제작 시 자동 생성됩니다 <br />
+										보유 중이신 할인쿠폰으로 저렴하게 제작하세요.
+									</h3>
+
+									<div>
+										<img src="img/prev_movie.png" alt="웨딩무비" style="width: 150px;">
+										<img class="modify_btn" src="img/btn_change.png" alt="순서변경 버튼" >
+									</div>
+									<button type=button>웨딩 무비 신청하기</button>
+									<div>
+										<span class="circle_span">i</span>
+										순서 변경 시 갤러리와 웨딩 무비가 한 묶음으로 이동합니다.
+									</div>
+								</div>
 							</div>	
 		
 							</div>

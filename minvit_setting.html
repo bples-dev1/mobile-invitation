@@ -411,7 +411,7 @@ function str_check(obj) {
 	
 
 	html { -webkit-text-size-adjust: 100%; }
-	body { margin:0; padding:0; background-color: #fafafa; }
+	body { margin:0; background-color: #fafafa; }
 	pre { font-size: 11px; }
 	form { margin: 0; padding: 0; border: 0; }
 	th { font-size: 12px; }
@@ -445,7 +445,7 @@ function str_check(obj) {
 		
 	}
 	.autotextarea { padding: 12px; padding-left: 6px; width: 100%; overflow: hidden;  height: auto; }
-	select { background-image: url('https://bojagicard.com/m/img/select_arrow.png?1641974971'); background-repeat: no-repeat; background-size: 32px 40px; background-position: right 0; padding-right: 18px; margin: 0; vertical-align: top; }
+	select { background-image: url('./img/select_arrow.png?1641974971'); background-repeat: no-repeat; background-size: 32px 40px; background-position: right 0; padding-right: 18px; margin: 0; vertical-align: top; }
 	select::-ms-expand {  display: none;  }
 
 	/* 이름, 아이디, 이메일 */
@@ -525,7 +525,6 @@ function str_check(obj) {
 		box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative;
 		text-align: center; background-color: #ffffff; color: #333333; font-size: 20px;
 		padding-top: 18px; padding-bottom: 18px;
-		
 	}
 
 	.btn_x_t2 {  /* 투명 x 버튼 for title2 */
@@ -843,7 +842,7 @@ input[name=input_option_engname] { width: 100%; }
 </style>
 
 <style>
-.post_no         { display:inline-block; padding:0; width:16px; height:17px; text-align:center; margin:10px; background-color:#666666; color:#fff; font-size:11px; border-radius:14px; line-height:17px;  }
+.post_no         { display:inline-block; padding:0; width:16px; height:17px; text-align:center; margin:10px;  background-color:#666666; color:#fff; font-size:11px; border-radius:14px; line-height:17px;  }
 .post_title_icon { display:inline-block; padding:0; width:16px; height:17px; text-align:center; margin:10px; }
 .post_title_date { position:absolute; right:17px; top:17px; font-size:11px; color:#999999; }
 .post_title { color: #333333; font-size:12px;  box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  border-bottom:1px solid #dddddd;  padding: 3px; padding-left: 0; padding-right: 0;  position: relative; line-height: 35px; font-size: 12px; }
@@ -882,7 +881,7 @@ $(function(){
 
 <!-- main_wrapper -->
 <div id=mask style="position: fixed; background-color: #000000; left: 0; top: 0; width: 0; height: 0; opacity: 0.7; z-index: 99;" onclick="zip_close('')"></div>
-<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff; max-width: 380px; ">
+<div id=main_wrapper style="position: relative; border: 0px solid red; margin: auto; font-size: 0; background-color: #fff;  max-width:380px;  ">
 <div id=tops style="z-index: 40;">
 <!-- 최상단 -->
 
@@ -892,57 +891,41 @@ $(function(){
 <link rel="stylesheet" href="https://bojagicard.com/m/_head_menu1.css?hash=1635865200">
 <style>
 .window .header {
-	 width: 380px;  top:0px;
-	 background-color:transparent;
+	 width: 380px;     top:0px;
 }
 #main_header {
     opacity: 1;
 }
-#main_header {
-    opacity: 1;
-}
-.header_back img{
-	width: 10px; 
-	padding-top:15px;
-	padding-left:15px;
-}
-
-
 </style>
 <div class="window">
 
 	<!-- header start -->
 	<div class="header" id="main_header">
-
-		<div class="header_back">
-			<img src="img/arrow_back.png" alt="뒤로가기">
-		</div>
 	
-		<!-- <div class="burger-container">
+		<div class="burger-container">
 			<div id="burger">
 				<div class="bar topBar"></div>
 				<div class="bar btmBar"></div>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="menu1_btns">
 			
 			<table cellspacing=0 cellpadding=0 height=50 width=100%>
 				<tr align=center>
 					<td align="left" id="top_logo_cell">
-						<img src="img/logo.png" height="26" onclick="location.href='index.php'" />
+						<img src="https://bojagicard.com/m/img/151004_01_01.png" height="26" onclick="location.href='index.php'" /></td>
 					</td>
-					</td>
-					<!-- <td width=56 style="position: relative;" onclick="sample_menu('open')">
+					<td width=56 style="position: relative;" onclick="sample_menu('open')">
 						<div class="sample_pick_count" style="font-size: 9px; background-color: #fd4976; border-radius: 12px; line-height: 17px; height: 16px; width: 16px; position: absolute; right: -7px; top: 7px; color: white; text-align: center; opacity: 1; ">10</div>
 						<img class="menu1_right_btns" src=https://bojagicard.com/m/img/170224_01_03.png?1642125910 height=21 />
 						<img class="menu_tips" id="menu_tip_sample" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 19px; display: none;" alt="삼각형팁" />
-					</td> -->
+					</td>
 					<td width=10></td>
-					<!-- <td width=30 style="position: relative;" onclick="my_menu('open')">
+					<td width=30 style="position: relative;" onclick="my_menu('open')">
 						<img class="menu1_right_btns" src="https://bojagicard.com/m/img/170224_01_02.png" height="16" ondblclick="$('#mata_tag_setting_wrapper').toggle()" />
 						<img class="menu_tips" id="menu_tip_mypage" src="https://bojagicard.com/m/img/151008_01_01.png" width="18" height="9" style="position: absolute; bottom: 0px; right: 6px; display: none;" alt="삼각형팁" />
-					</td> -->
+					</td>
 					<td width=12 onclick="my_menu('open')">&nbsp;</td>
 				</tr>
 			</table>
@@ -1519,7 +1502,7 @@ function sample_cards_update() {
 
 
 
-<!-- 
+
 <script>
 function menu1_more() {
 
@@ -1580,7 +1563,8 @@ function menu1_more() {
 }());
 </script><!-- 페이지별 메뉴 시작 -->
 
- -->
+
+
 
 
 
@@ -1738,374 +1722,115 @@ function menu2toggle(){
 
 <!-- 페이지별 메뉴 끝 -->
 
-<!--회원가입 폼 시작-->
-	<!-- ★★★회원가입 style -->
+<!--청첩장 설정 폼 시작-->
 <style>
-	.join_wrap{
-		padding-bottom: 65px;
-		text-align: center; 
+	/* div 기본세팅 */
+	#wrap{
+		font-size: 13px; 
+		/* text-align: center;  */
+		/* padding-top: 50px;  */
+		padding-bottom: 50px; 
 		background: #f7f8f8;
+		border:1px solid red;
 	}
-	/* 회원가입 타이틀 제목 */
+	
 	.top_title {
-		width: 100%; height: 65px;
+		width: 100%; height: 67px;
 		font-size:12px;
-		line-height: 65px;
+		line-height: 67px;
 		text-align: center;
 		background-color: #e7eefd;
 		color:#3e6fef;
 		margin-bottom:23px;		
 	}
-
-	/* 공통 내용 */
-	#join_form{
-		font-size:14px;
+	#invite_setting .title_box *{
+		box-sizing: border-box;
 		padding-left:24px;
-		padding-right:24px;
+		padding-right:24px;		
+	}
+	#invite_setting .title_box h3{
+		width: 100%; 
+		height: 43px;
+		line-height: 43px;
 		text-align: left;
-		/* border:1px solid red; */
+		background-color: #f1f1f1;
+		/* padding-left:24px; */
+		font-size:13px;
+	}
+	#invite_setting .title_box div{
+		width: 100%;
+		border:1px solid green;
+		/* padding-left:24px;
+		padding-right:24px;		 */
 		
 	}
-
-	#join_form fieldset{
-		border:none;
-	}
-
-	#join_form *{
-		font-size:12px;
-		box-sizing: border-box;
-	}
-
-	#join_form input{
-		width: 100%;
-		height: 38px;
-		background-color: #ffffff;
-		border-radius: 3px;
-		border:1px solid #dddddd;
-		outline: none;
-		padding-left:10px;
-	}
-
-	#join_form button{
-		height: 38px;
-		border:1px solid #aac6f5;
-		width: 25%;
-		border-radius: 5px;
-		background-color: #f7f8f8;
-		cursor: pointer;
-	}
-
-	/* 회원정보, 개인정보 타이틀제목 */
-	#join_form h3{
-		font-weight: bold;
-		text-indent: 3px;
-		padding-bottom:10px;
-	} 
-
-/* 회원정보입력 form */
-	#join_form .name_box{
-		width: 100%;
-		position: relative;
-	}
-	#join_form .id_box{
-		width: 100%;
-		padding-top:10px;
-		position: relative;
-	}
-	#join_form .id_box input{
-		width: calc(75% - 2px);
-		margin-right:2px;
-	}
-
-	#join_form .id_guide{
-		line-height: 16px;
-		padding-left:5px;
-		font-size:11px;
-	}
-	#join_form .pass_box{
-		width: 100%;
-		position: relative;
-		/* border:1px solid red; */
-	}
-	#join_form .pass_box input{
-		width: 100%;
-	}
-	.pass_box input:nth-child(2){
-		margin-top:10px;
-		margin-bottom:10px;
-		color:red;
-		
-	}
-	.error_box{
-		width: 60%;
-		background-color: #ffffff;
-		position: absolute;
-		left:10px;
-		display: none;
-	}
-	#join_form .name_box .error_box{
-		top:10px;
-	}
-	#join_form .id_box .error_box{
-		top:20px;
-	}
-	#join_form .pass_box .error_box{
-		top:10px;
-	}
-	.error_box div{
-		color: #ff2d55;
-	} 
-	.error_box div span{
-		display: inline-block;
-		width: 15px;height: 15px;
-		line-height: 16px;
-		border-radius: 50%;
-		background-color: #ff2d55;
-		color:#ffffff;
-		text-align: center;
-		font-weight: bold;
-		font-size:12px;
-		margin-right:8px;
-	}
-
-	#join_form .phone_comfirm{
-		width: 100%;
-		/* border:1px solid red; */
-		padding-bottom:20px;
-	}
-
-	/* 본인인증 공통 */
-	#join_form .phone_comfirm .calc_select{
-		width: calc(100% / 4 - 2px);
-		height: 38px;
-		box-sizing: border-box;
-	}
-
-	/* 본인인증*/
-	#join_form .phone_comfirm #phone_number_select {
-		background-color: #ffffff;
-		border-radius: 5px;
-		text-indent: 5px;
-		background-image: url('img/arrow_down.png');
-		background-repeat: no-repeat;
-		background-size: 14px 8px;
-		background-position: 50px center;
-		padding-right:16px;
-		outline:none;
-			}
-	#join_form .phone_comfirm #phone_number_select option{
-		background-color: #ffffff;
-	}
-
-	#join_form .phone_comfirm .comfirm_btn{
-		float: right;
-	}
-
-	/* 개인정보 동의 */
-	#join_form .agree_wrap {
-		width: 100%;
-		margin-bottom:32px;
-		/* border:1px solid red; */
-		box-sizing: border-box;
-		
-	}
-	#join_form .agree_wrap .agree_list{
-		
-		width: 100%;
-		height: 38px;
-		border-radius: 5px;
-		border:1px solid #dddddd;
-		background-color: #ffffff;
-		margin-top:10px;
-		padding-top:10px;
-		cursor: pointer;
-	}
-	#join_form .agree_wrap .agree_list span{
-		display: inline-block;
-		width: 100%;
-		padding-left:33px;
-		background: url('img/check_off.png');
-		background-repeat:  no-repeat;
-		background-position:  10px top;
-		background-size: 14px 14px;
-		/* border:1px solid red; */
-		vertical-align: middle;
-		position: relative;
-
-	}
-
-	#join_form .agree_wrap .agree_list span.on{
-		background: url('img/check_on.png');
-		background-repeat:  no-repeat;
-		background-position:  10px top;
-		background-size: 14px 14px;
-	}
-	#join_form .agree_wrap .agree_list img{
-	
-		/* border:1px solid red; */
-		margin-top:3px;
-		margin-right:10px;
-		width: 13px;height: 7px;
-		transition:all 0.2s ease;
-		
-	}
-	#join_form .agree_wrap .agree_list span.on img{
-		transform: rotate(180deg);	
-		
-	}
-	
-	#join_form .agree_wrap .agree_hidden{
-		width: 100%; height: 150px;
-		line-height: 19px;
-		box-sizing: border-box;
-		border: 1px solid #dddddd;
-		border-radius: 3px;
-		font-size:12px;
-		overflow: auto;
-		margin-top:-1px;
-		display: none;
-	}
-	pre{
-		white-space: pre-wrap;
-		/* padding-top:5px; */
-		padding-bottom: 5px;
-		padding-right:10px;
-		padding-left:10px;
-		font-size:11px;
-	}
-
-	#join_form .join_btn{
-		width: 100%;
-		height: 38px;
-		background-color: #3e6fef;
-		border:none;
-		color:#ffffff;
-	}
-
-
 </style>
-	<!-- div 박스 기본세팅
-	font-size: 20px; text-align: center; padding-top: 50px; padding-bottom: 50px; background: #f7f8f8;  -->
 
-<div class="join_wrap">
+<div id="wrap">
 	<div class="top_title">
-		회원가입 후 자동으로 모바일 청첩장이 생성됩니다.
+		기능 사용을 원하지 않으실 경우, 체크 박스의 선택을 해제해 주세요
 	</div>
-	<div id="join_form">
-		<div class="form_wrap">
-			<form action="">
-            <!-- <fieldset> -->
-                            
-            <h3>회원정보 입력</h3>
-			 
-			<div class="name_box">
-				<input type="text" class="name" placeholder="이름" required>
-				<div class="error_box">
-					<div><span>!</span> 필수 입력 정보입니다.</div>				
-				</div>	<!--error_box -->
-			</div> <!--name_box-->
-					
-			<div class="id_box">  
-            	<input type="text" placeholder="아이디" required><button type="button" class="check_btn">중복확인</button>
+	<!--top_title-->
+	<div id="invite_setting">
 
-			<div class="error_box">
-					<div><span>!</span> 아이디 중복 확인을 해주세요.</div>				
-			</div>	
-			<!--error_box-->
-			</div> 
-			<!--id_box-->
-	
-			<p class="id_guide">
-				- 아이디는 모바일 청첩장의 주소가 됩니다<br>
-					&nbsp;&nbsp; 예시) http://bojagicard.com/회원 아이디<br>
-				- 가입 후 수정이 불가하며, 대문자는 사용할 수 없습니다.
-			</p>
-			
-            <div class="pass_box">
-				<input type="password" placeholder="비밀번호" required>
-				<input type="password" placeholder="비밀번호 확인" required>
-			
-				<div class="error_box">
-					<div><span>!</span> 입력 정보가 올바르지 않습니다.</div>				
-				</div><!--error_box-->	
-			</div> <!--pass_check-->
-		 
-            
-			<div class="phone_comfirm">
-				<select name="phone_number" id="phone_number_select" class="calc_select">
-					<option value="010">010</option>
-					<option value="011">011</option>
-					<option value="016">016</option>
-					<option value="017">017</option>
-					<option value="018">018</option>
-					<option value="018">019</option>
-					<option value="018">050</option>
-				</select>
-				<input type="number" name="middle_num" class="calc_select">	
-				<input type="number" name="last_num" class="calc_select">
-				<button type="button" class="comfirm_btn calc_select">본인인증</button>	
+		<div class="connect_info">
+			<h2>접속 계정 정보</h2>
+			<div>계정정보 내용</div>
+
+		</div><!--connect_info-->
+
+		<div class="present_box title_box">
+			<h3>선물하기 설정</h3>
+			<div>
+				모바일 청첩장을 받는 분들께 작은 선물을 준비해 보세요. <br />
+				(주문 상품 소진 후 다른 상품 구입 가능)
 			</div>
-		<!-- </fieldset> -->
-		</form>
-	</div><!--form_wrap-->
+			<ul class="present_menu">
+				<li><a href="#">선물 설정</a></li>
+				<li><a href="#">이용 내역</a></li>
+			</ul>
 
-		<div class="agree_wrap">
-			<details>
+			<div class="present_setting">
+				<div class="present_type">
+				<div class="img">
 
-			<h3>개인정보 취급방침 및 이용약관</h3>
-		
-				<summary>
-					개인 정보 취급 방침에 동의합니다.<img src="img/arrow_down.png" alt="toggle button" align="right">
-				</summary>
+				</div>
+				<div class="present_select">
 
-			
-<pre>‘주식회사 비플스’가 운영하는 보자기카드(www.bojagicard.com)는 (이하 ‘회사’는) 고객의 개인정보를 중요시하며,”정보통신망 이용촉진 및 정보보호”에 관한 법률을 준수하고 있습니다.
-회사는 개인정보취급방침을 통하여 고객님께서 제공시 하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
-
-회사는 개인정보 취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다. 
-
-■ 수집하는 개인정보 항목
-
-</pre>
-		</details>
-		</div><!--agree_hidden 이용약관-->
-
-			<div class="agree_list">
-				<span>신상품 및 혜택 정보를 SMS, 메일로 수신합니다.</span>
+				</div>
+				</div>
 			</div>
+		</div>
 
-		</div><!--agree_wrap end-->
-			<button type=submit class="join_btn">회원가입</button>
-		
+		<div class="thema_box title_box">
+			<h3>테마 설정(필수)</h3>
+			<div>선물하기 내용</div>
+		</div>
 
-    </div><!--join_form-->
+		<div class="skin_box title_box">
+			<h3>스킨 설정(필수)</h3>
+		</div>
+		<div class="wedding_info">
+			<h3>예식정보(필수)</h3>
+		</div>
+		<div class="message_box">
+			<h3>초대인사말</h3>
+		</div>
+
+		<div class="phone_info">
+			<h3>축하 연락처</h3>
+		</div>
+		<div class="calendar_info">
+			<h3>달력</h3>
+		</div>
+
+	</div>
+	<!--invite_setting-->
 
 </div>
+<!--wrap-->
 
-<script>
-	$(function(){
-		//회원가입을 클릭시 이름, 아이디, 비번 입력했는지 검토 후 정확하지 않은경우 에러메시지 출력
-		//이름 필수 입력 정보입니다.
-		//아이디  아이디 중복확인을 해주세요
-		//패스워드 입력정보가 올바르지 않습니다
-
-		var error_box = document.querySelector('.error_box');
-		$('.join_btn').on('click', function(){
-
-			$('.error_box').fadeIn();
-			
-			setTimeout(function(){
-				$('.error_box').fadeOut();
-            },1500);;
-
-		});
-
-});
-// 스크립트 끝
-
-</script>
-
-<!--회원가입 폼 끝-->
+<!--청첩장 설정 끝-->
 
 
 
@@ -2143,7 +1868,7 @@ function menu2toggle(){
 	<div class=body_mid_menu onclick=location.href='review.php'> 
 		이용후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
 	<div class=body_mid_menu onclick=location.href='event_view.php?event_no=7'> 
-		샘플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> 
+		셈플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> 
 	</div>
 	<div class=body_mid_menu onclick="$.cookie('product_sub_menu_show',0);location.href='insa.php?card_type=gb'" > 
 		인사말검색 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
@@ -2502,7 +2227,7 @@ $(function() {
 <!--
 //dmaps.daum.net/map_js_init/postcode.v2.js
 -->
-<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
 <script>
 
 var element_layer = document.getElementById('zipno_window')
@@ -2811,8 +2536,6 @@ $('.zzim_btn').click(function(e) {  //Fill a bog with sample
 
 })
 </script>
-
-
 
 </body>
 </html>
