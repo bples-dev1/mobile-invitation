@@ -1,0 +1,943 @@
+/* -모바일청첩장 설정 폼 시작 */
+#page_wrapper {
+    background-color: #f7f8f8; 
+}
+
+.top_title {
+    width: 100%; height: 67px;
+    font-size:12px;
+    line-height: 67px;
+    text-align: center;
+    background-color: #e7eefd;
+    color:#3e6fef;
+    margin-bottom:23px;		
+}
+
+/* 
+섹션 타이틀
+*/
+
+.section,
+.section div {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+}
+
+.section>div:first-child {
+    height: 44px;
+    line-height: 44px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    padding-left: 52px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.title_icon {
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    padding: 0;
+    line-height: 0;
+   
+}
+
+.title_icon>img {
+    height: 20px;
+}
+
+.title_top_icon {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    line-height: 0;
+}
+
+.title_top_icon img {
+    height: 8px;
+}
+
+.section > div:first-child {
+    height: 44px;
+    line-height: 44px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    padding-left: 52px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.section > div:last-child {
+    background-color: #f7f8f8;
+    padding-top:20px;
+    padding-bottom:34px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.section > div:last-child h3{
+    line-height: 20px;
+    font-size:12px;
+}
+
+
+
+/* 폼 관련 공통 */
+
+.section form *{
+    font-size:12px;
+    border-radius: 3px;
+}
+
+.section button{
+    color:#333;
+    height: 38px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size:12px;
+}
+
+.section select{
+    background:url('img/arrow_down.png');
+    background-repeat:no-repeat;
+    background-position: 90% center;
+    background-size:17px;
+    padding-left:10px;
+    height: 38px;
+    border-radius: 3px;
+    font-size:12px;
+    padding-left:10px;
+}				
+
+.section input{
+    height: 38px;
+    border-radius: 3px;
+    font-size:12px;
+    padding-left:10px;
+}
+
+/* 버튼 공통 */
+
+div .radio_btn{
+    width: 15px;
+    height: 15px;
+    background: url("img/btn_radio_off.png")top;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    border:none;
+    vertical-align: middle;
+    margin-right:6px;
+}
+
+div.on .radio_btn{
+    width: 15px;height: 15px;
+    background: url("img/btn_radio_on.png")center;
+    background-size: 15px;
+}
+
+.check_btn{
+    width: 15px;
+    height: 15px;
+    background: url("img/check_off.png")top;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    border:none;
+    /* vertical-align: middle; */
+    margin-right:6px;
+    padding-top:2px;
+}
+
+.modify_btn{   
+    width: 32px;
+}
+
+
+.circle_span{
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 17px;
+    background-color: #aac6f5;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color:#ffffff;
+    font-size: 11px;
+    margin-bottom: 2px;
+    margin-right:5px;
+}
+
+/* 이미지 사이즈 */
+.prev_img{
+    width: 112px;
+    /* border:1px solid red; */
+}
+.prev_photo{
+    width: 100%;
+}
+
+
+/* 슬라이드 공통 */
+.slide {
+    height: 225px;
+    border: 1px solid navy;
+    margin-top:20px;
+    margin-bottom:20px;
+    }
+
+/* 구분선 */
+.division_line{
+    margin-top:20px;
+    padding-top:10px;
+    border-top:1px solid #dddddd;
+  
+}
+
+/* 탭메뉴 공통설정 */
+.section > div:last-child .tab_menu{
+    width: 100%;
+    height: 38px;
+    font-size:0;
+    cursor: pointer;
+
+}
+
+.section > div:last-child .tab_menu div{
+    display: inline-block;  
+    width: calc(100% / 2);
+    /* width: calc( calc(100% - 6px) / 2 ); */
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border:1px solid #dddddd;
+    color:#888888;
+    font-size:13px;
+}
+
+/* 탭메뉴 타이틀 원안에 숫자 */
+.section > div:last-child .tab_menu div span{
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    background-color: #cccccc;
+    color:#ffffff;
+    font-size:11px;
+    vertical-align: middle; 
+    
+}
+
+.section > div:last-child .tab_menu div.on{
+    background-color: #ffffff;
+    color:#333333;
+    border:1px solid #aac6f5;                        
+}
+.section > div:last-child .tab_menu div.on span{
+    background-color: #3e6fef;
+}
+.section > div:last-child .tab_menu div:first-child{
+    border-radius: 3px 0 0 3px;
+}
+.section > div:last-child .tab_menu div:first-child.on{
+    border-radius: 3px 0 0 3px;
+}
+.section > div:last-child .tab_menu div:last-child{
+    border-radius: 0 3px 3px 0;
+    /* margin-left:-3px; */
+}
+.section > div:last-child .tab_menu div:last-child.on{
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* -----------------------------------------섹션 별 css ------------------------------- */
+
+/* 선물설정 */
+.section > div:last-child .mcard_gift{
+    width: 100%;
+    height: 100%;
+    font-size:0;
+    padding-top:18px;		
+}
+
+.section > div:last-child .mcard_gift div{
+    text-align: center;
+}
+
+.mcard_gift .mcard_gift_list{
+    display: inline-block;
+    width: calc( calc(100% - 20px) / 3 );
+    /* height: 100%; */
+    margin-right: 10px;                                                                    
+}
+
+.mcard_gift .mcard_gift_list .gift_img{  
+    height: 130px;
+}
+
+
+.mcard_gift .mcard_gift_list img{
+    width: 47px;
+    text-align: center;
+    padding-top:20px;    
+    
+}
+
+.mcard_gift .mcard_gift_list:last-child{
+    margin-right: 0;
+}
+
+
+ /* 선물 이미지 배경색 변경 */
+.mcard_gift_list:first-child .gift_bgcolor{
+    background-color: #ccc;
+}
+
+.mcard_gift_list:nth-child(2) .gift_bgcolor{
+    background-color: #dbe4d4;
+}
+
+.mcard_gift .mcard_gift_list:nth-child(3) .gift_bgcolor{
+    background-color: #d1d2cd;  
+}
+
+
+/* 선물 텍스트 */
+.section > div:last-child .mcard_gift .gift_txt{
+    font-size:13px;
+    margin-top:13px;
+    margin-bottom:10px;
+    line-height: 19px;
+    text-align: left;
+   
+}
+
+.section > div:last-child .mcard_gift .gift_price{
+    border:1px solid blue;
+    
+}
+.section > div:last-child .mcard_gift .gift_select{
+    width: 90%;
+    /* height: 22px; */
+    font-size:13px;
+    /* border:1px solid green; */
+    text-align: left;
+    
+}
+
+.section > div:last-child .mcard_gift .gift_select select{
+    width: 90%;
+    height: 28px;
+    font-size:12px;
+   
+    
+}
+
+.section > div:last-child .gift_sum{
+    text-decoration: underline;
+    padding-top:12px;
+    padding-bottom:18px;
+  
+}
+
+.section > div:last-child .buy_btn{
+    width: 100%;
+    height: 38px;
+    color:#ffffff;
+    background-color: #3e6fef;
+    font-size:13px;
+    margin-bottom:22px;
+    border-radius: 3px;
+}
+.section > div:last-child .present_like{
+    width: 100%;
+    padding-left:11px;
+    padding-right:11px;
+    padding-top:20px;
+    padding-bottom:10px;
+    background-color: #f0f0f0;
+    
+}
+.section > div:last-child .present_like{
+    font-size:14px;
+    vertical-align: middle;
+}				
+
+
+
+.section > div:last-child .present_like p{
+    font-size:13px;
+    line-height: 20px;                    
+    /* letter-spacing: 0.5px; */
+    
+}
+.section > div:last-child .present_like p:last-child{
+    margin-top:-4px;
+}
+
+/* 테마설정  */
+
+/* 슬라이드 */
+
+/* 슬라이드 내부 스타일, 실제 슬라이드 적용시 수정필요 
+크기 및 슬라이드 공통설정은 상단 .slide에 있음 */
+
+/* .invite_theme_list .theme_slide {
+height: 225px;
+border: 1px solid red;
+} */
+
+
+/* 테마 색상 선택 */
+.invite_theme_list .theme_color{
+    overflow: hidden;					
+}
+
+.invite_theme_list .theme_color .color_choice {
+    border-top:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+    border-left:1px solid #dddddd;
+    border-radius: 3px;			
+}
+
+.invite_theme_list .theme_color .color_choice div{						
+    height: 38px;
+    border-bottom:1px solid #dddddd;
+    background-color: #ffffff;
+    padding-left:10px;
+    padding-top: 9px;					
+}
+
+.color_choice div:first-child{
+    border-radius: 10px;
+    border-radius: 3px 3px 0 0;
+}
+.color_choice div:last-child{
+    border-bottom:1px solid red;
+    border-radius: 0 0 3px 3px;
+}
+        
+.invite_theme_list .theme_color .color_choice img{
+    display: inline-block;
+    vertical-align: middle;
+    /* margin-top:11px; */
+}
+.invite_theme_list .theme_color .color_choice span{
+    display: inline-block;
+    width: 22px;height: 22px;
+    vertical-align: middle;
+    border-radius: 50%;
+    /* margin-top:7px; */
+    margin-left:7px;
+    margin-right:7px;					
+}
+
+/* 색상 표 */
+.color_choice div:first-child span{background: linear-gradient(#f1e7e6 50%, #b1d5e0 50%);}
+.color_choice div:nth-child(2) span{background-color: #6662ab;}
+.color_choice div:nth-child(3) span{background-color: #ffc46f;}
+.color_choice div:nth-child(4) span{background-color: #65737e;}
+
+/* 스킨설정 */
+.invite_skin_list {
+    width: 100%;
+}
+.invite_skin_list .invite_skin_photo{
+    width: 100%;			
+    font-size: 0;
+}
+.invite_skin_list .invite_skin_photo > div{
+
+    width: calc( calc(100% - 20px) / 3 );
+    display: inline-block;
+    margin-right:10px;
+    
+}
+.invite_skin_list .invite_skin_photo > div:last-child{
+    margin-right:0;
+    
+}
+.invite_skin_list .invite_skin_photo > div div:last-child{
+    /* border:1px solid red; */
+    padding-top:15px;
+}
+.invite_skin_list .invite_skin_photo > div div:last-child img{
+    padding-left:10px;
+    padding-right:7px;
+    /* padding-top:15px; */						
+} 
+
+.skin_photo_effect{
+    display: inline-block;
+    width: 100%;
+    /* border: 1px solid red; */
+    font-size:0;
+}
+.skin_photo_effect select{
+    font-size:12px;
+    width: calc( calc(100% - 17px) / 2 );
+    margin-right:17px;
+    padding-left:10px;
+}						
+
+
+
+.skin_photo_effect select:last-child{
+    margin-right:0;
+}
+
+/* 예식정보 */
+.wedding_date{
+    /* border:1px solid red; */
+    font-size: 0;
+}
+.wedding_date input{
+    padding-left:10px;
+}
+
+.wedding_date input:first-child{
+    border:1px solid #e8e8e8;
+    width: calc(100% - 10px);
+    height: 33px;
+    margin-right:10px;										
+}
+
+.wedding_date div{
+    display: inline-block;
+    width: calc( calc(100% - 10px) / 2 );
+    /* border:1px solid green; */
+    vertical-align: text-top;
+}
+
+.wedding_date div:first-child{
+    margin-right:10px;
+}
+
+/* .wedding_date .time_select {
+    width: 50%;
+    border:1px solid red;
+} */
+
+.wedding_date div:nth-child(2) select{					
+    border:1px solid #e8e8e8;
+    width: calc( calc(100% - 13px) / 2 );
+    height: 33px;
+}
+
+.wedding_date select:first-child{
+    margin-right:10px;
+}
+
+.wedding_date div:nth-child(3){
+    width: 100%;
+} 
+
+.wedding_date div:nth-child(3) input{
+    width: 100%;
+    margin-top:10px;	
+}
+
+/* 초대인사말 */
+.invite_greeting input{
+    width: 100%;
+}
+        
+.invite_greeting .greeting_form button{
+    border:1px solid #c6d7fa;
+    background-color: #f3f5fa;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+/* border, 여백 값 외 원형 문자 기본 스타일은 .circle_span 에 설정되어있음 */
+.invite_greeting span{
+    border-radius: 50%;
+    margin-left:5px;
+}
+
+.half_block {
+    font-size: 0;
+    /* border:1px solid red; */
+}
+
+.half_block div{
+    display: inline-block;
+    width: calc(100% / 2);
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border:1px solid #dddddd;
+    background-color: #fff;
+    color:#888888;
+    font-size:13px;
+    vertical-align: middle;
+}
+
+
+.greeting_form textarea{
+    width: 100%;
+    height: 150px;
+    background-color: #ffffff;
+    padding-top:10px;
+    padding-left:10px;
+    resize: none;
+}
+
+.phone_wrap:last-child{
+    margin-top:20px;
+}
+.groom{
+    width: 100%;
+    /* border:1px solid red; */
+    padding-top:20px;
+}
+
+.groom_bride{
+    width: 100%;
+    font-size: 0;
+}
+
+.groom_bride div {
+    display: inline-block;
+    width: calc( calc(100% - 20px) / 3 );
+    height: 38px;
+    vertical-align: bottom;
+    margin-top:10px;
+    margin-right:6px;
+    /* border:1px solid red; */
+}
+
+.groom_bride div:last-child{
+    line-height: 38px;
+    margin-right:0;
+}
+.groom_bride div select{
+    width: 100%;
+    background-color: #fff;
+}
+.groom_bride input{
+    background-color: #ffffff;
+}
+
+.phone_messege{
+    /* border:1px solid red; */
+}			
+.groom_phone_list{
+    display: inline-block;
+    width: 100%;
+    /* border:1px solid green; */
+    font-size: 0;
+
+}
+
+.groom_phone_list div{
+    display: inline-block;
+    /* width: calc( calc(100% - 20px) / 2 ); */
+    width: calc(100% / 2 - 5px);
+    vertical-align: top;
+    border-radius: 3px;
+}
+.groom_phone_list div:first-child{
+    margin-right:10px;
+    /* border:1px solid navy; */
+    height: 38px;
+}
+.groom_phone_list div:first-child div {
+    width: calc( calc(100% - 10px) / 2 );
+    /* background: skyblue; */
+
+}
+
+.groom_phone_list input{
+    width: 100%;
+    height: 38px;
+    background-color: #ffffff;
+}
+.groom_phone_list button{
+    width: 100%;
+    height: 38px;
+    border:none;
+    border-radius: 3px;
+}
+.groom_phone_list div:first-child div input{
+    background-color: transparent;
+}
+
+.groom_phone_list > div:last-child div{						
+    width: 100%;
+    /* border:1px solid yellow; */
+    } 
+
+.groom_phone_list div button{
+    height: 38px;
+    border:1px solid #dddddd;
+    background: url("img/check_off.png")no-repeat 10px center;
+    background-color: #ffffff;;
+    background-size: 15px;
+    font-size: 12px;
+    padding-left:30px;
+            
+}
+
+.groom_phone_list div > div:last-child{
+    height: 38px;
+    /* border:1px solid green; */
+}
+
+
+
+/* 달력	 */
+.calendar_section > div{
+    text-align: center;
+}
+.calendar_section img{
+    width: 158px;
+}
+
+
+
+/* 사진갤러리 */
+.invite_gallery_photo{
+    /* border:1px solid green; */
+    font-size: 0;
+}
+.invite_gallery_photo > div{
+    display: inline-block;
+    width: calc( calc(100% - 20px) / 3 );
+    margin-right:10px;
+
+}
+
+.invite_gallery_photo > div:nth-child(3n){
+    margin-right:0;
+}
+
+
+.gallery_photo_block > div:nth-child(2){
+    /* border:1px solid red; */
+    padding-top:14px;
+    padding-bottom:18px;
+    text-align: center;
+}
+
+.gallery_photo_block > div:nth-child(2) img{					
+    margin-right:12px;
+}
+.gallery_photo_block > div:nth-child(2) img:last-child{
+    margin-right:0;
+}
+
+.upload_btn{
+
+    width: 100%;
+    border:1px solid #c6d7fa;
+    background: #f3f5fa;
+}
+
+
+/* 오시는길 */
+.btn_100per{
+    width: 100%;
+    background-color: #f3f5fa;
+    border:1px solid #afc9f5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+    
+
+.switch_btn{
+    width: 38px;
+    height: 20px;
+    vertical-align: middle;
+    padding-right:10px;
+    
+    
+}
+
+.invite_way input{
+    width: 100%;
+    margin-top: 15px;
+    /* margin-bottom: 16px; */
+    background-color: #ffffff;
+}
+
+.hall_address_btn{
+    /* width: 100%;
+    background-color: #f3f5fa;
+    border:1px solid #afc9f5; */
+    background-image:url("img/arrow_gps.png");
+    background-repeat: no-repeat;
+    background-position:32% center;
+    background-size: 13px 10px;
+}
+
+.invite_way_map{
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    /* border:1px solid #dddddd; */
+    margin-top:10px;
+    margin-bottom:20px;
+    
+}
+
+.invite_way_map div{
+    border:1px solid #dddddd;
+    overflow: hidden;
+}
+.invite_way_map div:first-child img{
+    height: 150px;
+}
+.invite_way_map div:nth-child(2){
+    height: 38px;
+    background: #fff;
+    line-height: 38px;
+    font-size: 12px;
+    padding-left:20px;
+}
+
+.invite_way_map button{
+    height: 18px;
+    vertical-align: middle;
+
+}
+
+.weddinghall_map{
+    
+}
+.third_block{
+    font-size:0;
+    margin-bottom:20px;
+
+}
+.third_block > div{
+    display: inline-block;
+    width: calc(100% / 3);
+    height: 38px;
+    /* line-height: 38px; */
+    text-align: center;
+    border:1px solid #dddddd;
+    background-color: #fff;
+    color:#888888;
+    font-size:13px;
+    /* vertical-align: top; */
+    
+}
+
+.third_block > div button{
+    
+    background-position: left 11px;
+    vertical-align: middle;
+}
+
+.map_attention{
+    line-height: 20px;
+    margin-top:20px;
+    /* margin-bottom:15px; */
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #f0f0f0;
+}
+
+.prev_map{
+    overflow: hidden;
+    /* margin-top:13px; */
+    margin-bottom:13px;
+    height: 170px;
+    background-color: #ffffff;
+    text-align: center;
+    border:1px solid #dddddd;
+}
+.prev_map img{
+    height: 100%;
+}
+
+.prev_box{
+    /* margin-top:15px; */
+    margin-bottom: 15px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border:1px solid #dddddd;
+    background-color: #ffffff;
+    color:#888888;
+}
+
+/* 좌 우 30% 70% 박스 */
+.block_30_70{
+    font-size:0;
+}
+.block_30_70 > div{
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.block_30_70 > div:first-child{
+    width: 30%;
+}
+
+.block_30_70 > div:nth-child(2){
+    width: calc(70% - 10px);
+    margin-left:10px;
+    
+}
+
+
+/* 교통편 및 주차안내					 */
+.parking_info{
+    margin-top:10px;
+}		
+
+.parking_info_list > div:first-child select{
+    width: 100%;
+    height: 38px;							
+    font-size:12px;	
+            
+}
+
+/* 안내사항 */
+.notice_info_list{
+    font-size: 0;
+    margin-top:10px;
+}
+.notice_info_list > div{
+    display: inline-block;
+    
+}
+.notice_info_list > div input{
+    width: 100%;
+    background-color: #fff;
+    color:#888888;
+}
+
+
+/* 축하의 마음전하기 */
+.account_info_list{
+    font-size: 0;
+    margin-top:10px;
+}
+.account_info_list > div{
+    display: inline-block;
+    
+}
+.account_info_list > div select{
+    width: 100%;
+    height: 38px;							
+    font-size:12px;	
+            
+}
+.account_info_list > div input{
+    width: 100%;
+    background-color: #fff;
+    color:#888888;
+}
