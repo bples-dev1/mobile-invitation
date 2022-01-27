@@ -25,21 +25,21 @@
 -->
 
 	<link rel="stylesheet" href="https://img.bojagicard.com/jquery/swiper.435.min.css">
-	
+
 	<link rel="stylesheet" href="css/mcard_setting.css">
 
-	<script language="javascript" type="text/javascript"
-		src="https://img.bojagicard.com/jquery/jquery-1.7.2.min.js"></script>
-	<script language="javascript" type="text/javascript"
-		src="https://img.bojagicard.com/jquery/jquery.cookie.min.js"></script>
+	<script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery-1.7.2.min.js">
+	</script>
+	<script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery.cookie.min.js">
+	</script>
 	<script language="javascript" type="text/javascript"
 		src="https://img.bojagicard.com/jquery/jquery.ui.1.8.18.all.min.js"></script>
-	<script language="javascript" type="text/javascript"
-		src="https://img.bojagicard.com/jquery/jquery.transit.min.js"></script>
-	<script language="javascript" type="text/javascript"
-		src="https://img.bojagicard.com/jquery/jquery.transform2d.js"></script>
-	<script language="javascript" type="text/javascript"
-		src="https://img.bojagicard.com/jquery/swiper.435.min.js"></script>
+	<script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery.transit.min.js">
+	</script>
+	<script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/jquery.transform2d.js">
+	</script>
+	<script language="javascript" type="text/javascript" src="https://img.bojagicard.com/jquery/swiper.435.min.js">
+	</script>
 	<script language="javascript" src="https://bojagicard.com/card/js/common.js?hash=202004101330"></script>
 	<script src="script/mcard_setting.js"></script>
 
@@ -51,7 +51,8 @@
 
 			var option_nosize = "";
 			options_arr = options.split(",")
-			for (i = 0; (i + 1) <= options_arr.length; i++) {
+			for (i = 0;
+				(i + 1) <= options_arr.length; i++) {
 				option = options_arr[i]
 				option_arr = option.split("=")
 				var fld = option_arr[0]
@@ -64,11 +65,12 @@
 			var left = (screen.width / 2) - (ww / 2)
 			var top = (screen.height / 2) - (wh / 2) - 50
 
-			return window.open(url, title, 'width=' + ww + ', height=' + wh + ', top=' + top + ', left=' + left + option_nosize)
+			return window.open(url, title, 'width=' + ww + ', height=' + wh + ', top=' + top + ', left=' + left +
+				option_nosize)
 
 		}
 
-		function checkbox_toggle(inm) {  //input name
+		function checkbox_toggle(inm) { //input name
 
 			if ($("input[name=" + inm + "]").prop("checked")) {
 				$("img[alt=" + inm + "]").attr("src", $("img[alt=" + inm + "]").attr("src").replace("_on.png", "_off.png"))
@@ -80,7 +82,7 @@
 
 		}
 
-		function fold_toggle(oid) {  //object id
+		function fold_toggle(oid) { //object id
 
 			if ($("#" + oid).css("display") == "none") {
 
@@ -137,9 +139,7 @@
 
 		var cardType = 'gb';
 		var slide_side_btn_clicked = 0;
-		var slide_side_btn_clicked_scroll_done = 1;  //사이드스와이프 버튼을 정렬메뉴보다 높은 영역에서 클릭했을때, 사이드스와이프 버튼이 닫히는 현상 수정
-
-
+		var slide_side_btn_clicked_scroll_done = 1; //사이드스와이프 버튼을 정렬메뉴보다 높은 영역에서 클릭했을때, 사이드스와이프 버튼이 닫히는 현상 수정
 	</script>
 
 	<script>
@@ -148,14 +148,16 @@
 			if (member_only) {
 
 				if (logon != 'member') {
-					if (confirm('보자기카드 회원 로그인후 사용가능합니다.\n\n로그인 페이지로 이동할까요?')) location.href = '/m/doc/other/member/login.html?s_url=' + a.href;
+					if (confirm('보자기카드 회원 로그인후 사용가능합니다.\n\n로그인 페이지로 이동할까요?')) location.href =
+						'/m/doc/other/member/login.html?s_url=' + a.href;
 					return false;
 				}
 
 			} else {
 
 				if (logon == '') {
-					if (confirm('로그인후 사용가능합니다.\n\n로그인 페이지로 이동할까요?')) location.href = '/m/doc/other/member/login.html?s_url=' + a.href;
+					if (confirm('로그인후 사용가능합니다.\n\n로그인 페이지로 이동할까요?')) location.href = '/m/doc/other/member/login.html?s_url=' +
+						a.href;
 					return false;
 				}
 
@@ -181,14 +183,14 @@
 			}
 
 
-			if ((url.match(/\./g) || []).length < 1) {  //점(dot)갯수 체크
+			if ((url.match(/\./g) || []).length < 1) { //점(dot)갯수 체크
 				alert('올바른 URL을 입력해주세요.')
 				$("#" + oid).focus()
 				return
 			}
 
 			var url_arr = url.split('/')
-			if (url_arr[0] == "cafe.naver.com" || url_arr[0] == "cafe.daum.net") {		//카페 url일 경우에만 체크
+			if (url_arr[0] == "cafe.naver.com" || url_arr[0] == "cafe.daum.net") { //카페 url일 경우에만 체크
 
 				if (typeof (url_arr[2]) == 'undefined') {
 					alert("올바른 URL을 입력해주세요.")
@@ -210,7 +212,8 @@
 				return
 			}
 
-			if (url.indexOf('com/') == -1 && url.indexOf('net/') == -1 && url.indexOf('kr/') == -1 && url.indexOf('me/') == -1) {  //하위url 체크
+			if (url.indexOf('com/') == -1 && url.indexOf('net/') == -1 && url.indexOf('kr/') == -1 && url.indexOf('me/') == -
+				1) { //하위url 체크
 				alert('올바른 URL을 입력해주세요.')
 				$("#" + oid).focus()
 				return
@@ -267,13 +270,15 @@
 
 
 		//이름 문자열 체크
-		function unm_check(frmname) {  //formname
+		function unm_check(frmname) { //formname
 
 			var unm = ''
 			var unm_txt = ''
 
-			if (typeof ($('form[name=' + frmname + '] input[name=name]').val()) != 'undefined') unm = $('form[name=' + frmname + '] input[name=name]')
-			else if (typeof ($('form[name=' + frmname + '] input[name=unm]').val()) != 'undefined') unm = $('form[name=' + frmname + '] input[name=unm]')
+			if (typeof ($('form[name=' + frmname + '] input[name=name]').val()) != 'undefined') unm = $('form[name=' +
+				frmname + '] input[name=name]')
+			else if (typeof ($('form[name=' + frmname + '] input[name=unm]').val()) != 'undefined') unm = $('form[name=' +
+				frmname + '] input[name=unm]')
 
 			if (typeof ($(unm).val()) == 'undefined') return false
 
@@ -325,9 +330,12 @@
 			return true
 
 		}
-
-
 	</script>
+
+
+
+
+
 
 
 
@@ -2007,17 +2015,19 @@
 				.window .header {
 					width: 380px;
 					top: 0px;
-					background-color:transparent;
+					background-color: transparent;
 				}
 
 				#main_header {
 					opacity: 1;
 				}
-				.header_back img{
-					width: 10px; 
-					padding-top:15px;
-					padding-left:15px;
+
+				.header_back img {
+					width: 10px;
+					padding-top: 15px;
+					padding-left: 15px;
 				}
+
 				/* #top_logo_cell{
 					padding-left:45px;
 				} */
@@ -2030,7 +2040,7 @@
 					<div class="header_back">
 						<img src="img/arrow_back.png" alt="뒤로가기">
 					</div>
-					
+
 					<!-- <div class="burger-container">
 						<div id="burger">
 							<div class="bar topBar"></div>
@@ -2222,9 +2232,9 @@
 						if (logon == "member" || (logon == "guest" && acl == 2)) {
 
 							if (server_https == 'on') {
-								location.href = 'https://bojagicard.com/m/' + url;  //USE FULL URL FOR EXTERNAL LOGIN
+								location.href = 'https://bojagicard.com/m/' + url; //USE FULL URL FOR EXTERNAL LOGIN
 							} else {
-								location.href = 'http://bojagicard.com/m/' + url;  //USE FULL URL FOR EXTERNAL LOGIN
+								location.href = 'http://bojagicard.com/m/' + url; //USE FULL URL FOR EXTERNAL LOGIN
 							}
 							return false
 
@@ -2236,9 +2246,9 @@
 							$("#login_menu").show()
 
 							if (server_https == 'on') {
-								$("input[name=s_url]").val('https://bojagicard.com/m/' + url)  //USE FULL URL FOR EXTERNAL LOGIN
+								$("input[name=s_url]").val('https://bojagicard.com/m/' + url) //USE FULL URL FOR EXTERNAL LOGIN
 							} else {
-								$("input[name=s_url]").val('http://bojagicard.com/m/' + url)  //USE FULL URL FOR EXTERNAL LOGIN
+								$("input[name=s_url]").val('http://bojagicard.com/m/' + url) //USE FULL URL FOR EXTERNAL LOGIN
 							}
 
 						}
@@ -2252,9 +2262,9 @@
 
 						if (sw == 'open') {
 
-							sample_menu('close')  //샘플메뉴 닫기
-							$('#menu_product').hide()  //상품메뉴 닫기
-							$('#sub_menu_product_block').hide()  //상품하위메뉴 닫기
+							sample_menu('close') //샘플메뉴 닫기
+							$('#menu_product').hide() //상품메뉴 닫기
+							$('#sub_menu_product_block').hide() //상품하위메뉴 닫기
 							sub_menu_product_toggle('off')
 							$('#my_menu').show()
 							$('#menu_tip_mypage').show()
@@ -2262,7 +2272,7 @@
 						} else {
 
 							$('#my_menu').hide()
-							$('#menu_product').show()  //상품메뉴 닫기
+							$('#menu_product').show() //상품메뉴 닫기
 							$('#sub_menu_product_block').show()
 							$('#menu_tip_mypage').hide()
 
@@ -2278,19 +2288,21 @@
 
 						if (sw == 'open') {
 
-							my_menu('close')  //마이메뉴 닫기
-							$('#menu_product').hide()  //상품메뉴 닫기
-							$('#sub_menu_product_block').hide()  //상품하위메뉴 닫기
+							my_menu('close') //마이메뉴 닫기
+							$('#menu_product').hide() //상품메뉴 닫기
+							$('#sub_menu_product_block').hide() //상품하위메뉴 닫기
 							sub_menu_product_toggle('off')
 
 							$('#sample_menu').show()
 							$('#menu_tip_sample').show()
 
 							var new_sp_menu_top = 0
-							if (window.pageYOffset == 0 || $('#main_header').css('position') == 'fixed') {  // The main_header is fixed on first loading, and is changed to position = absolute when scrolling.
+							if (window.pageYOffset == 0 || $('#main_header').css('position') ==
+								'fixed'
+								) { // The main_header is fixed on first loading, and is changed to position = absolute when scrolling.
 								new_sp_menu_top += $('#main_header').height()
 							}
-							if ($('#top_banner')) {  // 메인 탑 배너
+							if ($('#top_banner')) { // 메인 탑 배너
 								if ($('#top_banner').css('display') != 'none') {
 									new_sp_menu_top += $('#top_banner').height()
 								}
@@ -2411,12 +2423,10 @@
 										if (f.uid.value == "") {
 											alert('아이디를 입력해 주세요');
 											f.uid.focus();
-										}
-										else if (f.pwd.value == "") {
+										} else if (f.pwd.value == "") {
 											alert('비밀번호를 입력해 주세요');
 											f.pwd.focus();
-										}
-										else f.submit();
+										} else f.submit();
 
 									}
 
@@ -2426,12 +2436,10 @@
 										if (f.name.value == "") {
 											alert('이름을 입력해 주세요');
 											f.name.focus();
-										}
-										else if (f.mail.value == "") {
+										} else if (f.mail.value == "") {
 											alert('메일을 입력해 주세요');
 											f.mail.focus();
-										}
-										else f.submit();
+										} else f.submit();
 
 									}
 
@@ -2465,13 +2473,14 @@
 
 									<!-- 아이디저장 / 자동로그인 -->
 									<script>
-
 										function auto_id_toggle() {
 											if ($("#auto_id_btn").attr("src").indexOf("on") == -1) {
 
 												$("#auto_id_btn").attr("src", $("#auto_id_btn").attr("src").replace("off", "on"))
 												$("input[name=auto_id]").val(1)
-												$.cookie("auto_id", $("input[name=uid]").val(), { expires: 365 })
+												$.cookie("auto_id", $("input[name=uid]").val(), {
+													expires: 365
+												})
 
 											} else {
 
@@ -2506,7 +2515,6 @@
 											$('input[name=pwd]').val('')
 
 										})
-
 									</script>
 
 									<style>
@@ -2658,7 +2666,8 @@
 									$("#login_guest_switch").attr("src", $("#login_guest_switch").attr("src").replace("off", "on"))
 
 									//LOGIN GUEST VALUES SET
-									$.get('/common/oauth_log.php?site=' + site + '&unm=' + unm + '&mail=' + mail + '&img=' + img, function (rst) { })
+									$.get('/common/oauth_log.php?site=' + site + '&unm=' + unm + '&mail=' + mail + '&img=' + img, function (
+										rst) {})
 									var f = document.login_order;
 									f.oauth.value = site
 									f.name.value = unm
@@ -2819,7 +2828,6 @@ function sample_cards_update() {
 
 
 				<script>
-
 					var swiper_1 = new Swiper('.swiper-container', {
 						pagination: '.swiper-pagination',
 						slidesPerView: 'auto',
@@ -2828,8 +2836,6 @@ function sample_cards_update() {
 						freeMode: true,
 						pagination: false
 					});
-
-
 				</script>
 
 
@@ -2997,1615 +3003,583 @@ function sample_cards_update() {
 					}
 				</script>
 
-		<!-- 페이지별 메뉴 끝 -->
+				<!-- 페이지별 메뉴 끝 -->
 
-		<!--모바일청첩장 설정 폼 시작-->
-
-	
-		<!-- width: calc( calc(100% - 20px) / 3 ); -->
-              
-				<div id="page_wrapper">
-
-					<div class="top_title">
-						기능 사용을 원하지 않으실 경우, 체크 박스의 선택을 해제해 주세요
-					</div>			
-					<!--top_title 끝-->
-
-					<!-- ============================================================= 선물하기 섹션 시작 -->
-					<div class="section">
-
-						<!-- 선물하기 섹션 타이틀 시작-->
-						<div>
-							선물하기 설정
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--선물하기 섹션 타이틀 끝-->
-
-						<div>
-						<!-- 선물하기 섹션 내용 -->
-							<h3> 모바일 청첩장을 받는 분들께 작은 선물을 준비해 보세요. <br />
-							(주문 상품 소진 후 다른 상품 구입 가능)</h3>
-						
-							<div class="tab_menu gift_tab">
-								<div class="on">선물 설정</div>
-								<div class="">이용 내역 <span>100</span> </div>
-							</div>
-							<!--present_menu 끝-->
-
-							<div class="mcard_gift">
-
-								<div class="mcard_gift_list">
-								
-										<div class="gift_preview">
-											<img src="img/gift_bananamilk_w.png" alt="bananamilk">
-										</div>
-
-										<div class="gift_txt">
-												빙그레 바나나맛 우유 240ml<br />
-												각 990원
-										</div>
-								
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="10">10개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div>
-									<!--gift_select-->
-								
-								</div> 
-								<!--mcard_gife_list 1 -->
-
-								<div class="mcard_gift_list">
-									
-									<div class="gift_preview">
-									<img src="img/gift_cafelatte_w.png" alt="cafelatte">
-									</div>
-								
-									<div class="gift_txt">
-											매일유업 마이 카페라떼 마일드 220ml <br />
-											각 1,500원                                          
-									</div>						
-						
-																
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="0">0개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div> 
-									<!--gift_select-->
-								
-								</div>
-								<!--mcard_gife_list 2 -->
-
-								<div class="mcard_gift_list">
-
-									<div class="gift_preview">
-										<img src="img/gift_starbucks_w.png" alt="starbucks">
-									</div>
-								
-									<div class="gift_txt">
-											스타벅스 아이스 카페 아메리카도 Tall <br />
-											각 4,100원
-									</div>
-									
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="10">0개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div>
-								</div>
-								<!--mcard_gife_list 3 -->
-							</div>
-							<!-- mcard_gift 끝 -->
-
-							<div class="gift_sum">
-								합 49,500원
-							</div>
-							<!--gift_price_sum 끝-->
-
-							<button type="button" class="buy_btn">선택 선물 구입하기</button>
-							
-							<div class="present_like">
-								<span class="circle_span">i</span> 선물하기, 이런 점이 좋아요!<br />
-								<p>선물을 구입하면 모바일 청첩장에 다운로드 버튼이 생기며, 방문자가 기프티콘을 다운로드 받을 수 있습니다.</p>
-								<p>
-									-  방문자 휴대폰 번호 당 1개 수령 가능 <br />
-									-  이용내역에서 구매 내역 및 선물 수령인 리스트 확인 가능<br />
-									-  받아가지 않은 선물은 100% 환불<br />
-								</p>                                
-							</div>      
-							<!--present_like 끝-->                              
-						</div>
-						<!--선물하기 섹션 내용 끝-->
-
-					</div>
-					<!--선물하기 섹션 끝-->
-
-					<!-- ============================================================= 테마설정 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							테마 설정
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<h3> 청첩장 테마 선택 후 색상을 선택하세요. <br />
-								(선택 가능한 색상은 테마별 상이)</h3>
-								
-							<div class="mcard_theme">
-
-								<div class="theme_slide slide">
-									<h2 style="text-align: center;">슬라이드이미지</h2>
-									<!-- <div>
-										<div><img class="prve_img" src="img/prev_theme_01.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
-											아름다운초대</div>
-									</div>
-
-									<div>
-										<div><img class="prve_img" src="img/prev_theme_02.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
-											매너있는 초대</div>
-									</div>
-									<div>
-										<div><img class="prve_img" src="img/prev_theme_03.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
-											정중한 초대</div>
-									</div> -->
-								</div> 
-								<!--theme_slide-->
-								<div class="division_line"></div>
-
-								<div class="theme_color">
-									<h3>테마 색상 선택</h3>
-								<div class="color_list">									
-									<div class="on"><button type="button" class="radio_btn"></button><span></span> 베이지 + 블루</div>
-									<div><button type="button" class="radio_btn"></button><span></span> 퍼플</div>
-									<div><button type="button" class="radio_btn"></button><span></span> 옐로</div>
-									<div><button type="button" class="radio_btn"></button><span></span> 그레이</div>
-								</div>
-								<!--color_list-->
-								</div>
-								<!--theme_color-->
-
-							</div>	
-							<!--.mcard_theme -->	
-						</div>
-						<!--섹션내용 끝-->
-					</div>
-					<!--테마설정 섹션 끝-->
-
-					<!-- ============================================================= 스킨설정 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							스킨 설정(필수)
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<h3> 스킨 디자인을 선택하세요. <br />
-								디자인 스킨의 경우 선택한 테마 색상이 자동 적용됩니다.</h3>
-								
-								<div class="tab_menu skin_tab">
-									<div class="on">청첩장 세트 스킨 <span>20</span></div>
-									<div class="">디자인 스킨 <span>34</span> </div>
-								</div>
-
-							<div class="macrd_skin">
-
-								<!-- <div class="skin_swiper slide">
-							
-								<div>
-										<div><img class="prve_img" src="img/prev_skin_01.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
-											JEINA530</div>
-									</div>
-
-									<div>
-										<div><img class="prve_img" src="img/prev_skin_02.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
-											JEINA500</div>
-									</div>
-									<div>
-										<div><img class="prve_img" src="img/prev_skin_01.png" alt="테마 미리보기"></div>
-										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
-											BNIEL498</div>
-									</div>
-								</div>  -->
+				<!--모바일청첩장 설정 폼 시작-->
 
 
-								<!--skin_slide-->
-
-								<div class="division_line"></div>
-
-								<h3>사진 선택 및 순서</h3>
-								<div class="skin_photo_upload">
-								
-									<div>
-										<div><img class="prev_photo" src="img/prev_photo_01.png" alt="사진선택 이미지"></div>
-										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-												<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-									</div>
-
-									<div>
-										<div><img class="prev_photo" src="img/prev_photo_02.png" alt="사진선택 이미지"></div>
-										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-												<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-									</div>
-
-									<div>
-										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
-										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-												<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-									</div>
-
-								</div>
-								
-								<div class="division_line"></div>
-
-								<div class="skin_photo_effect">
-									<h3>사진효과</h3>
-									<select name="select" id="effect_select">
-										<option value="사진 효과 선택">사진효과 선택</option>
-										<option value="페이드"> 페이드</option>
-									</select>
-									<select name="select" id="effect_select">
-										<option value="사진 효과 선택">빠르기 선택</option>
-										<option value="페이드"> 0.5</option>
-									</select>
-								</div>
-								<!--invite_skin_photo-->
-
-							</div>	
-							<!--skin_setting-->	
-						</div>
-						<!--섹션내용 끝-->
-					</div>
-					<!--스킨설정 섹션 끝-->
-
-					<!-- ============================================================= 예식정보 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							예식 정보(필수)
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<div class="mcard_infomation">
-
-							<div class="infomation_date_form">
-
-								<form action="">
-									<div>
-									<input type="date" name="day" value="2021-10-30">
-									</div>
-
-									<div>
-									<select name="hour" id="hour">
-										<option value="시간">시간</option>
-										<option value="1시">1시</option>
-										<option value="2시">2시</option>
-										<option value="3시">3시</option>
-										<option value="4시">4시</option>
-										<option value="5시">5시</option>
-									</select>
-									<select name="minute" id="minute">
-										<option value="분">분</option>
-										<option value="1분">1분</option>
-										<option value="2분">2분</option>
-										<option value="3분">3분</option>
-										<option value="4분">4분</option>
-										<option value="5분">5분</option>
-									</select>
-									</div>
-
-									<div>
-										<input type="text" placeholder="예식장명">
-										<input type="text" placeholder="층 / 홀 / 실">
-									</div>
-								</form>
-
-							</div>
-							<!--infomation_date_form-->
-							
-							
-						</div>
-						<!--mcard_infomation-->
-
-						</div>
-						<!--섹션내용 끝-->
-					</div>
-					<!--예식정보 섹션 끝-->
-
-					<div class="top_title">
-						[순서 변경]버튼으로 내용이 보여지는 순서를 바꿀 수 있습니다.
-					</div>	
+				<!-- width: calc( calc(100% - 20px) / 3 ); -->
 
 
-				<!-- ============================================================= 초대인사말 섹션 시작 -->
-				<div class="section">
+				<!-- ============================================================= 인사말 샘플 섹션 시작 -->
+				<div class="section_sub">
 
-					<!-- 섹션 타이틀 -->
-					<div>
-						초대 인사말
-						<div class="title_icon">
-							<img src="img/settingcheck.png" alt="title-img" />
-						</div>
-						<div class="title_top_icon">
-							<img src="img/setting_top.png" alt="title-icon" />
-						</div>
-						<!-- 오른쪽 버튼 -->
-					</div>
-					<!--섹션 타이틀 끝-->
 
 					<!-- 섹션 내용 -->
-					<div>
-						<div class="mcard_invite">
-							
-							<div class="invite_form">
-							<form action="">
-
-								<input type="text" placeholder="결혼합니다">
-								
-								<div>
-								<button type="button">인사말 샘플 보기</button> <span class="circle_span">i</span> 다양한 인사말 샘플을 제공합니다.
-								</div>
-
-								<div>
-								<textarea name="text" id="greeting_area" cols="30" rows="10" placeholder="인사말 내용 입력"></textarea>
-								</div>
-							</form>
+					<div class=section_sub_inner>
+						<div class="mcard_invite_sub">
+							<div>
+								<button type="button" class="close_btn"></button>
 							</div>
 
-							<div class="division_line"></div>
+							인사말 샘플 보기
 
 							<div>
-								<h3>혼주 및 신랑신부 정보</h3>
-								<div class="half_block">
-									<div class="on">
-										<button type="button" class="radio_btn"></button>
-										부모님 표기
-									</div>
-
-									<div>
-										<button type="button" class="radio_btn"></button>
-										<!-- <img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼"> -->
-										신랑신부만 표기
-									</div>
+								<button type="button" class="drop_btn">일반적인 인사말</button>
 							</div>
 
-							<div class="groom_bride_form">
-								신랑 측
-									<form action="">
-									<div class=groom_bride>
-										<div><input type="text" placeholder="신랑 부"></div>
-										<div><input type="text" placeholder="신랑 모"></div>
-										<div>의</div>
-												
-									</div>
-
-									<div class="groom_bride">
-										<div>									
-											<select name="" id="">
-												<option value="관계">관계</option>
-												<option value="장녀">장녀</option>
-												<option value="차녀">차녀</option>
-												<option value="삼녀">삼녀</option>
-												<option value="사녀">사녀</option>
-												<option value="막내">막내</option>
-												<option value="딸">딸</option>
-												<option value="조카">조카</option>
-												<option value="질녀">질녀</option>
-												<option value="손녀">손녀</option>
-												<option value="없음">없음</option>
-												<option value="기타">기타</option>
-											</select>
-										</div>	
-										
-									<div><input type="text" placeholder="신랑 성"></div>
-									<div><input type="text" placeholder="신랑 이름"></div>
-								</div>
-								</form>							
-							</div>
-							<!--groom_form-->				
-
-							<div class="groom_bride_form">
-								신부 측
-									<form action="">
-									<div class=groom_bride>
-										<div><input type="text" placeholder="신부 부"> </div>
-										<div><input type="text" placeholder="신부 모"> </div>
-										<div>의</div>
-									</div>
-
-									<div class="groom_bride">
-										<div>
-										<select name="" id="">
-											<option value="관계">관계</option>
-											<option value="장녀">장녀</option>
-											<option value="차녀">차녀</option>
-											<option value="삼녀">삼녀</option>
-											<option value="사녀">사녀</option>
-											<option value="막내">막내</option>
-											<option value="딸">딸</option>
-											<option value="조카">조카</option>
-											<option value="질녀">질녀</option>
-											<option value="손녀">손녀</option>
-											<option value="없음">없음</option>
-											<option value="기타">기타</option>
-										</select>
-										</div>
-									<div><input type="text" placeholder="신부 성"> </div>
-									<div><input type="text" placeholder="신부 이름"></div>
-								</div>
-								</form>
-								
-							</div>
-							<!--groom_form-->
-
-							<div class="division_line"></div>
-							
-							<div> 
-							<!--신랑신부 이름순서 시작-->
-								<h3>신랑 신부 이름 표기 순서 (모바일 청첩장 전체 적용)</h3>
-								<div class="half_block">
-										<div class="on">
-											<button type="button" class="radio_btn"></button>
-											신랑/신부 순
-										</div>
-
-										<div>
-											<button type="button" class="radio_btn"></button>
-											신부/신랑 순
-										</div>
-										</div>
-										<!--tab_menu 초대인사말-->
-								</div>
-								<!--신랑신부 이름순서 끝-->
-							</div>
-
-
-						</div>
-						<!--mcard_invite-->
-						
-					</div>	
-
-					</div>
-				<!--초대인사말 섹션 끝-->
-
-
-				
-				<!-- ============================================================= 축하연락처 섹션 시작 -->
-				<div class="section">
-
-					<!-- 섹션 타이틀 -->
-					<div>
-						축하 연락처
-						<div class="title_icon">
-							<img src="img/settingcheck.png" alt="title-img" />
-						</div>
-						<div class="title_top_icon">
-							<img src="img/setting_top.png" alt="title-icon" />
-						</div>
-						<!-- 오른쪽 버튼 -->
-					</div>
-					<!--섹션 타이틀 끝-->
-
-					<!-- 섹션 내용 -->
-
-				<div>
-
-					<div class="mcard_contact">
-						
-						신랑측
-
-						<div class="contact_list_wrap">
-							<div class="contact_list">					
-									<div class="contact_list_left">
-										<div class="on"><button type="button" class="check_btn"></button> 신랑</div>
-										<div><input type="text" placeholder="신랑 이름"></div>
-									</div>
-
-									<div class="contact_list_right" >
-										<div> <input type="text" placeholder="- 없이 입력"></div>
-									</div>						
-							</div>
-
-							<div class="contact_list">					
-								<div class="contact_list_left">
-									<div  class="on"><button type="button" class="check_btn"></button> 부</div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-
-								<div class="contact_list_right" >
-									<div> <input type="text" placeholder="- 없이 입력"></div>
-								</div>						
-							</div>
-
-							<div class="contact_list">					
-								<div class="contact_list_left">
-									<div><button type="button" class="check_btn"></button> 모</div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-
-								<div class="contact_list_right" >
-									<div> <input type="text" placeholder="- 없이 입력"></div>
-								</div>						
-							</div>
-
-						신부측
-						
-						<div class="contact_list">					
-							<div class="contact_list_left">
-								<div><button type="button" class="check_btn"></button> 신부</div>
-								<div><input type="text" placeholder="신부 이름"></div>
-							</div>
-
-							<div class="contact_list_right" >
-								<div> <input type="text" placeholder="- 없이 입력"></div>
-							</div>						
-						</div>
-
-						<div class="contact_list">					
-							<div class="contact_list_left">
-								<div><button type="button" class="check_btn"></button> 신랑</div>
-								<div><input type="text" placeholder="신랑 이름"></div>
-							</div>
-
-							<div class="contact_list_right" >
-								<div> <input type="text" placeholder="- 없이 입력"></div>
-							</div>						
-						</div>
-
-						<div class="contact_list">					
-							<div class="contact_list_left">
-								<div><button type="button" class="check_btn"></button> 신랑</div>
-								<div><input type="text" placeholder="신랑 이름"></div>
-							</div>
-
-							<div class="contact_list_right" >
-								<div> <input type="text" placeholder="- 없이 입력"></div>
-							</div>						
-						</div>
-
-					</div>
-					<!--contact_list_wrap 끝 -->
-
-					</div>
-					<!--mcard_contact 종료-->
-					
-				</div>	
-
-					</div>
-				<!--축하 연락처 섹션 끝-->	
-
-
-
-					<!-- ============================================================= 달력 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							
-							달력
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<div class="mcard_calendar">
-								<h3>
-									- 달력은 아래 예시 이미지를 참고해 주세요. <br />
-									- 예식 정보에 입력하신 예식일자를 기준으로 표기됩니다.<br />
-									- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.
-								</h3>
-								
+							<div class="invite_msg_total">
 								<div>
-									<img src="img/prev_calendar.png" alt="달력 이미지">
+									총 <span>23</span> 개
+								</div>
+
+								<div class="sample_sort">
+									<button type="button" class="sort_btn on">인기순</button>
+									<button type="button" class="sort_btn">번호순</button>
 								</div>
 							</div>
-						</div>
-						<!--섹션내용 끝-->
-					</div>
-					<!--예식정보 섹션 끝-->
-
-
-				<!-- ============================================================= 사진갤러리 섹션 시작 -->
-				<div class="section">
-
-					<!-- 섹션 타이틀 -->
-					<div>
-						사진갤러리
-						<div class="title_icon">
-							<img src="img/settingcheck.png" alt="title-img" />
-						</div>
-						<div class="title_top_icon">
-							<img src="img/setting_top.png" alt="title-icon" />
-						</div>
-						<!-- 오른쪽 버튼 -->
-					</div>
-					<!--섹션 타이틀 끝-->
-
-					<!-- 섹션 내용 -->
-					<div></div>
-						<div class="mcard_gallery">
-							<h2 style="text-align: center;">슬라이드이미지</h2>
-							<div class="gallery_slide slide">
-																	
-								<!-- <div>
-									<div><img class="prve_img" src="img/prev_style01.png" alt="갤러리스타일 미리보기"></div>
-									<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
-										스타일01</div>
-								</div>
-
-								<div>
-									<div><img class="prve_img" src="img/prev_style02.png" alt="갤러리스타일 미리보기"></div>
-									<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
-										스타일02</div>
-								</div> -->
-							
-							</div> 
-							<!--gallery_slide-->
 
 							<div class="division_line"></div>
 
-							<h3>사진 선택 및 순서</h3>
-							<div class="gallery_photo_upload">
+							<div class="sample_msg">
+								<pre>
+									두 사람이 사랑으로 만나
+									진실과 이해로써 하나를 이루려합니다
+									이 두 사람을 지성으로 아끼고 돌봐주신
+									여러 어른과 친지를 모시고 서약을 맺고자 하오니
+									바쁘신 가운데 두 사람의 앞날을
+									가까이에서 축복해 주시면 고맙겠습니다.
+								</pre>
 
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_01.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
+								<!-- <p>
+									두 사람이 사랑으로 만나 <br />
+									진실과 이해로써 하나를 이루려합니다 <br />
+									이 두 사람을 지성으로 아끼고 돌봐주신 <br />
+									여러 어른과 친지를 모시고 서약을 맺고자 하오니 <br />
+									바쁘신 가운데 두 사람의 앞날을 <br />
+									가까이에서 축복해 주시면 고맙겠습니다. <br />
+								</p> -->
 
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_02.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
-
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
-
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
-
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
-
-								<div class="gallery_modify">
-									<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
-									<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
-											<img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
-								</div>
 
 							</div>
-							<!--invite_gallery_photo-->
-							<button type="button" class="upload_btn">사진추가 (최대 00장 업로드) </button>
-							
+
+							<div class="division_line"></div>
+
+							<div class="sample_msg">
+
+								<pre>
+									두 사람이 사랑으로 만나
+									진실과 이해로써 하나를 이루려합니다
+									이 두 사람을 지성으로 아끼고 돌봐주신
+									여러 어른과 친지를 모시고 서약을 맺고자 하오니
+									바쁘신 가운데 두 사람의 앞날을
+									가까이에서 축복해 주시면 고맙겠습니다.
+								</pre>
+							</div>
+
+							<div class="division_line"></div>
+
+							<div class="sample_msg">
+
+								<pre>
+									두 사람이 사랑으로 만나
+									진실과 이해로써 하나를 이루려합니다
+									이 두 사람을 지성으로 아끼고 돌봐주신
+									여러 어른과 친지를 모시고 서약을 맺고자 하오니
+									바쁘신 가운데 두 사람의 앞날을
+									가까이에서 축복해 주시면 고맙겠습니다.
+								</pre>
+							</div>
+
 						</div>
-						<!--inivte_gallery-->	
-				
-					</div>				
-				<!--사진갤러리 섹션 끝-->									
-
-
-				
-					<!-- ============================================================= 웨딩무비 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							웨딩 무비
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<div class="mcard_movie">
-								<h3>
-									모바일 초대 영상 제작 시 자동 생성됩니다 <br />
-									보유 중이신 할인쿠폰으로 저렴하게 제작하세요.
-								</h3>
-
-								<div>
-									<img src="img/prev_movie.png" alt="웨딩무비" style="width: 150px;">
-									<img class="modify_btn" src="img/btn_change.png" alt="순서변경 버튼" >
-								</div>
-								<button type=button>웨딩 무비 신청하기</button>
-								<div>
-									<span class="circle_span">i</span>
-									순서 변경 시 갤러리와 웨딩 무비가 한 묶음으로 이동합니다.
-								</div>
-							</div>
-						</div>	
-					
-						</div>
-					<!--웨딩무비 섹션 끝-->	
-
-
-					<!-- ============================================================= 오시는 길 섹션 시작 -->
-
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							오시는 길
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<div class="mcard_location">
-
-								<div class="navigation">
-
-									<div class="on">
-									<button type="button" class="switch_btn"></button>
-									네비게이션 길 안내 설정
-									</div>
-									
-									<div>											
-										<input type="text" placeholder="예식장 주소 입력">
-										<button type="button" class="address_btn full_btn">예식장 주소 확인</button>
-									</div>
-								</div>
-								<!--navigation-->
-
-								<div class="location_map">
-
-									<div><img src="img/prev_map.png" alt="지도"></div>
-
-									<div class="on">
-										<button type="button" class="check_btn"></button>
-										위 지도상의 위치로 길 안내를 합니다.
-									</div>
-								</div>
-								<!--location_map-->
-
-								<div>
-									<img class="switch_btn" src="img/btn_switch_off.png" alt="선택버튼">
-									예식장 전화 연결 사용 여부
-								</div>
-
-								<div class="division_line"></div>
-
-								<div class="weddinghall_map">
-									<h3>예식장 약도</h3>
-									<div class="third_block">
-										<div class="on">
-											<button type="button" class="check_btn"></button>
-											보자기 약도
-										</div>
-
-										<div>
-											<button type="button" class="check_btn"></button>
-											카카오맵
-										</div>
-
-										<div>
-											<button type="button" class="check_btn"></button>
-											직접 업로드
-										</div>
-									</div>
-									<!--third_block/ tab_menu 예식장 약도-->
-
-									<div>
-										보자기카드 약도
-										<div class="map_attention">
-											<span class="circle_span">i</span>약도 사용 주의사항<br />
-											<p>보자기카드에서 제공하는 약도는 고객님들께서 사용하신 약도로, 현재 상황에서 정확한 정보가 아닐 수 있습니다. 오타, 지명, 교통편, 주소, 연락처 등을 반드시 확인하세요.
-											</p>                                
-										</div>  
-									</div>
-
-								</div>
-								<!--weddinghall_map/ 예식장약도 끝-->
-
-								<div>
-									<button type="button" class="full_btn">보유 약도 검색</button>
-									<div class="prev_map">
-										<img src="img/rough_map.png" alt="약도 미리보기">
-									</div>
-								</div>
-
-								<div>
-									카카오맵
-									<input type="text" placeholder="예식장 주소 입력">
-									<button type="button" class="address_btn full_btn">예식장 주소 확인</button>
-									<div class="prev_box">
-										미리보기
-									</div>
-
-									직접업로드										
-									<button type="button" class="full_btn">파일 업로드</button>
-									<div class="prev_box">
-										미리보기
-									</div>
-								</div>
-							
-								<div class="division_line"></div>
-
-
-								
-								<div class="parking_info">										
-									교통편 및 주차 안내
-									<div class="parking_info_list block_30_70">
-										<div>
-										<select name="subway_and" id="">
-											<option value="지하철">지하철</option>
-											<option value="버스">버스</option>
-											<option value="자가용">자가용</option>
-										</select>
-										</div>
-										
-										<div>
-											<input type="text" placeholder="예)3호선 동대입구역 하차 1번 출구">
-										</div>
-									</div>
-									<!--parking_info_list-->
-									
-									<div class="parking_info_list block_30_70">
-										<div>
-											<select name="subway_and" id="">
-												<option value="직접입력">직접입력</option>							
-											</select>
-										</div>
-										<div>
-											<input type="text">
-										</div>
-									</div>
-									<!--parking_info_list-->
-
-									<div class="parking_info_list block_30_70">
-										<div>
-											<input type="text" placeholder="입력">
-										</div>
-										<div>
-											<input type="text">
-										</div>
-									</div>
-									<!--parking_info_list-->
-
-									<div class="parking_info_list block_30_70">
-										<div>
-											<select name="subway_and" id="">
-												<option value="선택">선택</option>							
-											</select>
-										</div>
-										<div>
-											<input type="text">
-										</div>
-									</div>
-									<!--parking_info_list-->
-								
-									<button type="button" class="full_btn">항목 추가</button>
-								</div>
-								<!--parking_info-->
-
-
-							</div>
-							<!--invite_way-->
-						</div>
-						<!--섹션내용 끝-->	
-				
+						<!--mcard_invite_sub-->
 					</div>
-					<!--오시는길 section 끝-->
+					<!--섹션내용 끝-->
 
-					<!-- ============================================================= 안내사항 섹션 시작 -->
-					<div class="section">
 
-						<!-- 섹션 타이틀 -->
-						<div>
-							안내사항
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
+				</div>
+				<!--인사말 샘플 섹션 끝-->
+
+
+
+				<!-- ============================================================= 약도 검색 -->
+				<div class="section_sub">
+
+
+					<!-- 섹션 내용 -->
+					<div class="section_sub_inner">
+						<div class="mcard_location_sub">
+							<div>
+								<button type="button" class="close_btn"></button>
 							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<h3>
-								전세 버스,피로연,화환 등의 안내 사항을 기재하실 수 있습니다.<br />
-								예) 전세 버스 : 당일 오전 11시에 ㅇㅇ역 1번 출구 앞에서 출발
-								
-							</h3>
-							<div class="mcard_guide_notice">
-																
-								<div class="notice_list block_30_70">
-									<div>
-										<input type="text" placeholder="제목">
-									</div>
-									<div>
-										<input type="text" placeholder="내용">
-									</div>
-								</div>
-
-								<div class="notice_list block_30_70">
-									<div>
-										<input type="text" placeholder="제목">
-									</div>
-									<div>
-										<input type="text" placeholder="내용">
-									</div>
-								</div>
-
-								<div class="notice_list block_30_70">
-									<div>
-										<input type="text" placeholder="제목">
-									</div>
-									<div>
-										<input type="text" placeholder="내용">
-									</div>
-								</div>
-
-								<button type="button" class="full_btn">항목 추가</button>
-							</div>
-						</div>	
-					
-						</div>
-					<!--안내사항 섹션 끝-->	
-
-
-
-					<!-- ============================================================= 축하의 마음 전하기 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							축하의 마음 전하기 (계좌번호)
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							신랑 측
-							<div class="mcard_account">
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>신랑</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>부</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>모</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-								<div class="account_info_list block_30_70 account_hidden">
-
-									<div class="color888"><button type="button" class="check_btn"></button>
-										관계입력
-									</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-								<button type="button" class="full_btn">신랑 측 계좌 추가</button>
-
-								<!-- 신랑 측 계좌추가 끝 -->
-
-
-								신부 측
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>신부</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>부</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-
-								<div class="account_info_list block_30_70">
-
-									<div><button type="button" class="check_btn"></button>모</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-								<div class="account_info_list block_30_70 account_hidden">
-
-									<div class="color888"><button type="button" class="check_btn"></button>관계입력</div>
-
-									<div><input type="text" placeholder="이름"></div>
-
-								</div>
-								<!--account_info_list-->
-
-								<div class="account_info_list account_hidden block_30_70 ">
-									<div>
-										<select name="account_select" id="account_select">
-											<option value="선택">은행</option>
-										</select>
-									</div>
-									<div>
-										<input type="text">
-									</div>
-								</div>
-								<!--account_info_list hidden-->
-
-								<button type="button" class="full_btn">신부 측 계좌 추가</button>
-
-								<!-- 신부 측 계좌추가 끝 -->
-
-
-
-
-							</div>
-							<!--mcard_account-->
-
-						</div>
-						<!--섹션 내용 끝-->
 						
-					</div>
-					<!--축하의 마음 전하기 섹션 끝-->
-
-
-
-					<!-- ============================================================= 축하 메시지 섹션 시작 -->
-					<div class="section">
-
-						<!-- 섹션 타이틀 -->
-						<div>
-							축하메시지
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--섹션 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-							<div class="mcard_messege">
-								<h3>방문자에게서 축하 메시지를 받고, 상호 댓글을 남길 수 있습니다<br />
-									- 아래 예시 이미지를 참고해 주세요<br />
-									- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.</h3>
-
-								<div>
-									<img src="img/prev_message.png" alt="메시지 예시">
-								</div>
-							</div>	
-							
-
-						</div>
-					
-					</div>
-					<!--축하의 마음 전하기 섹션 끝-->	
-
-
-					<!-- ============================================================= 예식일 연기 안내 -->
-					<div class="section">
-
-						<div>
-
-							예식일 연기 안내
-							<div class="title_icon">
-								<img src="img/settingcheck.png" alt="title-img" />
-							</div>
-							<div class="title_top_icon">
-								<img src="img/setting_top.png" alt="title-icon" />
-							</div>
-							
-							<!-- 오른쪽 버튼 -->
-						</div>
-						<!--예식일 연기 안내 타이틀 끝-->
-
-						<!-- 섹션 내용 -->
-						<div>
-					
-							<div class="mcard_covid_msg">
-							<h3>예식이 연기되었을 때 사용할 수 있는 기능입니다.<br />
-							설정 시 알림용 공지 이미지가 생성되며, 모바일 청첩장 메인에 노출됩니다.	
-							</h3>
+							약도 검색
 
 							<div>
-								<button type="button" class="drop_btn wedding_delay_btn"></button>
+								<button type="button" class="drop_btn">전국</button>
 							</div>
-							
-							<div class="hidden">
-								<img src="img/covid_msg.png" alt="예식일 연기 안내">
-							</div>						
-						
+
+							<div class="location_search">
+								<input type="text" 이곳에 명칭을 입력하세요.>
+								<button type="button">검색</button>
+							</div>
+
+
+							<div class="top_title">
+								총 <span>21,941</span> 건의 자료가 검색 되었습니다.
+							</div>	
+
+							<ul class="location_list">
+								<li>
+									라움웨딩홀 <br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+
+								<li>
+									라움웨딩홀<br />
+									경남 창원시 성산구 중앙대로 227번길 16
+								</li>
+							</ul>
+
+							<div class="location_page">
+								<button type="button" class="page_btn on">1</button>
+								<button type="button" class="page_btn">2</button>
+								<button type="button" class="page_btn">3</button>
+								<button type="button" class="page_btn">4</button>
+								<button type="button" class="page_arrow_btn"><img src="img/arrow_right_bar.png" alt="다음버튼"></button>
 
 							</div>
-							<!--mcard_covid_msg-->
 
-						
-							<button type="button" class="all_save_btn">전체 내용 저장하기</button>	
-						
 						</div>
-						<!--섹션내용 끝-->
+						<!--mcard_wedding_info_sub-->
+
+						</div>
+
+					<!--섹션내용 끝-->
+
+
+				</div>
+				<!--약도 검색 섹션 끝-->
+
+
+				<!-- ============================================================= 약도 검색 : 상세보기 -->
+				<div class="section_sub">
+
+					<div class="section_title">
+
+						약도 검색 : 상세보기
+						<div class="title_icon">
+							<img src="img/arrow_back_gray.png" alt="title-img" />
+						</div>
 					
 						
 					</div>
-					<!--예식일 연기 안내섹션 끝-->
+					<!--약도 검색 : 상세보기 타이틀 끝-->
 
-					
-					
+					<!-- 섹션 내용 -->
+					<div class="section_sub_inner">
+						
+						<div class="mcard_sub_map_detail">
+							
+							<!-- div 1 -->
+							<div>
+								<div>명칭<span>더채플앳논현</span> </div>
+								<div>주소<span>서울 강남구 논현로 549</span> </div>
+								<div>등록<span>2021-05-11</span> </div>
+							
+							</div>
+						
+							<!-- div 2 -->
+							<div class="division_line"></div>
+
+							<!-- div 3 -->
+							<div>
+								<button type="button" class="page_btn on">1</button>
+								<button type="button" class="page_btn">2</button>
+								<button type="button" class="page_btn">3</button>
+							</div>
+
+							<!-- div 4 -->
+							<div>
+								<img src="img/rough_map.png" alt="약도 이미지">
+							</div>
+
+							<!-- div 5 -->
+							<div>
+								위 약도는 보자기카드에서 제작하였으며, <br />
+								저작권법의 보호를 받습니다.
+							</div>
+
+							<!-- div 6 -->
+							<div>
+								<button type="button">설정하기</button>
+							</div>
+
+							<!-- div 7 -->
+							<div class="division_line"></div>
+
+							<!-- div 8 -->
+							<div>
+								<button type="button">목록 보기</button>
+							</div>
+							
+						</div>
+						<!--mcard_sub_map_detail-->
+
+						</div>
+
+					<!--섹션내용 끝-->
+
+
+				</div>
+				<!--약도 검색:상세보기 섹션 끝-->
+
+
+
 				
+				<!-- ============================================================= 예식일 연기 안내 -->
+				<div class="section_sub">
+
+					<div class="section_title">
+
+						예식일 연기 안내
+						<div class="title_icon">
+							<img src="img/settingcheck.png" alt="title-img" />
+						</div>
+						<div class="title_top_icon">
+							<img src="img/setting_top.png" alt="title-icon" />
+						</div>
+						
+						<!-- 오른쪽 버튼 -->
+					</div>
+					<!--예식일 연기 안내 타이틀 끝-->
+
+					<!-- 섹션 내용 -->
+					<div class="section_sub_inner">
+
+						div.
+			
+					예식이 연기되었을 때 사용할 수 있는 기능입니다<br />
+					설정 시 알림용 공지 이미지가 생성되며, 모바일 청첩장 메인에 노출됩니다.	
 					
+					
+
+					</div>
+					<!--mcard_wedding_info_sub-->
+
+						</div>
+
+					<!--섹션내용 끝-->
+
+
+				</div>
+				<!--예식일 연기 안내섹션 끝-->
+
+
+
 			</div>
 			<!--page_wrapper 모바일청첩장 설정 끝-->
 
 
-		
-		<script>
-			$(function(){
-
-			});
-		</script>
-
-		<style>
-			.body_mid_menu {
-				color: #cccccc;
-				font-size: 12px;
-				border-bottom: 1px solid #3c3f47;
-				background-color: #21242d;
-				padding-top: 14px;
-				padding-bottom: 14px;
-				position: relative;
-			}
-
-			.body_mid_menu_arrow {
-				position: absolute;
-				z-index: 1;
-				width: 15px;
-				height: 15px;
-				top: 14px;
-				right: 0px;
-			}
-
-			#mid_menu_block {
-				box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				position: relative;
-				z-index: 0;
-				background-color: #21242d;
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-top: 20px;
-			}
-
-			.bottom_cs_tel_no {
-				margin-left: 5px;
-			}
-
-			.body_mid_menu_sub {
-				display: inline-block;
-				width: 32%;
-				text-align: center;
-				border-right: 1px solid #3c3f47;
-				padding-top: 14px;
-				padding-bottom: 14px;
-			}
-
-			.body_mid_menu_sub:last-child {
-				border-right: 0px solid #3c3f47;
-			}
-		</style>
-
-		<div id="mid_menu_block">
-
-			<div class=body_mid_menu onclick=location.href='review.php'>
-				이용후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
-			<div class=body_mid_menu onclick=location.href='event_view.php?event_no=7'>
-				샘플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
-			</div>
-			<div class=body_mid_menu
-				onclick="$.cookie('product_sub_menu_show',0);location.href='insa.php?card_type=gb'">
-				인사말검색 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
-
-			<div class=body_mid_menu onclick=location.href='map.php'> 예식장 약도 검색 <img class=body_mid_menu_arrow
-					src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
-
-			<div class=body_mid_menu onclick=location.href='benefit.php'> 주문혜택 <img class=body_mid_menu_arrow
-					src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
-			<div class=body_mid_menu onclick="$.cookie('product_sub_menu_show',0);location.href='cs.php'">
-				고객센터
-				<span class="bottom_cs_tel_no">1566-2334</span>
-				<img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
-			</div>
-			<div
-				style="color: #cccccc; font-size:12px; border-bottom:1px solid #3c3f47; background-color:#21242d;">
-				<div class=body_mid_menu_sub
-					onclick="location.href='com_intro_main.php?menu_id=com_intro_main'">About 보자기카드</div>
-				<div class=body_mid_menu_sub onclick="location.href='join_sug.php?menu_id=join_sug'">제휴 및 협찬문의
-				</div>
-				<div class=body_mid_menu_sub onclick="location.href='join_reg.php?menu_id=join_reg'">협력업체 등록
-				</div>
-			</div>
-
-		</div>
-
-
-		<!-- tail menu -->
-		<div id="tail_block" style=" background-color: #21242d;">
-
-			<!-- SNS 버튼 -->
-			<div style="clear: both; height: 16px;"></div>
-			<style>
-				.addr_map_btn {
-					height: 30px;
-					width: auto;
-					margin-right: 10px;
-				}
-
-				#sns_block {
-					margin: auto;
-				}
-
-				#sns_block tbody tr td {
-					font-size: 0;
-				}
-
-				.site_bottom_sns_row {
-					text-align: center;
-					font-size: 0;
-				}
-
-				.sns_btn {
-					font-size: 0;
-					margin-right: 5px;
-				}
-
-				.sns_btn:last-child {
-					margin-right: 0;
-				}
-
-				.sns_btn>img {
-					font-size: 0;
-					height: 28px;
-				}
-			</style>
-			<div class="site_bottom_sns_row">
-				<a class="sns_btn" target="_blank" href="https://facebook.com/bojagicard"><img
-						src="https://bojagicard.com/m/img/200615_01_01.png" /></a>
-				<a class="sns_btn" target="_blank" href="https://instagram.com/bojagicard/"><img
-						src="https://bojagicard.com/m/img/200615_01_02.png" /></a>
-				<a class="sns_btn" target="_blank"
-					href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img
-						src="https://bojagicard.com/m/img/200615_01_05.png" /></a>
-				<a class="sns_btn" target="_blank" href="http://bojagi.net"><img
-						src="https://bojagicard.com/m/img/200615_01_03.png" /></a>
-				<a class="sns_btn" target="_blank" href="javascript://" id="pcmode"><img
-						src="https://bojagicard.com/m/img/200615_01_04.png" /></a>
-			</div>
 
 			<script>
 				$(function () {
-					$('#pcmode').bind('click', function () {
 
-						$.removeCookie('m_mode')
-						$.removeCookie('m_mode', { path: '/' })
-						$.removeCookie('m_mode', { path: '/m' })
-
-						$.cookie('pcmode', 1, { path: '/' })
-
-						var move_url = '/card/'
-						var conv_url = '';
-						if (conv_url != '') move_url = conv_url
-						location.href = move_url
-
-					})
-				})
+				});
 			</script>
 
-			<!-- SNS 버튼 -->
-
 			<style>
-				.body_link_menu {
-					color: #999999;
+				.body_mid_menu {
+					color: #cccccc;
+					font-size: 12px;
+					border-bottom: 1px solid #3c3f47;
+					background-color: #21242d;
+					padding-top: 14px;
+					padding-bottom: 14px;
+					position: relative;
+				}
+
+				.body_mid_menu_arrow {
+					position: absolute;
+					z-index: 1;
+					width: 15px;
+					height: 15px;
+					top: 14px;
+					right: 0px;
+				}
+
+				#mid_menu_block {
+					box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					-webkit-box-sizing: border-box;
+					position: relative;
+					z-index: 0;
+					background-color: #21242d;
+					padding-left: 30px;
+					padding-right: 30px;
+					padding-top: 20px;
+				}
+
+				.bottom_cs_tel_no {
+					margin-left: 5px;
+				}
+
+				.body_mid_menu_sub {
+					display: inline-block;
+					width: 32%;
 					text-align: center;
-					font-size: 11px;
-					display: inline-block;
+					border-right: 1px solid #3c3f47;
+					padding-top: 14px;
+					padding-bottom: 14px;
 				}
 
-				.body_link_menu:nth-child(1) {
-					margin-right: 13px;
-				}
-
-				.bottom_com_link_sep_icon {
-					display: inline-block;
-					margin-left: 9px;
-					margin-right: 11px;
-				}
-
-				#bottom_company_info {
-					display: none;
-					font-size: 10px;
-					color: #999999 !important;
-					line-height: 16px;
-					padding-left: 0;
-					padding-top: 10px;
-					text-align: left;
+				.body_mid_menu_sub:last-child {
+					border-right: 0px solid #3c3f47;
 				}
 			</style>
 
-			<!--footer 메뉴/ 로그인메뉴에서는 미사용-->
-			<div style="width: 100%; text-align: center; padding-top: 10px;">
-				<div style="width: 300px; margin: auto; text-align: center;">
+			<div id="mid_menu_block">
 
-					<div class="body_link_menu" id="bottom_company_info_btn">
-						사업자 정보 <img src="https://bojagicard.com/m/img/151001_01_22_down.png" height="10"
-							style="margin-left: 5px; margin-top: -6px;" />
-					</div>
-					<div class="body_link_menu"
-						onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
-						이용약관
-						<div class="bottom_com_link_sep_icon">·</div>
-					</div>
-					<div class="body_link_menu"
-						onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
-						개인정보 취급방침
-						<div class="bottom_com_link_sep_icon">·</div>
-					</div>
-					<div class="body_link_menu" onclick="location.href='bojagi_map.php?menu_id=bojagi_map'">
-						오시는길
-					</div>
-
-					<br />
-
-
-					<!-- 사업자 정보 -->
-					<div id="bottom_company_info">
-
-						(주)비플스 : 대표이사 <span style="color: #999999;"
-							onclick="location.href='/agent'">이왕수</span><br /> <!-- event_diary.htm -->
-						주소 : 서울 중구 동호로25길 20 보자기카드<br />
-						사업자등록번호 : 199-81-00459<br />
-						통신판매업<span style="color: #999999;">신고번호</span> : 2017-서울중구-0268호<br />
-						개인정보관리책임자 : 이왕수<br />
-						고객센터 : 1566-2334 / 팩스 : 02-6455-2334
-
-						<!-- 제휴접속 표기 -->
-
-						/ 네이버 PC-자상호 제휴접속
-
-
-						<!-- 제휴접속 표기 -->
-
-					</div>
-					<!-- 사업자 정보 -->
-
-
+				<div class=body_mid_menu onclick=location.href='review.php'>
+					이용후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
+				<div class=body_mid_menu onclick=location.href='event_view.php?event_no=7'>
+					샘플후기 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
 				</div>
+				<div class=body_mid_menu
+					onclick="$.cookie('product_sub_menu_show',0);location.href='insa.php?card_type=gb'">
+					인사말검색 <img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
+
+				<div class=body_mid_menu onclick=location.href='map.php'> 예식장 약도 검색 <img class=body_mid_menu_arrow
+						src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
+
+				<div class=body_mid_menu onclick=location.href='benefit.php'> 주문혜택 <img class=body_mid_menu_arrow
+						src=https://bojagicard.com/m/img/151001_01_22.png /> </div>
+				<div class=body_mid_menu onclick="$.cookie('product_sub_menu_show',0);location.href='cs.php'">
+					고객센터
+					<span class="bottom_cs_tel_no">1566-2334</span>
+					<img class=body_mid_menu_arrow src=https://bojagicard.com/m/img/151001_01_22.png />
+				</div>
+				<div style="color: #cccccc; font-size:12px; border-bottom:1px solid #3c3f47; background-color:#21242d;">
+					<div class=body_mid_menu_sub onclick="location.href='com_intro_main.php?menu_id=com_intro_main'">
+						About 보자기카드</div>
+					<div class=body_mid_menu_sub onclick="location.href='join_sug.php?menu_id=join_sug'">제휴 및 협찬문의
+					</div>
+					<div class=body_mid_menu_sub onclick="location.href='join_reg.php?menu_id=join_reg'">협력업체 등록
+					</div>
+				</div>
+
 			</div>
-			<script>
-				$('#bottom_company_info_btn').on('click', function () {
-					if ($('#bottom_company_info').css('display') == 'none') {
-						$('#bottom_company_info').show()
-						window.scrollTo(0, document.body.scrollHeight)
-					} else {
-						$('#bottom_company_info').hide()
+
+
+			<!-- tail menu -->
+			<div id="tail_block" style=" background-color: #21242d;">
+
+				<!-- SNS 버튼 -->
+				<div style="clear: both; height: 16px;"></div>
+				<style>
+					.addr_map_btn {
+						height: 30px;
+						width: auto;
+						margin-right: 10px;
 					}
-				})
-			</script>
+
+					#sns_block {
+						margin: auto;
+					}
+
+					#sns_block tbody tr td {
+						font-size: 0;
+					}
+
+					.site_bottom_sns_row {
+						text-align: center;
+						font-size: 0;
+					}
+
+					.sns_btn {
+						font-size: 0;
+						margin-right: 5px;
+					}
+
+					.sns_btn:last-child {
+						margin-right: 0;
+					}
+
+					.sns_btn>img {
+						font-size: 0;
+						height: 28px;
+					}
+				</style>
+				<div class="site_bottom_sns_row">
+					<a class="sns_btn" target="_blank" href="https://facebook.com/bojagicard"><img
+							src="https://bojagicard.com/m/img/200615_01_01.png" /></a>
+					<a class="sns_btn" target="_blank" href="https://instagram.com/bojagicard/"><img
+							src="https://bojagicard.com/m/img/200615_01_02.png" /></a>
+					<a class="sns_btn" target="_blank"
+						href="https://www.youtube.com/channel/UCH1YclM2ie-xSohbNNiCsfQ/videos?disable_polymer=1"><img
+							src="https://bojagicard.com/m/img/200615_01_05.png" /></a>
+					<a class="sns_btn" target="_blank" href="http://bojagi.net"><img
+							src="https://bojagicard.com/m/img/200615_01_03.png" /></a>
+					<a class="sns_btn" target="_blank" href="javascript://" id="pcmode"><img
+							src="https://bojagicard.com/m/img/200615_01_04.png" /></a>
+				</div>
+
+				<script>
+					$(function () {
+						$('#pcmode').bind('click', function () {
+
+							$.removeCookie('m_mode')
+							$.removeCookie('m_mode', {
+								path: '/'
+							})
+							$.removeCookie('m_mode', {
+								path: '/m'
+							})
+
+							$.cookie('pcmode', 1, {
+								path: '/'
+							})
+
+							var move_url = '/card/'
+							var conv_url = '';
+							if (conv_url != '') move_url = conv_url
+							location.href = move_url
+
+						})
+					})
+				</script>
+
+				<!-- SNS 버튼 -->
+
+				<style>
+					.body_link_menu {
+						color: #999999;
+						text-align: center;
+						font-size: 11px;
+						display: inline-block;
+					}
+
+					.body_link_menu:nth-child(1) {
+						margin-right: 13px;
+					}
+
+					.bottom_com_link_sep_icon {
+						display: inline-block;
+						margin-left: 9px;
+						margin-right: 11px;
+					}
+
+					#bottom_company_info {
+						display: none;
+						font-size: 10px;
+						color: #999999 !important;
+						line-height: 16px;
+						padding-left: 0;
+						padding-top: 10px;
+						text-align: left;
+					}
+				</style>
+
+				<!--footer 메뉴/ 로그인메뉴에서는 미사용-->
+				<div style="width: 100%; text-align: center; padding-top: 10px;">
+					<div style="width: 300px; margin: auto; text-align: center;">
+
+						<div class="body_link_menu" id="bottom_company_info_btn">
+							사업자 정보 <img src="https://bojagicard.com/m/img/151001_01_22_down.png" height="10"
+								style="margin-left: 5px; margin-top: -6px;" />
+						</div>
+						<div class="body_link_menu" onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
+							이용약관
+							<div class="bottom_com_link_sep_icon">·</div>
+						</div>
+						<div class="body_link_menu" onclick="location.href='bojagi_privacy.php?menu_id=bojagi_privacy'">
+							개인정보 취급방침
+							<div class="bottom_com_link_sep_icon">·</div>
+						</div>
+						<div class="body_link_menu" onclick="location.href='bojagi_map.php?menu_id=bojagi_map'">
+							오시는길
+						</div>
+
+						<br />
 
 
-			<div style="height: 20px;">
-				&nbsp;
+						<!-- 사업자 정보 -->
+						<div id="bottom_company_info">
+
+							(주)비플스 : 대표이사 <span style="color: #999999;"
+								onclick="location.href='/agent'">이왕수</span><br /> <!-- event_diary.htm -->
+							주소 : 서울 중구 동호로25길 20 보자기카드<br />
+							사업자등록번호 : 199-81-00459<br />
+							통신판매업<span style="color: #999999;">신고번호</span> : 2017-서울중구-0268호<br />
+							개인정보관리책임자 : 이왕수<br />
+							고객센터 : 1566-2334 / 팩스 : 02-6455-2334
+
+							<!-- 제휴접속 표기 -->
+
+							/ 네이버 PC-자상호 제휴접속
+
+
+							<!-- 제휴접속 표기 -->
+
+						</div>
+						<!-- 사업자 정보 -->
+
+
+					</div>
+				</div>
+				<script>
+					$('#bottom_company_info_btn').on('click', function () {
+						if ($('#bottom_company_info').css('display') == 'none') {
+							$('#bottom_company_info').show()
+							window.scrollTo(0, document.body.scrollHeight)
+						} else {
+							$('#bottom_company_info').hide()
+						}
+					})
+				</script>
+
+
+				<div style="height: 20px;">
+					&nbsp;
+				</div>
+
+
 			</div>
+			<!-- tail menu -->
+
+
+
+
+
 
 
 		</div>
-		<!-- tail menu -->
-
-
-
-
-
-
-
-				</div>
-				<!-- main_wrapper end -->
+		<!-- main_wrapper end -->
 
 
 
@@ -4616,162 +3590,164 @@ function sample_cards_update() {
 
 
 
-	<script>
-		function zip(f1, f2, f3, f4, f5) {
-			var last_scroll_direction_preserve = last_scroll_direction
-			var obj = eval("document." + f1)
-			$("#zip_search").show()
-			$("#zip_search").css("top", $(obj).offset().top + "px")
-			$("#zip_search").height("220px")  //DEFAULT ZIP-SEARCH HEIGHT
-			$("#zip_search").attr("src", "zip_search.htm?f1=" + f1 + "&f2=" + f2 + "&f3=" + f3 + "&f4=" + f4 + "&f5=" + f5)
-			$("#mask").width("100%").height("100%")
+		<script>
+			function zip(f1, f2, f3, f4, f5) {
+				var last_scroll_direction_preserve = last_scroll_direction
+				var obj = eval("document." + f1)
+				$("#zip_search").show()
+				$("#zip_search").css("top", $(obj).offset().top + "px")
+				$("#zip_search").height("220px") //DEFAULT ZIP-SEARCH HEIGHT
+				$("#zip_search").attr("src", "zip_search.htm?f1=" + f1 + "&f2=" + f2 + "&f3=" + f3 + "&f4=" + f4 + "&f5=" + f5)
+				$("#mask").width("100%").height("100%")
 
-
-		}
-		function zip_close(f1, f2, f3, f4, f5) {
-			$("#zip_search").attr("src", "about:blank")
-			$("#zip_search").hide()
-			if (f1.length > 1) {
-
-				var obj_zip = eval("document." + f1)
-				var bno = $(obj_zip).attr("bno")
-				var btn = $(".addr_map_btn[bno=" + bno + "]")
-				$(btn).attr("src", $(btn).attr("src").replace("btn.png", "btn_gray.png"))  //DISABLE ADDR-MAP BUTTON
-
-				var obj_addr_type = eval("document." + f4)
-				var addr_type = $(obj_addr_type).val()
-				if (addr_type == "r") {
-					$(btn).attr("src", $(btn).attr("src").replace("btn_gray.png", "btn.png"))  //ENABLE ADDR-MAP BUTTON WHEN road_address PICKED
-				}
 
 			}
-			$("#mask").width(0).height(0)
-		}
-		function textarea_resize(obj) {
 
-			// count
-			var text = obj.val()
-			var data_arr = text.split(/\r|\r\n|\n/)
-			var count = data_arr.length
+			function zip_close(f1, f2, f3, f4, f5) {
+				$("#zip_search").attr("src", "about:blank")
+				$("#zip_search").hide()
+				if (f1.length > 1) {
 
-			// check wrapping count
+					var obj_zip = eval("document." + f1)
+					var bno = $(obj_zip).attr("bno")
+					var btn = $(".addr_map_btn[bno=" + bno + "]")
+					$(btn).attr("src", $(btn).attr("src").replace("btn.png", "btn_gray.png")) //DISABLE ADDR-MAP BUTTON
 
-			// resize
-			var default_count = Number(obj.attr("row_init"))
-			if (!default_count) default_count = 1
-			if (count > default_count) obj.attr("rows", count)
-			else obj.attr("rows", default_count)
+					var obj_addr_type = eval("document." + f4)
+					var addr_type = $(obj_addr_type).val()
+					if (addr_type == "r") {
+						$(btn).attr("src", $(btn).attr("src").replace("btn_gray.png",
+							"btn.png")) //ENABLE ADDR-MAP BUTTON WHEN road_address PICKED
+					}
 
-		}
-
-		$(function () {
-
-			$(".addr_map_btn").on("click", function () {
-				var str = $("input[name=" + $(this).attr("data_form_name") + "]").val()
-				if (str.length > 1) {
-					str = encodeURI(str)
-					window.open("http://map.daum.net/?from=total&tab=address&q=" + str)
-				} else {
-					alert('주소를 입력하시면, 지도로 주소확인 서비스를 사용하실 수 있습니다.')
 				}
+				$("#mask").width(0).height(0)
+			}
+
+			function textarea_resize(obj) {
+
+				// count
+				var text = obj.val()
+				var data_arr = text.split(/\r|\r\n|\n/)
+				var count = data_arr.length
+
+				// check wrapping count
+
+				// resize
+				var default_count = Number(obj.attr("row_init"))
+				if (!default_count) default_count = 1
+				if (count > default_count) obj.attr("rows", count)
+				else obj.attr("rows", default_count)
+
+			}
+
+			$(function () {
+
+				$(".addr_map_btn").on("click", function () {
+					var str = $("input[name=" + $(this).attr("data_form_name") + "]").val()
+					if (str.length > 1) {
+						str = encodeURI(str)
+						window.open("http://map.daum.net/?from=total&tab=address&q=" + str)
+					} else {
+						alert('주소를 입력하시면, 지도로 주소확인 서비스를 사용하실 수 있습니다.')
+					}
+				})
+
+				$(".autotextarea").bind("keyup", function (e) {
+					textarea_resize($(this))
+				})
+
+			})
+		</script>
+
+
+
+		<script>
+			$(function () {
+
+				$("div").each(function () {
+					if ($(this).attr("onclick")) $(this).css("cursor", "pointer")
+				})
+
+				$("img").each(function () {
+					if ($(this).attr("href") != "") $(this).css("cursor", "pointer")
+				})
+
+				$("td").each(function () {
+					if ($(this).attr("href") != "") $(this).css("cursor", "pointer")
+				})
+
+
+				$("img").on("click", function () {
+					if ($(this).attr("href") && $(this).attr("href") != "") location.href = $(this).attr("href")
+				})
+
+
+				$("form").each(function () {
+					$(this).attr("autocomplete", "off")
+				})
+
+				$(".member_only").show()
+
+
+				$("form[name=order]").append("<input type=hidden name=platform value='m' />")
+
 			})
 
-			$(".autotextarea").bind("keyup", function (e) {
-				textarea_resize($(this))
-			})
 
-		})
-	</script>
+			function zip_search(f1, f2, f3, f4) {
+				window.open('zip.php?popup=0&f_zip1=' + f1 + '&f_zip2=' + f2 + '&f_addr1=' + f3 + '&f_addr2=' + f4);
+			}
 
+			function zip_open(f1, f2, f3, f4) {
+				$("#zip_line").show();
+				$("#zip_line").height(50);
+				$("#zip_frame").attr("src", 'zip_frame.php?f_zip1=' + f1 + '&f_zip2=' + f2 + '&f_addr1=' + f3 + '&f_addr2=' + f4)
+			}
 
-
-	<script>
-		$(function () {
-
-			$("div").each(function () {
-				if ($(this).attr("onclick")) $(this).css("cursor", "pointer")
-			})
-
-			$("img").each(function () {
-				if ($(this).attr("href") != "") $(this).css("cursor", "pointer")
-			})
-
-			$("td").each(function () {
-				if ($(this).attr("href") != "") $(this).css("cursor", "pointer")
-			})
-
-
-			$("img").on("click", function () {
-				if ($(this).attr("href") && $(this).attr("href") != "") location.href = $(this).attr("href")
-			})
-
-
-			$("form").each(function () {
-				$(this).attr("autocomplete", "off")
-			})
-
-			$(".member_only").show()
-
-
-			$("form[name=order]").append("<input type=hidden name=platform value='m' />")
-
-		})
-
-
-		function zip_search(f1, f2, f3, f4) {
-			window.open('zip.php?popup=0&f_zip1=' + f1 + '&f_zip2=' + f2 + '&f_addr1=' + f3 + '&f_addr2=' + f4);
-		}
-
-		function zip_open(f1, f2, f3, f4) {
-			$("#zip_line").show();
-			$("#zip_line").height(50);
-			$("#zip_frame").attr("src", 'zip_frame.php?f_zip1=' + f1 + '&f_zip2=' + f2 + '&f_addr1=' + f3 + '&f_addr2=' + f4)
-		}
-
-		function windowopen(url, windowname, ww, wh) {
-			window.open(url, windowname, 'width=320,height=800')
-		}
+			function windowopen(url, windowname, ww, wh) {
+				window.open(url, windowname, 'width=320,height=800')
+			}
 
 
 
 
 
 
-		$(function () {
+			$(function () {
 
-			//AUTOCOMPLETE OFF
-			$("form").each(function () {
-				$(this).attr("autocomplete", "off")
-				$(this).prop("autocomplete", "off")
-			})
+				//AUTOCOMPLETE OFF
+				$("form").each(function () {
+					$(this).attr("autocomplete", "off")
+					$(this).prop("autocomplete", "off")
+				})
 
 
-			$("select[name=eml2]").bind("change", function () {
-				if ($(this).val() == "self") {
-					$("select[name=eml2]").hide()
-					$("#eml2_self_cancel").show()
-					$("input[name=eml3]").show()
-					$("input[name=eml3]").focus()
-				} else {
+				$("select[name=eml2]").bind("change", function () {
+					if ($(this).val() == "self") {
+						$("select[name=eml2]").hide()
+						$("#eml2_self_cancel").show()
+						$("input[name=eml3]").show()
+						$("input[name=eml3]").focus()
+					} else {
+						$("input[name=eml3]").hide()
+						$("#eml2_self_cancel").hide()
+					}
+				})
+
+
+				$("#eml2_self_cancel").on("click", function () {
 					$("input[name=eml3]").hide()
 					$("#eml2_self_cancel").hide()
-				}
+					$("select[name=eml2]").show()
+					$("select[name=eml2]").val("")
+				})
+
+				$("iframe[name=google_conversion_frame]").css("position", "fixed")
+				$("iframe[name=google_conversion_frame]").css("bottom", "-1px")
+
 			})
-
-
-			$("#eml2_self_cancel").on("click", function () {
-				$("input[name=eml3]").hide()
-				$("#eml2_self_cancel").hide()
-				$("select[name=eml2]").show()
-				$("select[name=eml2]").val("")
-			})
-
-			$("iframe[name=google_conversion_frame]").css("position", "fixed")
-			$("iframe[name=google_conversion_frame]").css("bottom", "-1px")
-
-		})
-
-	</script>
+		</script>
 
 
 
@@ -4782,332 +3758,345 @@ function sample_cards_update() {
 
 
 
-	<!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
-	<div id="zipno_window"
-		style="display: none; position: fixed; overflow: hidden; z-index: 3; -webkit-overflow-scrolling: touch;">
-		<img src="https://bojagicard.com/card/img/160824_01_01.png" id="btnCloseLayer"
-			style="cursor:pointer;position:absolute; right: 16px; top: 15px; z-index:3" onclick="zipno_close()"
-			alt="우편번호 검색 닫기 버튼">
-		<div
-			style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; padding: 16px; width: 100%; height: 46px; line-height: 12px; background-color: #000; color: #fff; font-size: 16px; text-align: center; font-family: MalgunGothic;">
-			우편번호 검색
+		<!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
+		<div id="zipno_window"
+			style="display: none; position: fixed; overflow: hidden; z-index: 3; -webkit-overflow-scrolling: touch;">
+			<img src="https://bojagicard.com/card/img/160824_01_01.png" id="btnCloseLayer"
+				style="cursor:pointer;position:absolute; right: 16px; top: 15px; z-index:3" onclick="zipno_close()"
+				alt="우편번호 검색 닫기 버튼">
+			<div
+				style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; padding: 16px; width: 100%; height: 46px; line-height: 12px; background-color: #000; color: #fff; font-size: 16px; text-align: center; font-family: MalgunGothic;">
+				우편번호 검색
+			</div>
 		</div>
-	</div>
 
 
-	<!--
+		<!--
 //dmaps.daum.net/map_js_init/postcode.v2.js
 -->
-	<!-- <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
-	<script>
-
-		var element_layer = document.getElementById('zipno_window')
-
-
-		var themeObj = {
-			searchBgColor: "#626262", //검색창 배경색
-			queryTextColor: "#FFFFFF" //검색창 글자색
-		}
-
-		if (typeof mobile_page != 'number') mobile_page = 0
-
-		function initLayerPosition() {
-			var width = 500;
-			var height = 500;
-			var borderWidth = 1;
-			element_layer.style.width = width + 'px';
-			element_layer.style.height = height + 'px';
-			element_layer.style.border = borderWidth + 'px solid #aaaaaa';
-			element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width) / 2 - borderWidth) + 'px';
-			element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height) / 2 - borderWidth) + 'px';
-		}
-
-		function zipno_close() {
-			element_layer.style.display = 'none'
-			$(".zip_search_block").hide()
-		}
-
-		function zipno(prefix, seqn) {
-
-			if (typeof (prefix) == 'undefined') var prefix = ""
-			if (prefix != "") prefix += "_"
-
-			if (typeof (seqn) == 'undefined') var seqn = ""
+		<!-- <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> -->
+		<script>
+			var element_layer = document.getElementById('zipno_window')
 
 
-			var targetobj = element_layer
-
-			if (mobile_page) {
-				targetobj = document.getElementById(prefix + 'zip_row')
-				var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+			var themeObj = {
+				searchBgColor: "#626262", //검색창 배경색
+				queryTextColor: "#FFFFFF" //검색창 글자색
 			}
 
-			new daum.Postcode({
-				theme: themeObj,
-				oncomplete: function (data) {
+			if (typeof mobile_page != 'number') mobile_page = 0
 
-					var fullAddr = data.roadAddress
-					var extraAddr = ''
+			function initLayerPosition() {
+				var width = 500;
+				var height = 500;
+				var borderWidth = 1;
+				element_layer.style.width = width + 'px';
+				element_layer.style.height = height + 'px';
+				element_layer.style.border = borderWidth + 'px solid #aaaaaa';
+				element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width) / 2 -
+					borderWidth) + 'px';
+				element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height) / 2 -
+					borderWidth) + 'px';
+			}
 
-					if (data.userSelectedType === 'R') {
+			function zipno_close() {
+				element_layer.style.display = 'none'
+				$(".zip_search_block").hide()
+			}
 
-						if (data.bname !== '') {
-							//extraAddr += data.bname
+			function zipno(prefix, seqn) {
+
+				if (typeof (prefix) == 'undefined') var prefix = ""
+				if (prefix != "") prefix += "_"
+
+				if (typeof (seqn) == 'undefined') var seqn = ""
+
+
+				var targetobj = element_layer
+
+				if (mobile_page) {
+					targetobj = document.getElementById(prefix + 'zip_row')
+					var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+				}
+
+				new daum.Postcode({
+					theme: themeObj,
+					oncomplete: function (data) {
+
+						var fullAddr = data.roadAddress
+						var extraAddr = ''
+
+						if (data.userSelectedType === 'R') {
+
+							if (data.bname !== '') {
+								//extraAddr += data.bname
+							}
+
+							if (data.buildingName !== '') {
+								extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName)
+							}
+
+							fullAddr += (extraAddr !== '' ? ' (' + extraAddr + ')' : '')
+
 						}
 
-						if (data.buildingName !== '') {
-							extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName)
+
+						if (data.userSelectedType === 'J') {
+
+							fullAddr = data.jibunAddress
+
 						}
 
-						fullAddr += (extraAddr !== '' ? ' (' + extraAddr + ')' : '')
+						document.getElementById(prefix + 'zip' + seqn).value = data.zonecode
+						document.getElementById(prefix + 'addr_code' + seqn).value = data.buildingCode
+						document.getElementById(prefix + 'addr' + seqn + '1').value = fullAddr
+						document.getElementById(prefix + 'addr' + seqn + '2').focus()
 
+
+
+						if (document.getElementById(prefix + 'map_btn' + seqn)) document.getElementById(prefix +
+								'map_btn' + seqn).src = document.getElementById(prefix + 'map_btn' + seqn).src
+							.replace("_gray", "")
+
+
+
+						targetobj.style.display = 'none'
+						if (mobile_page) document.body.scrollTop = currentScroll
+
+					},
+
+					onresize: function (size) {
+
+						if (mobile_page) targetobj.style.height = size.height + 'px'
+
+					},
+					maxSuggestItems: 5,
+					width: '100%',
+					height: '100%'
+
+				}).embed(targetobj)
+
+				targetobj.style.display = 'block'
+				if (mobile_page) targetobj.style.height = '466px'
+				else initLayerPosition()
+
+			}
+
+			function zip_addr1_key(obj, e) {
+				// Deletion check
+				if (e.keyCode == 8 || e.keyCode == 46) { // Backspace, Delete
+					if (obj.value.length == 0) {
+						$(obj).parent().prev().find('.zip_number').val('')
 					}
-
-
-					if (data.userSelectedType === 'J') {
-
-						fullAddr = data.jibunAddress
-
-					}
-
-					document.getElementById(prefix + 'zip' + seqn).value = data.zonecode
-					document.getElementById(prefix + 'addr_code' + seqn).value = data.buildingCode
-					document.getElementById(prefix + 'addr' + seqn + '1').value = fullAddr
-					document.getElementById(prefix + 'addr' + seqn + '2').focus()
-
-
-
-					if (document.getElementById(prefix + 'map_btn' + seqn)) document.getElementById(prefix + 'map_btn' + seqn).src = document.getElementById(prefix + 'map_btn' + seqn).src.replace("_gray", "")
-
-
-
-					targetobj.style.display = 'none'
-					if (mobile_page) document.body.scrollTop = currentScroll
-
-				},
-
-				onresize: function (size) {
-
-					if (mobile_page) targetobj.style.height = size.height + 'px'
-
-				},
-				maxSuggestItems: 5,
-				width: '100%',
-				height: '100%'
-
-			}).embed(targetobj)
-
-			targetobj.style.display = 'block'
-			if (mobile_page) targetobj.style.height = '466px'
-			else initLayerPosition()
-
-		}
-
-		function zip_addr1_key(obj, e) {
-			// Deletion check
-			if (e.keyCode == 8 || e.keyCode == 46) { // Backspace, Delete
-				if (obj.value.length == 0) {
-					$(obj).parent().prev().find('.zip_number').val('')
 				}
 			}
-		}
 
 
 
-		$(function () {
+			$(function () {
 
-			if (mobile_page) {
-				$("input,select,textarea").on("click", function () {
-					zipno_close()
-				})
-			}
+				if (mobile_page) {
+					$("input,select,textarea").on("click", function () {
+						zipno_close()
+					})
+				}
 
-		})
-	</script>
-
-
-	<script>
-
-		/*
-					상품메뉴
-									*/
+			})
+		</script>
 
 
-		var sub_menu_cnt = parseInt($(".sub_menu_product").length);	//서브 메뉴 갯수
+		<script>
+			/*
+							상품메뉴
+											*/
 
 
-		function get_block_height() {	//서브 메뉴 높이 반환
-
-			var sub_menu_product_block_h = (sub_menu_cnt * 44) + 20;
-
-			if (typeof ($("#product_title_img").val()) != "undefined")
-				//sub_menu_product_block_h = $("#product_title_img").height()+1;	//타이틀 이미지 높이보다 서브메뉴 높이가 작을 경우에는 이미지 높이로 맞춤
-				sub_menu_product_block_h = $("#product_title_img").height() + 1
-
-			return sub_menu_product_block_h
-
-		}
+			var sub_menu_cnt = parseInt($(".sub_menu_product").length); //서브 메뉴 갯수
 
 
-		$(function () {
+			function get_block_height() { //서브 메뉴 높이 반환
 
+				var sub_menu_product_block_h = (sub_menu_cnt * 44) + 20;
 
-			$("#sub_menu_product_block").width($("#top_menu").width())
+				if (typeof ($("#product_title_img").val()) != "undefined")
+					//sub_menu_product_block_h = $("#product_title_img").height()+1;	//타이틀 이미지 높이보다 서브메뉴 높이가 작을 경우에는 이미지 높이로 맞춤
+					sub_menu_product_block_h = $("#product_title_img").height() + 1
 
-
-			$('#sub_menu_product_').css('color', '#fd4777');  //현재페이지 활성화
-
-
-
-
-
-
-
-		})
-
-
-		function sub_menu_product_toggle(sw) {
-
-
-			if (sw == 'on' || $("#sub_menu_product_block").height() == 0) {
-
-				scroll_detect_lock = 0;
-
-				$("#title_arrow").animate({
-					"transform": "rotate(180deg)"
-				})
-
-				$("#menu_product").css("opacity", "1")
-
-				$("#sub_menu_product_block").animate({
-					display: "block",
-					opacity: 1,
-					height: get_block_height() + "px",
-					"z-index": "99"
-				}, {
-					specialEasing: {
-						width: 'linear',
-						height: 'easeInExpo'
-					},
-					duration: 33.3 * sub_menu_cnt,
-					queue: false
-				})
-
-				var t = 100;
-				$(".sub_menu_product").each(function (i) {
-					setTimeout(function () { $(".sub_menu_product:eq(" + i + ")").animate({ opacity: 1 }, { duration: 500 }) }, t)
-					t += 100;
-				})
-
-				//$('#mask').show().height('100%').width('100%')
-
+				return sub_menu_product_block_h
 
 			}
 
 
-
-			if (sw == 'off' || $("#sub_menu_product_block").height() > 0) {
-
-				var t = sub_menu_cnt * 10;
-				$(".sub_menu_product").each(function (i) {
-
-					setTimeout(function () { $(".sub_menu_product:eq(" + i + ")").animate({ opacity: 0 }, { duration: 500 }) }, t)
-					t -= 10;
-				})
+			$(function () {
 
 
-				setTimeout(function () {
+				$("#sub_menu_product_block").width($("#top_menu").width())
+
+
+				$('#sub_menu_product_').css('color', '#fd4777'); //현재페이지 활성화
+
+
+
+
+
+
+
+			})
+
+
+			function sub_menu_product_toggle(sw) {
+
+
+				if (sw == 'on' || $("#sub_menu_product_block").height() == 0) {
+
+					scroll_detect_lock = 0;
+
+					$("#title_arrow").animate({
+						"transform": "rotate(180deg)"
+					})
+
+					$("#menu_product").css("opacity", "1")
 
 					$("#sub_menu_product_block").animate({
-
-						/*
-							specialEasing: {
-								width: 'linear',
-								height: 'easeInExpo'
-							},
-						*/
-
+						display: "block",
 						opacity: 1,
-						height: "0px",
-						"z-index": -1
-
+						height: get_block_height() + "px",
+						"z-index": "99"
 					}, {
-
-						duration: 300,
+						specialEasing: {
+							width: 'linear',
+							height: 'easeInExpo'
+						},
+						duration: 33.3 * sub_menu_cnt,
 						queue: false
-
 					})
 
-				}, 200)
+					var t = 100;
+					$(".sub_menu_product").each(function (i) {
+						setTimeout(function () {
+							$(".sub_menu_product:eq(" + i + ")").animate({
+								opacity: 1
+							}, {
+								duration: 500
+							})
+						}, t)
+						t += 100;
+					})
 
-				//$('#mask').hide().height(0).width(0)
+					//$('#mask').show().height('100%').width('100%')
+
+
+				}
+
+
+
+				if (sw == 'off' || $("#sub_menu_product_block").height() > 0) {
+
+					var t = sub_menu_cnt * 10;
+					$(".sub_menu_product").each(function (i) {
+
+						setTimeout(function () {
+							$(".sub_menu_product:eq(" + i + ")").animate({
+								opacity: 0
+							}, {
+								duration: 500
+							})
+						}, t)
+						t -= 10;
+					})
+
+
+					setTimeout(function () {
+
+						$("#sub_menu_product_block").animate({
+
+							/*
+								specialEasing: {
+								  width: 'linear',
+								  height: 'easeInExpo'
+								},
+							*/
+
+							opacity: 1,
+							height: "0px",
+							"z-index": -1
+
+						}, {
+
+							duration: 300,
+							queue: false
+
+						})
+
+					}, 200)
+
+					//$('#mask').hide().height(0).width(0)
+
+				}
+
 
 			}
+		</script>
+		<script>
+			$('.zzim_btn').click(function (e) { //Fill a bog with sample
 
 
-		}
+				//  샘플담기에 있는 상품 선택했을시 (빨간색 [무료샘플 신청] 버튼 클릭) 샘플신청페이지로 이동
+				if ($(this).data('picked') == '1') {
 
-	</script>
-	<script>
-		$('.zzim_btn').click(function (e) {  //Fill a bog with sample
+					location.href = 'sample_order.php'
 
-
-			//  샘플담기에 있는 상품 선택했을시 (빨간색 [무료샘플 신청] 버튼 클릭) 샘플신청페이지로 이동
-			if ($(this).data('picked') == '1') {
-
-				location.href = 'sample_order.php'
-
-				// 샘플담기에 없는 상품 선택했을시
-			} else {
-
-
-				// 찜한 샘플이 10개 미만이면
-				if (sample_pick < 10) {
-
-					// 샘플담기 처리
-					var cardCode = $(this).data('cardcode')
-					$.get('/card/sample_cart_add.php?cardCode=' + cardCode, function (data) {
-
-						//최상단 샘플갯수 업데이트
-						sample_cards_update()  // _head.php에 정의되있음.  선택카드 삭제시에는 sample_cards.php 에서 업데이트.
-
-					})
-
-					// 해당상품 샘플버튼 변경처리
-					$('#zzim_' + cardCode).data('picked', 1)
-					$('#zzim_' + cardCode).text('무료샘플 신청')
-					$('#zzim_' + cardCode).css('color', '#fd4976')
-
-
-					// 샘플메뉴 열기
-					sample_menu('open')
-
-
-
-					// 찜한 샘플이 10개 이상이면
+					// 샘플담기에 없는 상품 선택했을시
 				} else {
 
 
-					if (confirm('무료 10종의 샘플을 모두 선택하셨습니다.\n\n샘플신청 페이지로 이동할까요?')) {
+					// 찜한 샘플이 10개 미만이면
+					if (sample_pick < 10) {
 
-						// 샘플신청 페이지로 이동
-						location.href = 'sample_order.php'
+						// 샘플담기 처리
+						var cardCode = $(this).data('cardcode')
+						$.get('/card/sample_cart_add.php?cardCode=' + cardCode, function (data) {
 
+							//최상단 샘플갯수 업데이트
+							sample_cards_update() // _head.php에 정의되있음.  선택카드 삭제시에는 sample_cards.php 에서 업데이트.
+
+						})
+
+						// 해당상품 샘플버튼 변경처리
+						$('#zzim_' + cardCode).data('picked', 1)
+						$('#zzim_' + cardCode).text('무료샘플 신청')
+						$('#zzim_' + cardCode).css('color', '#fd4976')
+
+
+						// 샘플메뉴 열기
+						sample_menu('open')
+
+
+
+						// 찜한 샘플이 10개 이상이면
 					} else {
 
-						// 또는 샘플담기 내역 보여주기
-						sample_menu('open')
+
+						if (confirm('무료 10종의 샘플을 모두 선택하셨습니다.\n\n샘플신청 페이지로 이동할까요?')) {
+
+							// 샘플신청 페이지로 이동
+							location.href = 'sample_order.php'
+
+						} else {
+
+							// 또는 샘플담기 내역 보여주기
+							sample_menu('open')
+
+						}
+
+						return false
 
 					}
 
-					return false
-
 				}
 
-			}
-
-		})
-	</script>
+			})
+		</script>
 
 </body>
 

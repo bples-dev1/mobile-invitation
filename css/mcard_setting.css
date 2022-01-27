@@ -2,6 +2,7 @@
 
 #page_wrapper {
     background-color: #f7f8f8; 
+   
 }
 
 .top_title {
@@ -15,7 +16,7 @@
 }
 
 /* 
-섹션 타이틀
+섹션 타이틀, 고정 여백
 */
 
 .section,
@@ -62,17 +63,7 @@
     height: 8px;
 }
 
-.section > div:first-child {
-    height: 44px;
-    line-height: 44px;
-    background-color: #f1f1f1;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333333;
-    position: relative;
-    padding-left: 52px;
-    border-bottom: 2px solid #e7e7e7;
-}
+
 
 .section > div:last-child {
     background-color: #f7f8f8;
@@ -173,6 +164,15 @@ div.on  .check_btn{
     width: 32px;
 }
 
+.close_btn{
+    width: 15px;
+    height: 15px;
+    background: url('../img/close_btn.png');
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+
 /* 100% 버튼 기본설정 */
 .full_btn{
     width: 100%;
@@ -199,6 +199,20 @@ div.on .switch_btn{
     background-size: 38px 20px;
 }
 
+/* drop 박스 버튼 예식일연기, 약도 */
+.drop_btn {
+    width: 100%;
+    height: 38px;
+    border:1px solid #ddd;
+    background: url('../img/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 17px 10px;
+    background-position: 95% center;
+    padding-left:10px;
+    padding-right:10px;
+    text-align: left;
+    border-radius: 3px;
+}
 
 .circle_span{
     display:inline-block;
@@ -992,14 +1006,292 @@ div.on .switch_btn{
 
 /* -------------------- 예식일 연기 안내 */
 
-.drop_btn {
+.mcard_covid_msg .wedding_delay_btn.on{
+    background-color: #ffffff;
+}
+
+.mcard_covid_msg .wedding_delay_btn::before{
+    content: '설정하기';
+}
+
+.mcard_covid_msg .wedding_delay_btn.on::before{
+    content: '닫을 수 있는 공지 이미지';
+}
+
+.mcard_covid_msg .hidden{
+    margin-top:10px;
+    text-align: center;
+    display: none;
+}
+.mcard_covid_msg img{
+    width: 90%;
+  
+}
+
+.section .all_save_btn{
     width: 100%;
-    border:1px solid #ddd;
-    background: url('../img/arrow_down.png');
-    background-repeat: no-repeat;
-    background-size: 17px 10px;
-    background-position: 95% center;
+    height: 38px;
+    background-color: #3e6fef;
+    color:#ffffff;
+    font-weight: bold;
+    margin-top:30px;
+}
+
+
+
+
+/* ------------------------------ 서브페이지 ------------------------------*/ 
+
+.section_sub{
+    border-top:1px solid blue;
+}
+.section_sub .section_sub_inner {
+
+    background-color: #f7f8f8;
+    padding-top:38px;
+    padding-bottom:34px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 12px;
+    color: #333333;
+    position: relative;    
+ 
+}
+
+.section_sub .section_title {
+    
+    height: 44px;
+    line-height: 44px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    padding-left: 52px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.section_sub .title_icon {
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    padding: 0;
+    line-height: 0;
+   
+}
+
+.title_icon>img {
+    height: 20px;
+}
+
+.title_top_icon {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    line-height: 0;
+}
+
+.title_top_icon img {
+    height: 8px;
+}
+
+
+.section_sub .close_btn{
+    position: absolute;
+    top: 24px; right: 24px;
+ 
+}
+
+
+.section_sub .drop_btn{
+    margin-top:10px;
+    background-color: #ffffff;
+ 
+}
+
+
+/* -------------------- 인사말샘플 */
+
+.mcard_invite_sub .invite_msg_total{
+    width: 100%;
+    height: 38px;
+    margin-top:10px;
+    font-size: 0;
+}
+
+.mcard_invite_sub .invite_msg_total div{
+    display: inline-block;
+    width: calc( calc(100% - 10px) / 2 );
+    height: 38px;
+    line-height: 38px;
+    font-size:12px;
+
+}
+.mcard_invite_sub .invite_msg_total div:first-child{
+    margin-right:10px;
+}
+
+.invite_msg_total span{
+    color:#3e6fef;
+}
+.mcard_invite_sub .sample_sort{
+    font-size: 0;
+}
+.mcard_invite_sub .sample_sort button{
+    width: calc( calc(100% ) / 2 );
+}
+
+.mcard_invite_sub .sample_sort button:last-child{
+   margin-left:-3px;
+}
+.sort_btn{
+    width: 100%;
+    height: 38px;
+    border:1px solid #dddddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.sort_btn.on{
+    border:1px solid #c6d7fa;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.sample_msg {
+    text-align: center; 
+    margin-top:-10px;
+}
+
+/* .sample_msg p{
+   line-height: 18px;
+} */
+
+.sample_msg pre{
+    line-height: 20px;
+white-space: pre-line;
+   
+}
+
+.mcard_invite_sub > .division_line{
+   margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* --------------------  약도검색*/
+.location_search {
+    margin-top:10px;
+    font-size:0;
+}
+.location_search input{
+    width: calc(70% - 10px );
+    margin-right:10px;
+}
+
+.location_search button{
+    width: 30%;
+    height: 38px;
+    border:1px solid #3e6fef;
+    color:#3e6fef;
+    border-radius: 3px;
+}
+
+.mcard_location_sub .top_title{
+    color:#333;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    margin-top:10px;
+    margin-bottom: 0;
+}
+
+.mcard_location_sub .top_title span{
+    color:#3e6fef;
+}
+
+.location_list li{
+    line-height: 18px;
+    border-bottom:1px solid #dddddd;
+    padding-top:13px;
+    padding-bottom:13px;
     padding-left:10px;
     padding-right:10px;
-    text-align: left;
+    color:#333;
+}
+
+.location_page{
+    padding-top:20px;
+    text-align: center;
+}
+.page_btn{
+    width: 30px;height: 30px;
+    border-radius: 50%;
+    border:1px solid #dddddd;
+    background-color:#f0f0f0;
+    color:#333333;
+    margin-right:12px;
+}
+
+.location_page button:last-child{
+    margin-right: 0;
+}
+
+.page_btn.on{
+    color:#3e6fef;
+    border:1px solid #c6d7fa;
+    background-color: #f3f5fa;
+}
+
+
+.location_page button img{
+    width: 11px;
+    height: 9px;
+   vertical-align: middle;
+}
+
+
+/* -------------------- 약도 검색 : 상세보기 */
+
+.mcard_sub_map_detail > div:first-child{
+  line-height: 23px;  
+}
+.mcard_sub_map_detail span{
+    margin-left:12px;
+}
+
+.mcard_sub_map_detail > :nth-child(3){
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.mcard_sub_map_detail img{
+    width: 100%;
+}
+
+.mcard_sub_map_detail > :nth-child(5){
+    text-align: center;
+    line-height: 18px;
+    margin-top:20px;
+    margin-bottom:16px;
+}
+
+.mcard_sub_map_detail > :nth-child(6){
+    text-align: center;
+}
+
+.mcard_sub_map_detail button{
+    height: 40px;
+    border-radius: 3px;
+}
+.mcard_sub_map_detail > :nth-child(6) button{
+    width: 95px;    
+    background-color: #3e6fef;
+    color:#ffffff;
+    
+}
+
+.mcard_sub_map_detail > :nth-child(8) button{
+    width: 100%;
+    background-color: #f0f0f0;
+    border:1px solid #dedede;
 }
