@@ -25,7 +25,8 @@
 -->
 
 	<link rel="stylesheet" href="https://img.bojagicard.com/jquery/swiper.435.min.css">
-	<!-- <link rel="stylesheet" href="css/sign.css"> -->
+	
+	<link rel="stylesheet" href="css/mcard_setting.css">
 
 	<script language="javascript" type="text/javascript"
 		src="https://img.bojagicard.com/jquery/jquery-1.7.2.min.js"></script>
@@ -40,7 +41,7 @@
 	<script language="javascript" type="text/javascript"
 		src="https://img.bojagicard.com/jquery/swiper.435.min.js"></script>
 	<script language="javascript" src="https://bojagicard.com/card/js/common.js?hash=202004101330"></script>
-
+	<script src="script/setting.js"></script>
 
 	<script>
 		var https = 'on'
@@ -3009,687 +3010,7 @@ function sample_cards_update() {
 
 				<!--모바일청첩장 설정 폼 시작-->
 
-				<style>
-					#page_wrapper {
-						background-color: #f7f8f8; 
-					}
-
-					
-
-					.top_title {
-						width: 100%; height: 67px;
-						font-size:12px;
-						line-height: 67px;
-						text-align: center;
-						background-color: #e7eefd;
-						color:#3e6fef;
-						margin-bottom:23px;		
-						}
-
-					/*
-	섹션 타이틀
-*/
-					.section,
-					.section div {
-						box-sizing: border-box;
-						-moz-box-sizing: border-box;
-						-webkit-box-sizing: border-box;
-                    }
-					.section form *{
-						font-size:12px;
-						border-radius: 3px;
-					}
-
-					.section select{
-						background:url('img/arrow_down.png');
-						background-repeat:no-repeat;
-						background-position: 90% center;
-						background-size:17px;
-						padding-left:10px;
-					}
-
-					.section button{
-						color:#333;
-						height: 38px;
-						cursor: pointer;
-						border-radius: 3px;
-						font-size:12px;
-					}
-					.section input{
-						height: 38px;
-						border-radius: 3px;
-						font-size:12px;
-						padding-left:10px;
-					}
-
-					div .radio_btn{
-						width: 15px;
-						height: 15px;
-						background: url("img/btn_radio_off.png")top;
-						background-repeat: no-repeat;
-						background-size: 15px;
-						border:none;
-						vertical-align: middle;
-						margin-right:6px;
-					}
-
-					div.on .radio_btn{
-						width: 15px;height: 15px;
-						background: url("img/btn_radio_on.png")center;
-						background-size: 15px;
-					}
-
-					.checkbox_btn{
-						width: 15px;
-						height: 15px;
-						background: url("img/check_off.png")top;
-						background-repeat: no-repeat;
-						background-size: 15px;
-						border:none;
-						vertical-align: middle;
-						margin-right:6px;
-					}
-					.modify_btn{   
-						width: 32px;
-					}	
-					.prev_img{
-						width: 112px;
-					}
-					.prev_photo{
-						width: 100%;
-					}
-
-					.circle_span{
-						display:inline-block;
-                        width: 15px;
-                        height: 15px;
-                        line-height: 17px;
-                        background-color: #aac6f5;
-                        border-radius: 50%;
-                        text-align: center;
-                        vertical-align: middle;
-                        color:#ffffff;
-                        font-size: 11px;
-                        margin-bottom: 2px;
-                        margin-right:5px;
-					}
-
-					.slide {
-					height: 225px;
-					border: 1px solid navy;
-					margin-top:20px;
-					margin-bottom:20px;
-					}
-
-					.division_line{
-						margin-top:20px;
-						padding-top:10px;
-						border-top:1px solid #dddddd;
-					}
-
-
-					.section>div:first-child {
-						height: 44px;
-						line-height: 44px;
-						background-color: #f1f1f1;
-						font-size: 12px;
-						font-weight: bold;
-						color: #333333;
-						position: relative;
-						padding-left: 52px;
-						border-bottom: 2px solid #e7e7e7;
-					}
-                  
-					.title_icon {
-						position: absolute;
-						left: 24px;
-						top: 12px;
-						padding: 0;
-						line-height: 0;
-                       
-					}
-
-					.title_icon>img {
-						height: 20px;
-					}
-
-					.title_top_icon {
-						position: absolute;
-						top: 18px;
-						right: 24px;
-						line-height: 0;
-					}
-
-					.title_top_icon img {
-						height: 8px;
-					}
-
-					.section > div:last-child {
-						background-color: #f7f8f8;
-                        padding-top:20px;
-                        padding-bottom:34px;
-						padding-left: 24px;
-						padding-right: 24px;
-						font-size: 12px;
-						color: #333333;
-					}
-
-                    .section > div:last-child h3{
-                        line-height: 20px;
-                        font-size:12px;
-                    }
-
-                    .section > div:last-child .tab_menu{
-                        width: 100%;
-                        height: 38px;
-                        font-size:0;
-						cursor: pointer;
-                    }
-                    
-                    .section > div:last-child .tab_menu div{
-                        display: inline-block;
-                        width: calc(100% / 2);
-                        /* width: calc( calc(100% - 6px) / 2 ); */
-                        height: 38px;
-                        line-height: 38px;
-                        text-align: center;
-                        border:1px solid #dddddd;
-                        color:#888888;
-                        font-size:13px;
-                    }
-                    .section > div:last-child .tab_menu div span{
-                        display: inline-block;
-                        width: 30px;
-                        height: 15px;
-                        line-height: 15px;
-                        border-radius: 20px;
-                        background-color: #cccccc;
-                        color:#ffffff;
-                        font-size:11px;
-                        vertical-align: middle;
-                        
-                    }
-                    
-                    .section > div:last-child .tab_menu div.on{
-                        background-color: #ffffff;
-                        color:#333333;
-                        border:1px solid #aac6f5;                        
-                    }
-					.section > div:last-child .tab_menu div.on span{
-						background-color: #3e6fef;
-					}
-                    .section > div:last-child .tab_menu div:first-child{
-                        border-radius: 3px 0 0 3px;
-                    }
-                    .section > div:last-child .tab_menu div:first-child.on{
-                        border-radius: 3px 0 0 3px;
-                    }
-                    .section > div:last-child .tab_menu div:last-child{
-                        border-radius: 0 3px 3px 0;
-                        /* margin-left:-3px; */
-                    }
-                    .section > div:last-child .tab_menu div:last-child.on{
-                        border-radius: 0 3px 3px 0;
-                    }
-                    
-
-					/* 선물설정 */
-                    .section > div:last-child .present_list{
-                        width: 100%;
-						height: 100%;
-                        font-size:0;
-                        padding-top:18px;
-                        /* border:1px solid red;				 */
-					}
-                    
-					.section > div:last-child .present_list div{
-                        text-align: center;
-                    }
-                  
-                    .section > div:last-child .present_list .item{
-                        display: inline-block;
-                        width: calc( calc(100% - 20px) / 3 );
-						/* height: 100%; */
-                        margin-right: 10px;
-																						
-					}
-					.section > div:last-child .present_list .item .item_img{
-						
-						height: 130px;
-					}
 			
-					.item_bottom{
-						overflow: hidden;
-					}
-                    .section > div:last-child .present_list .item img{
-                        width: 47px;
-                        text-align: center;
-                        padding-top:20px;    
-						
-                    }
-                    .section > div:last-child .present_list .item:last-child{
-                        margin-right: 0;
-                    }
-             
-                    
-                    /* 선물 이미지 배경색 변경 */
-                    .section > div:last-child .present_list .item:first-child .item_img{
-                        background-color: #e7e9dd;
-                    }
-                    .section > div:last-child .present_list .item:nth-child(2) .item_img{
-                        background-color: #dbe4d4;
-                    }
-                    .section > div:last-child .present_list .item:nth-child(3) .item_img{
-                        background-color: #d1d2cd;
-                    }
-                    
-                    /* 선물 텍스트 */
-                    .section > div:last-child .present_list .item_txt{
-                        font-size:13px;
-                        margin-top:13px;
-                        margin-bottom:10px;
-                        line-height: 19px;
-                        text-align: left;
-						border:1px solid red;
-                    }
-
-					.section > div:last-child .present_list .item_price{
-						border:1px solid blue;
-						
-					}
-                    .section > div:last-child .present_list .item_select{
-                        width: 90%;
-                        /* height: 22px; */
-                        font-size:13px;
-                        /* border:1px solid green; */
-                        text-align: left;
-						
-                    }
-
-                    .section > div:last-child .present_list .item_select select{
-                        width: 90%;
-                        height: 28px;
-                        font-size:12px;
-                        /* border:1px solid red; */
-						
-                    }
-
-                    .section > div:last-child .price_sum{
-                        text-decoration: underline;
-                        padding-top:12px;
-                        padding-bottom:18px;
-                    }
-
-                    .section > div:last-child .buy_btn{
-                        width: 100%;
-                        height: 38px;
-                        color:#ffffff;
-                        background-color: #3e6fef;
-                        font-size:13px;
-                        margin-bottom:22px;
-                        border-radius: 3px;
-                    }
-                    .section > div:last-child .present_like{
-                        width: 100%;
-                        padding-left:11px;
-                        padding-right:11px;
-                        padding-top:20px;
-                        padding-bottom:10px;
-                        background-color: #f0f0f0;
-                        
-                    }
-                    .section > div:last-child .present_like{
-                        font-size:14px;
-                        vertical-align: middle;
-                    }				
-					
-
-                    /* .section > div:last-child .present_like span{
-                        display:inline-block;
-                        width: 15px;
-                        height: 15px;
-                        line-height: 17px;
-                        background-color: #aac6f5;
-                        border-radius: 50%;
-                        text-align: center;
-                        vertical-align: middle;
-                        color:#ffffff;
-                        font-size: 11px;
-                        margin-bottom: 2px;
-                        margin-right:5px;
-                    } */
-                    .section > div:last-child .present_like p{
-                        font-size:13px;
-                        line-height: 20px;                    
-                        /* letter-spacing: 0.5px; */
-                        
-                    }
-                    .section > div:last-child .present_like p:last-child{
-                        margin-top:-4px;
-                    }
-
-					/* 테마설정  */
-					
-					/* 슬라이드 */
-
-					/* 슬라이드 내부 스타일, 실제 슬라이드 적용시 수정필요 
-					크기 및 슬라이드 공통설정은 상단 .slide에 있음 */
-
-					/* .invite_theme_list .theme_slide {
-					height: 225px;
-					border: 1px solid red;
-					} */
-			
-					
-					/* 테마 색상 선택 */
-					.invite_theme_list .theme_color{
-						overflow: hidden;					
-					}
-
-					.invite_theme_list .theme_color .color_choice {
-						border-top:1px solid #dddddd;
-						border-right:1px solid #dddddd;
-						border-left:1px solid #dddddd;
-						border-radius: 3px;			
-					}
-
-					.invite_theme_list .theme_color .color_choice div{						
-						height: 38px;
-						border-bottom:1px solid #dddddd;
-						background-color: #ffffff;
-						padding-left:10px;
-						padding-top: 9px;					
-					}
-
-					.color_choice div:first-child{
-						border-radius: 10px;
-						border-radius: 3px 3px 0 0;
-					}
-					.color_choice div:last-child{
-						border-bottom:1px solid red;
-						border-radius: 0 0 3px 3px;
-					}
-							
-					.invite_theme_list .theme_color .color_choice img{
-						display: inline-block;
-						vertical-align: middle;
-						/* margin-top:11px; */
-					}
-					.invite_theme_list .theme_color .color_choice span{
-						display: inline-block;
-						width: 22px;height: 22px;
-						vertical-align: middle;
-						border-radius: 50%;
-						/* margin-top:7px; */
-						margin-left:7px;
-						margin-right:7px;					
-					}
-
-					/* 색상 표 */
-					.color_choice div:first-child span{background: linear-gradient(#f1e7e6 50%, #b1d5e0 50%);}
-					.color_choice div:nth-child(2) span{background-color: #6662ab;}
-					.color_choice div:nth-child(3) span{background-color: #ffc46f;}
-					.color_choice div:nth-child(4) span{background-color: #65737e;}
-				
-					/* 스킨설정 */
-					.invite_skin_list {
-						width: 100%;
-					}
-					.invite_skin_list .invite_skin_photo{
-						width: 100%;			
-						font-size: 0;
-					}
-					.invite_skin_list .invite_skin_photo > div{
-					
-						width: calc( calc(100% - 20px) / 3 );
-						display: inline-block;
-						margin-right:10px;
-						
-					}
-					.invite_skin_list .invite_skin_photo > div:last-child{
-						margin-right:0;
-						
-					}
-					.invite_skin_list .invite_skin_photo > div div:last-child{
-						/* border:1px solid red; */
-						padding-top:15px;
-					}
-					.invite_skin_list .invite_skin_photo > div div:last-child img{
-						padding-left:10px;
-						padding-right:7px;
-						/* padding-top:15px; */						
-					} 
-				
-					.skin_photo_effect{
-						display: inline-block;
-						width: 100%;
-						/* border: 1px solid red; */
-						font-size:0;
-					}
-					.skin_photo_effect select{
-						font-size:12px;
-						width: calc( calc(100% - 17px) / 2 );
-						margin-right:17px;
-						padding-left:10px;
-					}						
-				
-
-				
-					.skin_photo_effect select:last-child{
-						margin-right:0;
-					}
-
-					/* 예식정보 */
-					.wedding_date{
-						/* border:1px solid red; */
-						font-size: 0;
-					}
-					.wedding_date input{
-						padding-left:10px;
-					}
-					
-					.wedding_date input:first-child{
-						border:1px solid #e8e8e8;
-						width: calc(100% - 10px);
-						height: 33px;
-						margin-right:10px;										
-					}
-
-					.wedding_date div{
-						display: inline-block;
-						width: calc( calc(100% - 10px) / 2 );
-						/* border:1px solid green; */
-						vertical-align: text-top;
-					}
-
-					.wedding_date div:first-child{
-						margin-right:10px;
-					}
-
-					/* .wedding_date .time_select {
-						width: 50%;
-						border:1px solid red;
-					} */
-					
-					.wedding_date div:nth-child(2) select{					
-						border:1px solid #e8e8e8;
-						width: calc( calc(100% - 13px) / 2 );
-						height: 33px;
-					}
-
-					.wedding_date select:first-child{
-						margin-right:10px;
-					}
-
-					.wedding_date div:nth-child(3){
-						width: 100%;
-					} 
-
-					.wedding_date div:nth-child(3) input{
-						width: 100%;
-						margin-top:10px;	
-					}
-
-					/* 초대인사말 */
-					.invite_greeting input{
-						width: 100%;
-					}
-							
-					.invite_greeting .greeting_form button{
-						border:1px solid #c6d7fa;
-						background-color: #f3f5fa;
-						margin-top:10px;
-						margin-bottom: 10px;
-					}
-					
-					/* border, 여백 값 외 원형 문자 기본 스타일은 .circle_span 에 설정되어있음 */
-					.invite_greeting span{
-						border-radius: 50%;
-						margin-left:5px;
-					}
-				
-					.half_block {
-						font-size: 0;
-						/* border:1px solid red; */
-					}
-
-					.half_block div{
-						display: inline-block;
-                        width: calc(100% / 2);
-                        height: 38px;
-                        line-height: 38px;
-                        text-align: center;
-                        border:1px solid #dddddd;
-						background-color: #fff;
-                        color:#888888;
-                        font-size:13px;
-						vertical-align: middle;
-					}
-
-				
-					.greeting_form textarea{
-						width: 100%;
-						height: 150px;
-						background-color: #ffffff;
-						padding-top:10px;
-						padding-left:10px;
-						resize: none;
-					}
-
-					.phone_wrap:last-child{
-						margin-top:20px;
-					}
-					.groom{
-						width: 100%;
-						/* border:1px solid red; */
-						padding-top:20px;
-					}
-				
-					.groom_bride{
-						width: 100%;
-						font-size: 0;
-					}
-					
-					.groom_bride div {
-						display: inline-block;
-						width: calc( calc(100% - 20px) / 3 );
-						height: 38px;
-						vertical-align: bottom;
-						margin-top:10px;
-						margin-right:6px;
-						/* border:1px solid red; */
-					}
-
-					.groom_bride div:last-child{
-						line-height: 38px;
-						margin-right:0;
-					}
-					.groom_bride div select{
-						width: 100%;
-						background-color: #fff;
-					}
-					.groom_bride input{
-						background-color: #ffffff;
-					}
-
-					.phone_messege{
-						/* border:1px solid red; */
-					}			
-					.groom_phone_list{
-						display: inline-block;
-						width: 100%;
-						/* border:1px solid green; */
-						font-size: 0;
-					
-					}
-
-					.groom_phone_list div{
-						display: inline-block;
-						/* width: calc( calc(100% - 20px) / 2 ); */
-						width: calc(100% / 2 - 5px);
-						vertical-align: top;
-						border-radius: 3px;
-					}
-					.groom_phone_list div:first-child{
-						margin-right:10px;
-						/* border:1px solid navy; */
-						height: 38px;
-					}
-					.groom_phone_list div:first-child div {
-						width: calc( calc(100% - 10px) / 2 );
-						/* background: skyblue; */
-					
-					}
-
-					.groom_phone_list input{
-						width: 100%;
-						height: 38px;
-						background-color: #ffffff;
-					}
-					.groom_phone_list button{
-						width: 100%;
-						height: 38px;
-						border:none;
-						border-radius: 3px;
-					}
-					.groom_phone_list div:first-child div input{
-						background-color: transparent;
-					}
-
-					.groom_phone_list > div:last-child div{						
-						width: 100%;
-						/* border:1px solid yellow; */
-						} 
-
-					.groom_phone_list div button{
-						height: 38px;
-						border:1px solid #dddddd;
-						background: url("img/check_off.png")no-repeat 10px center;
-						background-color: #ffffff;;
-						background-size: 15px;
-						font-size: 12px;
-						padding-left:30px;
-								
-					}
-
-					.groom_phone_list div > div:last-child{
-						height: 38px;
-						/* border:1px solid green; */
-					}
-
-
-					
-					/* 달력	 */
-					.calendar_section > div{
-						text-align: center;
-					}
-					.calendar_section img{
-						width: 158px;
-					}
-
-				
-				</style> 
-				
                 <!-- width: calc( calc(100% - 20px) / 3 ); -->
               
 				<div id="page_wrapper">
@@ -3720,88 +3041,89 @@ function sample_cards_update() {
                             <h3> 모바일 청첩장을 받는 분들께 작은 선물을 준비해 보세요. <br />
                             (주문 상품 소진 후 다른 상품 구입 가능)</h3>
                         
-                            <div class="tab_menu present_tab_menu">
+                            <div class="tab_menu gift_tab">
                                 <div class="on">선물 설정</div>
                                 <div class="">이용 내역 <span>100</span> </div>
                             </div>
                             <!--present_menu 끝-->
 
-                            <div class="present_list">
-                                <div class="item">
-									<div class="item_top">
-										<div class="item_img">
-											<img src="img/gift_bananamilk.png" alt="bananamilk">
+                            <div class="mcard_gift">
+
+                                <div class="mcard_gift_list">
+								
+										<div class="gift_preview">
+											<img src="img/gift_bananamilk_w.png" alt="bananamilk">
 										</div>
 
-										<div class="item_txt">
+										<div class="gift_txt">
 												빙그레 바나나맛 우유 240ml<br />
 												각 990원
 										</div>
-									</div>										
-										
-										<div class="item_select">
-											<select name="select" id="present_select">
-												<option value="10">10개</option>
-												<option value="10">20개</option>
-												<option value="10">30개</option>
-											</select>
-										</div>
-                                    <!--item_select-->
 								
-                                </div> 
-                                <!--item 1 -->
+								<div class="gift_select">
+									<select name="gift_select" id="gift_select">
+										<option value="10">10개</option>
+										<option value="10">20개</option>
+										<option value="10">30개</option>
+									</select>
+								</div>
+								<!--gift_select-->
+								
+							</div> 
+							<!--mcard_gife_list 1 -->
 
-                                <div class="item">
-									<div class="item_top">
-                                    <div class="item_img">
-                                    <img src="img/gift_cafelatte.png" alt="cafelatte">
+                                <div class="mcard_gift_list">
+									
+                                    <div class="gift_preview">
+                                    <img src="img/gift_cafelatte_w.png" alt="cafelatte">
                                     </div>
                                
-                                    <div class="item_txt">
+                                    <div class="gift_txt">
                                             매일유업 마이 카페라떼 마일드 220ml <br />
 											각 1,500원                                          
                                     </div>
-								</div>
+							
 						
 																
-										<div class="item_select">
-										<select name="select" id="present_Select">
-											<option value="0">0개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-                                    </div> 
-                                    <!--item_select-->
+								<div class="gift_select">
+									<select name="gift_select" id="gift_select">
+										<option value="0">0개</option>
+										<option value="10">20개</option>
+										<option value="10">30개</option>
+									</select>
+								</div> 
+								<!--gift_select-->
 								
                                 </div>
-                                <!--item 2 -->
+                              <!--mcard_gife_list 2 -->
 
-                                <div class="item">
-                                    <div class="item_img">
-                                    <img src="img/gift_starbucks.png" alt="starbucks">
+                                <div class="mcard_gift_list">
+
+                                    <div class="gift_preview">
+                                   		<img src="img/gift_starbucks_w.png" alt="starbucks">
                                     </div>
                                
-                                    <div class="item_txt">
+                                    <div class="gift_txt">
                                             스타벅스 아이스 카페 아메리카도 Tall <br />
 											각 4,100원
                                     </div>
 									
-									<div class="item_select">
-                                    <select name="select" id="present_Select">
-                                        <option value="10">0개</option>
-                                        <option value="10">20개</option>
-                                        <option value="10">30개</option>
-                                    </select>
+									<div class="gift_select">
+										<select name="gift_select" id="gift_select">
+											<option value="10">0개</option>
+											<option value="10">20개</option>
+											<option value="10">30개</option>
+										</select>
                                     </div>
                                 </div>
-                                <!--item 3 -->
+                                <!--mcard_gife_list 3 -->
                               </div>
-                            <!--present_list 끝 -->
+                            <!--gift_list 끝 -->
 
-                            <div class="price_sum">
+                            <div class="gift_sum">
                                 합 49,500원
                             </div>
-                            <!--price_sum 끝-->
+                            <!--gift_price_sum 끝-->
 
                             <button type="button" class="buy_btn">선택 선물 구입하기</button>
                             
@@ -3842,7 +3164,8 @@ function sample_cards_update() {
 							<h3> 청첩장 테마 선택 후 색상을 선택하세요. <br />
 								(선택 가능한 색상은 테마별 상이)</h3>
 								
-							<div class="invite_theme_list">
+							<div class="mcard_theme">
+
 								<div class="theme_slide slide">
 									<h2 style="text-align: center;">슬라이드이미지</h2>
 									<!-- <div>
@@ -3864,20 +3187,21 @@ function sample_cards_update() {
 								</div> 
 								<!--theme_slide-->
 								<div class="division_line"></div>
+
 								<div class="theme_color">
 									<h3>테마 색상 선택</h3>
-								<div class="color_choice">									
+								<div class="color_list">									
 									<div class="on"><button type="button" class="radio_btn"></button><span></span> 베이지 + 블루</div>
 									<div><button type="button" class="radio_btn"></button><span></span> 퍼플</div>
 									<div><button type="button" class="radio_btn"></button><span></span> 옐로</div>
 									<div><button type="button" class="radio_btn"></button><span></span> 그레이</div>
 								</div>
-								<!--color_choice-->
+								<!--color_list-->
 								</div>
 								<!--theme_color-->
 
 							</div>	
-							<!--invite_theme_list-->	
+							<!--.mcard_theme -->	
 						</div>
 						<!--섹션내용 끝-->
 					</div>
@@ -3904,12 +3228,12 @@ function sample_cards_update() {
 							<h3> 스킨 디자인을 선택하세요. <br />
 								디자인 스킨의 경우 선택한 테마 색상이 자동 적용됩니다.</h3>
 								
-								<div class="tab_menu">
+								<div class="tab_menu skin_tab">
 									<div class="on">청첩장 세트 스킨 <span>20</span></div>
 									<div class="">디자인 스킨 <span>34</span> </div>
 								</div>
 
-							<div class="invite_skin_list">
+							<div class="macrd_skin">
 								<div class="skin_slide slide">
 									<h2 style="text-align: center;">슬라이드이미지</h2>
 								<!-- <div>
@@ -3932,8 +3256,10 @@ function sample_cards_update() {
 								<!--skin_slide-->
 
 								<div class="division_line"></div>
-								<div class="invite_skin_photo">
-									<h3>사진 선택 및 순서</h3>
+
+								<h3>사진 선택 및 순서</h3>
+								<div class="skin_photo_upload">
+								
 									<div>
 										<div><img class="prev_photo" src="img/prev_photo_01.png" alt="사진선택 이미지"></div>
 										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
@@ -3955,6 +3281,7 @@ function sample_cards_update() {
 								</div>
 								
 								<div class="division_line"></div>
+
 								<div class="skin_photo_effect">
 									<h3>사진효과</h3>
 									<select name="select" id="effect_select">
@@ -3993,9 +3320,9 @@ function sample_cards_update() {
 
 						<!-- 섹션 내용 -->
 						<div>
-							<div class="wedding_info">
+							<div class="mcard_infomation">
 
-							<div class="wedding_date">
+							<div class="infomation_date_form">
 
 								<form action="">
 									<div>
@@ -4028,11 +3355,11 @@ function sample_cards_update() {
 								</form>
 
 							</div>
-							<!--wedding_date-->
+							<!--infomation_date_form-->
 							
 							
 						</div>
-						<!--wedding_info-->
+						<!--mcard_infomation-->
 
 						</div>
 						<!--섹션내용 끝-->
@@ -4062,9 +3389,9 @@ function sample_cards_update() {
 
 					<!-- 섹션 내용 -->
 					<div>
-						<div class="invite_greeting">
+						<div class="mcard_invite">
 							
-							<div class="greeting_form">
+							<div class="invite_form">
 							<form action="">
 
 								<input type="text" placeholder="결혼합니다">
@@ -4096,7 +3423,7 @@ function sample_cards_update() {
 									</div>
 							</div>
 
-							<div class="groom">
+							<div class="groom_bride_form">
 								신랑 측
 									<form action="">
 									<div class=groom_bride>
@@ -4131,12 +3458,12 @@ function sample_cards_update() {
 							</div>
 							<!--groom_form-->				
 
-							<div class="groom">
+							<div class="groom_bride_form">
 								신부 측
 									<form action="">
 									<div class=groom_bride>
-										<div><input type="text" placeholder="신랑 부"> </div>
-										<div><input type="text" placeholder="신랑 모"> </div>
+										<div><input type="text" placeholder="신부 부"> </div>
+										<div><input type="text" placeholder="신부 모"> </div>
 										<div>의</div>
 									</div>
 
@@ -4157,8 +3484,8 @@ function sample_cards_update() {
 											<option value="기타">기타</option>
 										</select>
 										</div>
-									<div><input type="text" placeholder="신랑 성"> </div>
-									<div><input type="text" placeholder="신랑 이름"></div>
+									<div><input type="text" placeholder="신부 성"> </div>
+									<div><input type="text" placeholder="신부 이름"></div>
 								</div>
 								</form>
 								
@@ -4171,24 +3498,24 @@ function sample_cards_update() {
 							<!--신랑신부 이름순서 시작-->
 								<h3>신랑 신부 이름 표기 순서 (모바일 청첩장 전체 적용)</h3>
 								<div class="half_block">
-									<div class="on">
-										<button type="button" class="radio_btn"></button>
-										신랑/신부 순
-									</div>
+										<div class="on">
+											<button type="button" class="radio_btn"></button>
+											신랑/신부 순
+										</div>
 
-									<div>
-										<button type="button" class="radio_btn"></button>
-										신부/신랑 순
-									</div>
+										<div>
+											<button type="button" class="radio_btn"></button>
+											신부/신랑 순
+										</div>
+										</div>
+										<!--tab_menu 초대인사말-->
 								</div>
-								<!--tab_menu 초대인사말-->
+								<!--신랑신부 이름순서 끝-->
 							</div>
-							<!--신랑신부 이름순서 끝-->
-						</div>
 
 
 						</div>
-						<!--invite_greeting-->
+						<!--mcard_invite-->
 						
 					</div>	
 
@@ -4217,100 +3544,86 @@ function sample_cards_update() {
 
 				<div>
 
-					<div class="phone_wrap">
-						신랑 측
-						<div class="phone_messege">
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">신랑</button></div>
-									<div><input type="text" placeholder="신랑 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>
-							
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">부</button></div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>		
-
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">모</button></div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>		
-								
-					</div>	
-					<!--phone_messege-->	
-					</div>
-					<!--신랑 측-->
-
-					<div class="phone_wrap">
-						신부 측
-						<div class="phone_messege">
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">신부</button></div>
-									<div><input type="text" placeholder="신랑 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>
-							
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">부</button></div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>		
-
-							<div class="groom_phone_list">								
-								<div>
-									<!-- <div><button type="button" class="checkbox_btn">신랑</button></div> -->
-									<div><button type="button">모</button></div>
-									<div><input type="text" placeholder="혼주 이름"></div>
-								</div>
-								
-								<div>
-									<div><input type="text" placeholder="- 없이 입력"></div>          
-								</div>
-							</div>		
-								
-					</div>	
-					<!--phone_messege-->	
-					</div>
-
-
-				</div>	
-				
-					
-							
+					<div class="mcard_contact">
 						
+						신랑측
+
+						<div class="contact_list_wrap">
+							<div class="contact_list">					
+									<div class="contact_list_left">
+										<div class="on"><button type="button" class="check_btn"></button> 신랑</div>
+										<div><input type="text" placeholder="신랑 이름"></div>
+									</div>
+
+									<div class="contact_list_right" >
+										<div> <input type="text" placeholder="- 없이 입력"></div>
+									</div>						
+							</div>
+
+							<div class="contact_list">					
+								<div class="contact_list_left">
+									<div  class="on"><button type="button" class="check_btn"></button> 부</div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+
+								<div class="contact_list_right" >
+									<div> <input type="text" placeholder="- 없이 입력"></div>
+								</div>						
+							</div>
+
+							<div class="contact_list">					
+								<div class="contact_list_left">
+									<div><button type="button" class="check_btn"></button> 모</div>
+									<div><input type="text" placeholder="혼주 이름"></div>
+								</div>
+
+								<div class="contact_list_right" >
+									<div> <input type="text" placeholder="- 없이 입력"></div>
+								</div>						
+							</div>
+
+						신부측
+						
+						<div class="contact_list">					
+							<div class="contact_list_left">
+								<div><button type="button" class="check_btn"></button> 신부</div>
+								<div><input type="text" placeholder="신부 이름"></div>
+							</div>
+
+							<div class="contact_list_right" >
+								<div> <input type="text" placeholder="- 없이 입력"></div>
+							</div>						
+						</div>
+
+						<div class="contact_list">					
+							<div class="contact_list_left">
+								<div><button type="button" class="check_btn"></button> 신랑</div>
+								<div><input type="text" placeholder="신랑 이름"></div>
+							</div>
+
+							<div class="contact_list_right" >
+								<div> <input type="text" placeholder="- 없이 입력"></div>
+							</div>						
+						</div>
+
+						<div class="contact_list">					
+							<div class="contact_list_left">
+								<div><button type="button" class="check_btn"></button> 신랑</div>
+								<div><input type="text" placeholder="신랑 이름"></div>
+							</div>
+
+							<div class="contact_list_right" >
+								<div> <input type="text" placeholder="- 없이 입력"></div>
+							</div>						
+						</div>
+
+					</div>
+					<!--contact_list_wrap 끝 -->
+
+					</div>
+					<!--mcard_contact 종료-->
 					
+				</div>	
 
 					</div>
 				<!--축하 연락처 섹션 끝-->	
@@ -4336,7 +3649,7 @@ function sample_cards_update() {
 
 						<!-- 섹션 내용 -->
 						<div>
-							<div class="calendar_section">
+							<div class="mcard_calendar">
 								<h3>
 									- 달력은 아래 예시 이미지를 참고해 주세요. <br />
 									- 예식 정보에 입력하신 예식일자를 기준으로 표기됩니다.<br />
@@ -4370,11 +3683,75 @@ function sample_cards_update() {
 						<!--섹션 타이틀 끝-->
 	
 						<!-- 섹션 내용 -->
-						<div>
-							섹션 내용
-						</div>	
-	
-						</div>
+						<div></div>
+							<div class="mcard_gallery">
+								<h2 style="text-align: center;">슬라이드이미지</h2>
+								<div class="gallery_slide slide">
+																		
+									<!-- <div>
+										<div><img class="prve_img" src="img/prev_style01.png" alt="갤러리스타일 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_on.png" alt="라디오버튼">
+											스타일01</div>
+									</div>
+
+									<div>
+										<div><img class="prve_img" src="img/prev_style02.png" alt="갤러리스타일 미리보기"></div>
+										<div><img class="radio_btn" src="img/btn_radio_off.png" alt="라디오버튼">
+											스타일02</div>
+									</div> -->
+								
+								</div> 
+								<!--gallery_slide-->
+
+								<div class="division_line"></div>
+
+								<h3>사진 선택 및 순서</h3>
+								<div class="gallery_photo_upload">
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_01.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_02.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+									<div class="gallery_modify">
+										<div><img class="prev_photo" src="img/prev_photo_more.png" alt="사진선택 이미지"></div>
+										<div><img class="modify_btn" src="img/btn_modify.png" alt="수정아이콘">
+											 <img class="modify_btn" src="img/btn_change.png" alt="순서변경아이콘"></div>
+									</div>
+
+								</div>
+								<!--invite_gallery_photo-->
+								<button type="button" class="upload_btn">사진추가 (최대 00장 업로드) </button>
+								
+							</div>
+							<!--inivte_gallery-->	
+					
+						</div>				
 					<!--사진갤러리 섹션 끝-->									
 
 
@@ -4397,7 +3774,7 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								<div>
+								<div class="mcard_movie">
 									<h3>
 										모바일 초대 영상 제작 시 자동 생성됩니다 <br />
 										보유 중이신 할인쿠폰으로 저렴하게 제작하세요.
@@ -4420,6 +3797,13 @@ function sample_cards_update() {
 
 
 						<!-- ============================================================= 오시는 길 섹션 시작 -->
+
+							<style>
+								
+								
+
+							
+							</style>
 						<div class="section">
 
 							<!-- 섹션 타이틀 -->
@@ -4437,13 +3821,161 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								섹션 내용
-							</div>	
-		
+								<div class="mcard_location">
+
+									<div class="navigation">
+
+										<div class="on">
+										<button type="button" class="switch_btn"></button>
+										네비게이션 길 안내 설정
+										</div>
+										
+										<div>											
+											<input type="text" placeholder="예식장 주소 입력">
+											<button type="button" class="address_btn full_btn">예식장 주소 확인</button>
+										</div>
+									</div>
+									<!--navigation-->
+
+									<div class="location_map">
+
+										<div><img src="img/prev_map.png" alt="지도"></div>
+
+										<div class="on">
+											<button type="button" class="check_btn"></button>
+											위 지도상의 위치로 길 안내를 합니다.
+										</div>
+									</div>
+									<!--location_map-->
+
+									<div>
+										<img class="switch_btn" src="img/btn_switch_off.png" alt="선택버튼">
+										예식장 전화 연결 사용 여부
+									</div>
+
+									<div class="division_line"></div>
+
+									<div class="weddinghall_map">
+										<h3>예식장 약도</h3>
+										<div class="third_block">
+											<div class="on">
+												<button type="button" class="check_btn"></button>
+												보자기 약도
+											</div>
+
+											<div>
+												<button type="button" class="check_btn"></button>
+												카카오맵
+											</div>
+
+											<div>
+												<button type="button" class="check_btn"></button>
+												직접 업로드
+											</div>
+										</div>
+										<!--third_block/ tab_menu 예식장 약도-->
+
+										<div>
+											보자기카드 약도
+											<div class="map_attention">
+												<span class="circle_span">i</span>약도 사용 주의사항<br />
+												<p>보자기카드에서 제공하는 약도는 고객님들께서 사용하신 약도로, 현재 상황에서 정확한 정보가 아닐 수 있습니다. 오타, 지명, 교통편, 주소, 연락처 등을 반드시 확인하세요.
+												</p>                                
+											</div>  
+										</div>
+
+									</div>
+									<!--weddinghall_map/ 예식장약도 끝-->
+
+									<div>
+										<button type="button" class="full_btn">보유 약도 검색</button>
+										<div class="prev_map">
+											<img src="img/rough_map.png" alt="약도 미리보기">
+										</div>
+									</div>
+
+									<div>
+										카카오맵
+										<input type="text" placeholder="예식장 주소 입력">
+										<button type="button" class="address_btn full_btn">예식장 주소 확인</button>
+										<div class="prev_box">
+											미리보기
+										</div>
+
+										직접업로드										
+										<button type="button" class="full_btn">파일 업로드</button>
+										<div class="prev_box">
+											미리보기
+										</div>
+									</div>
+								
+									<div class="division_line"></div>
+
+
+									
+									<div class="parking_info">										
+										교통편 및 주차 안내
+										<div class="parking_info_list block_30_70">
+											<div>
+											<select name="subway_and" id="">
+												<option value="지하철">지하철</option>
+												<option value="버스">버스</option>
+												<option value="자가용">자가용</option>
+											</select>
+											</div>
+											
+											<div>
+												<input type="text" placeholder="예)3호선 동대입구역 하차 1번 출구">
+											</div>
+										</div>
+										<!--parking_info_list-->
+										
+										<div class="parking_info_list block_30_70">
+											<div>
+												<select name="subway_and" id="">
+													<option value="직접입력">직접입력</option>							
+												</select>
+											</div>
+											<div>
+												<input type="text">
+											</div>
+										</div>
+										<!--parking_info_list-->
+
+										<div class="parking_info_list block_30_70">
+											<div>
+												<input type="text" placeholder="입력">
+											</div>
+											<div>
+												<input type="text">
+											</div>
+										</div>
+										<!--parking_info_list-->
+
+										<div class="parking_info_list block_30_70">
+											<div>
+												<select name="subway_and" id="">
+													<option value="선택">선택</option>							
+												</select>
+											</div>
+											<div>
+												<input type="text">
+											</div>
+										</div>
+										<!--parking_info_list-->
+									
+										<button type="button" class="full_btn">항목 추가</button>
+									</div>
+									<!--parking_info-->
+
+
+								</div>
+								<!--invite_way-->
 							</div>
-						<!--오시는길 섹션 끝-->	
+							<!--섹션내용 끝-->	
 
-
+						</div>
+						<!--오시는길 section 끝-->
 
 						<!-- ============================================================= 안내사항 섹션 시작 -->
 						<div class="section">
@@ -4463,7 +3995,42 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								섹션 내용
+								<h3>
+									전세 버스,피로연,화환 등의 안내 사항을 기재하실 수 있습니다.<br />
+									예) 전세 버스 : 당일 오전 11시에 ㅇㅇ역 1번 출구 앞에서 출발
+									
+								</h3>
+								<div class="mcard_guide_notice">
+																	
+									<div class="notice_list block_30_70">
+										<div>
+											<input type="text" placeholder="제목">
+										</div>
+										<div>
+											<input type="text" placeholder="내용">
+										</div>
+									</div>
+
+									<div class="notice_list block_30_70">
+										<div>
+											<input type="text" placeholder="제목">
+										</div>
+										<div>
+											<input type="text" placeholder="내용">
+										</div>
+									</div>
+
+									<div class="notice_list block_30_70">
+										<div>
+											<input type="text" placeholder="제목">
+										</div>
+										<div>
+											<input type="text" placeholder="내용">
+										</div>
+									</div>
+
+									<button type="button" class="full_btn">항목 추가</button>
+								</div>
 							</div>	
 		
 							</div>
@@ -4489,37 +4056,205 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								섹션 내용
-							</div>	
-		
-							</div>
-						<!--축하의 마음 전하기 섹션 끝-->
+								신랑 측
+								<div class="mcard_account">
 
+								<div class="account_info_list block_30_70">
 
-						
-						<!-- ============================================================= 축하의 마음 전하기 섹션 시작 -->
-						<div class="section">
-
-							<!-- 섹션 타이틀 -->
-							<div>
-								축하의 마음 전하기 (계좌번호)
-								<div class="title_icon">
-									<img src="img/settingcheck.png" alt="title-img" />
+									<div><button type="button" class="check_btn"></button>신랑</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
 								</div>
-								<div class="title_top_icon">
-									<img src="img/setting_top.png" alt="title-icon" />
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
 								</div>
-								<!-- 오른쪽 버튼 -->
-							</div>
-							<!--섹션 타이틀 끝-->
-		
-							<!-- 섹션 내용 -->
-							<div>
-								섹션 내용
+								<!--account_info_list hidden-->
+
+								
+								<div class="account_info_list block_30_70">
+
+									<div><button type="button" class="check_btn"></button>부</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+							
+								
+								<div class="account_info_list block_30_70">
+
+									<div><button type="button" class="check_btn"></button>모</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+
+								<div class="account_info_list block_30_70 account_hidden">
+
+									<div class="color888"><button type="button" class="check_btn"></button>
+										관계입력
+									</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+
+								<button type="button" class="full_btn">신랑 측 계좌 추가</button>
+
+								<!-- 신랑 측 계좌추가 끝 -->
+
+
+								신부 측
+							
+								<div class="account_info_list block_30_70">
+
+									<div><button type="button" class="check_btn"></button>신부</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+
+								
+								<div class="account_info_list block_30_70">
+
+									<div><button type="button" class="check_btn"></button>부</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+							
+								
+								<div class="account_info_list block_30_70">
+
+									<div><button type="button" class="check_btn"></button>모</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+
+								<div class="account_info_list block_30_70 account_hidden">
+
+									<div class="color888"><button type="button" class="check_btn"></button>관계입력</div>
+															
+									<div><input type="text" placeholder="이름"></div>
+										
+								</div>
+								<!--account_info_list-->
+
+								<div class="account_info_list account_hidden block_30_70 ">
+									<div>
+										<select name="account_select" id="account_select">
+											<option value="선택">은행</option>							
+										</select>
+									</div>
+									<div>
+										<input type="text">
+									</div>
+								</div>
+								<!--account_info_list hidden-->
+
+								<button type="button" class="full_btn">신부 측 계좌 추가</button>
+
+								<!-- 신부 측 계좌추가 끝 -->
+
+
+
+
 							</div>	
-		
+							<!--mcard_account-->
+							
 							</div>
-						<!--축하의 마음 전하기 섹션 끝-->	
+							<!--섹션 내용 끝-->
+							</div>
+							<!--축하의 마음 전하기 섹션 끝-->
+
 
 
 						<!-- ============================================================= 축하 메시지 섹션 시작 -->
@@ -4540,9 +4275,15 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								<h3>방문자에게서 축하 메시지를 받고, 상호 댓글을 남길 수 있습니다<br />
-									- 아래 예시 이미지를 참고해 주세요<br />
-									- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.</h3>
+								<div class="mcard_messege">
+									<h3>방문자에게서 축하 메시지를 받고, 상호 댓글을 남길 수 있습니다<br />
+										- 아래 예시 이미지를 참고해 주세요<br />
+										- 선택 테마와 테마 색상에 따라 디자인과 색상이 적용됩니다.</h3>
+
+									<div>
+										<img src="img/prev_message.png" alt="메시지 예시">
+									</div>
+								</div>	
 							</div>	
 		
 							</div>
@@ -4567,9 +4308,10 @@ function sample_cards_update() {
 		
 							<!-- 섹션 내용 -->
 							<div>
-								<h3>예식이 연기되었을 떄 사용할 수 있는 기능입니다.<br />
+								<h3>예식이 연기되었을 때 사용할 수 있는 기능입니다.<br />
 									설정 시 알림용 공지 이미지가 생성되며, 모바일 청첩장 메인에 노출됩니다.</h3>
 									
+								<button type="button" class="drop_btn">설정하기</button>	
 							</div>	
 		
 							</div>
@@ -4578,6 +4320,8 @@ function sample_cards_update() {
 				</div>
 				<!--page_wrapper 모바일청첩장 설정 끝-->
 
+
+				
 				<script>
 					$(function(){
 
