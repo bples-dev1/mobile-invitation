@@ -1,4 +1,5 @@
 /* -모바일청첩장 설정 폼 시작 */
+
 #page_wrapper {
     background-color: #f7f8f8; 
 }
@@ -106,7 +107,7 @@
 }
 
 .section select{
-    background:url('img/arrow_down.png');
+    background:url('../img/arrow_down.png');
     background-repeat:no-repeat;
     background-position: 90% center;
     background-size:17px;
@@ -124,39 +125,78 @@
     padding-left:10px;
 }
 
+
 /* 버튼 공통 */
 
-div .radio_btn{
-    width: 15px;
-    height: 15px;
-    background: url("img/btn_radio_off.png")top;
+div > .radio_btn{
+   
+    width: 15px; 
+    height: 15px; 
+    background: url('../img/radio_btn_off.png') ;
     background-repeat: no-repeat;
     background-size: 15px;
     border:none;
     vertical-align: middle;
-    margin-right:6px;
+    margin-right:6px; 
+   
 }
 
-div.on .radio_btn{
-    width: 15px;height: 15px;
-    background: url("img/btn_radio_on.png")center;
+div.on > .radio_btn{
+    background: url('../img/radio_btn_on.png') ;  
     background-size: 15px;
 }
 
-.check_btn{
+div .check_btn{
+   
     width: 15px;
     height: 15px;
-    background: url("img/check_off.png")top;
+    background-color: red;
+    background: url("../img/check_off.png");
     background-repeat: no-repeat;
     background-size: 15px;
     border:none;
-    /* vertical-align: middle; */
-    margin-right:6px;
-    padding-top:2px;
+    vertical-align: middle;
+    margin-left:5px;  
+    margin-right:5px;
+    
 }
+
+div.on  .check_btn{
+    background-color: #fff;
+    background: url("../img/check_on_w.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
 
 .modify_btn{   
     width: 32px;
+}
+
+/* 100% 버튼 기본설정 */
+.full_btn{
+    width: 100%;
+    background-color: #f3f5fa;
+    border:1px solid #afc9f5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 스위치(선택) 버튼 */
+div .switch_btn{
+    width: 38px;
+    height: 20px;
+    vertical-align: middle;
+    padding-right:10px;
+    background: url("../img/btn_switch_off.png");
+    background-repeat: no-repeat;
+    background-size: 38px 20px;
+    margin-right:6px;
+}
+
+div.on .switch_btn{
+    background: url("../img/btn_switch_on.png");
+    background-size: 38px 20px;
 }
 
 
@@ -178,7 +218,7 @@ div.on .radio_btn{
 /* 이미지 사이즈 */
 .prev_img{
     width: 112px;
-    /* border:1px solid red; */
+    border:1px solid red;
 }
 .prev_photo{
     width: 100%;
@@ -258,10 +298,76 @@ div.on .radio_btn{
     border-radius: 0 3px 3px 0;
 }
 
+/* block 2개, 구역 절반씩인 블럭 ㅁㅁ */
 
-/* -----------------------------------------섹션 별 css ------------------------------- */
+.half_block {
+    font-size: 0;
+    /* border:1px solid red; */
+}
 
-/* 선물설정 */
+.half_block div{
+    display: inline-block;
+    width: calc(100% / 2);
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border:1px solid #dddddd;
+    background-color: #fff;
+    color:#888888;
+    font-size:13px;
+    vertical-align: middle;
+}
+
+/* block 3개, 예식장약도 */
+.third_block{
+    font-size:0;
+    margin-bottom:20px;
+
+}
+.third_block > div{
+    display: inline-block;
+    width: calc(100% / 3);
+    height: 38px;
+    /* line-height: 38px; */
+    text-align: center;
+    border:1px solid #dddddd;
+    background-color: #fff;
+    color:#888888;
+    font-size:13px;
+    /* vertical-align: top; */
+   
+    
+}
+
+.third_block > div{
+    padding-top:10px;
+}
+.third_block > div .check_btn{
+    vertical-align: middle;
+} 
+
+
+/* 좌 우 30% 70% 박스 */
+.block_30_70{
+    font-size:0;
+}
+.block_30_70 > div{
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.block_30_70 > div:first-child{
+    width: 30%;
+}
+
+.block_30_70 > div:nth-child(2){
+    width: calc(70% - 10px);
+    margin-left:10px;
+   
+}
+
+/* ----------------------------------------- 섹션 별 css ------------------------------- */
+
+/* -------------------- 선물설정 */
 .section > div:last-child .mcard_gift{
     width: 100%;
     height: 100%;
@@ -269,9 +375,9 @@ div.on .radio_btn{
     padding-top:18px;		
 }
 
-.section > div:last-child .mcard_gift div{
+/* .section > div:last-child .mcard_gift div{
     text-align: center;
-}
+} */
 
 .mcard_gift .mcard_gift_list{
     display: inline-block;
@@ -280,16 +386,30 @@ div.on .radio_btn{
     margin-right: 10px;                                                                    
 }
 
-.mcard_gift .mcard_gift_list .gift_img{  
+.mcard_gift .mcard_gift_list .gift_preview{
+    text-align: center;  
     height: 130px;
+    position: relative;
 }
 
-
-.mcard_gift .mcard_gift_list img{
+.mcard_gift .mcard_gift_list .gift_preview img{
     width: 47px;
     text-align: center;
     padding-top:20px;    
+    /* position: relative; */
+   
+}
+
+.mcard_gift .mcard_gift_list .gift_preview::before{
+    content: 'test';
+    width: 100%; height: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    opacity: 0.05;
     
+
 }
 
 .mcard_gift .mcard_gift_list:last-child{
@@ -298,48 +418,42 @@ div.on .radio_btn{
 
 
  /* 선물 이미지 배경색 변경 */
-.mcard_gift_list:first-child .gift_bgcolor{
+.mcard_gift_list:first-child .gift_preview{
     background-color: #ccc;
 }
-
-.mcard_gift_list:nth-child(2) .gift_bgcolor{
+.mcard_gift_list:nth-child(2) .gift_preview{
     background-color: #dbe4d4;
 }
-
-.mcard_gift .mcard_gift_list:nth-child(3) .gift_bgcolor{
+.mcard_gift .mcard_gift_list:nth-child(3) .gift_preview{
     background-color: #d1d2cd;  
 }
 
 
 /* 선물 텍스트 */
-.section > div:last-child .mcard_gift .gift_txt{
+.mcard_gift .mcard_gift_list .gift_txt{
+    display: inline-block;
     font-size:13px;
     margin-top:13px;
     margin-bottom:10px;
     line-height: 19px;
     text-align: left;
-   
 }
 
-.section > div:last-child .mcard_gift .gift_price{
+.mcard_gift .mcard_gift_list .gift_price{
     border:1px solid blue;
     
 }
-.section > div:last-child .mcard_gift .gift_select{
+
+.mcard_gift .mcard_gift_list .gift_select{
     width: 90%;
-    /* height: 22px; */
     font-size:13px;
-    /* border:1px solid green; */
     text-align: left;
-    
 }
 
-.section > div:last-child .mcard_gift .gift_select select{
+.mcard_gift .mcard_gift_list .gift_select select{
     width: 90%;
     height: 28px;
-    font-size:12px;
-   
-    
+    font-size:12px;  
 }
 
 .section > div:last-child .gift_sum{
@@ -384,32 +498,26 @@ div.on .radio_btn{
     margin-top:-4px;
 }
 
-/* 테마설정  */
+/* -------------------- 테마설정  */
 
 /* 슬라이드 */
 
 /* 슬라이드 내부 스타일, 실제 슬라이드 적용시 수정필요 
-크기 및 슬라이드 공통설정은 상단 .slide에 있음 */
-
-/* .invite_theme_list .theme_slide {
-height: 225px;
-border: 1px solid red;
-} */
 
 
 /* 테마 색상 선택 */
-.invite_theme_list .theme_color{
+.mcard_theme .theme_color{
     overflow: hidden;					
 }
 
-.invite_theme_list .theme_color .color_choice {
+.mcard_theme .theme_color .color_list {
     border-top:1px solid #dddddd;
     border-right:1px solid #dddddd;
     border-left:1px solid #dddddd;
     border-radius: 3px;			
 }
 
-.invite_theme_list .theme_color .color_choice div{						
+.mcard_theme .theme_color .color_list div{						
     height: 38px;
     border-bottom:1px solid #dddddd;
     background-color: #ffffff;
@@ -417,21 +525,20 @@ border: 1px solid red;
     padding-top: 9px;					
 }
 
-.color_choice div:first-child{
+.mcard_theme .color_list div:first-child{
     border-radius: 10px;
     border-radius: 3px 3px 0 0;
 }
-.color_choice div:last-child{
-    border-bottom:1px solid red;
+.mcard_theme .color_list div:last-child{  
     border-radius: 0 0 3px 3px;
 }
         
-.invite_theme_list .theme_color .color_choice img{
+.mcard_theme .theme_color .color_list img{
     display: inline-block;
     vertical-align: middle;
-    /* margin-top:11px; */
 }
-.invite_theme_list .theme_color .color_choice span{
+
+.mcard_theme .theme_color .color_list span{
     display: inline-block;
     width: 22px;height: 22px;
     vertical-align: middle;
@@ -442,116 +549,111 @@ border: 1px solid red;
 }
 
 /* 색상 표 */
-.color_choice div:first-child span{background: linear-gradient(#f1e7e6 50%, #b1d5e0 50%);}
-.color_choice div:nth-child(2) span{background-color: #6662ab;}
-.color_choice div:nth-child(3) span{background-color: #ffc46f;}
-.color_choice div:nth-child(4) span{background-color: #65737e;}
+.mcard_theme .color_list div:first-child span{background: linear-gradient(#f1e7e6 50%, #b1d5e0 50%);}
+.mcard_theme .color_list div:nth-child(2) span{background-color: #6662ab;}
+.mcard_theme .color_list div:nth-child(3) span{background-color: #ffc46f;}
+.mcard_theme .color_list div:nth-child(4) span{background-color: #65737e;}
 
-/* 스킨설정 */
-.invite_skin_list {
+
+/* -------------------- 스킨설정 */
+.macrd_skin {
     width: 100%;
 }
-.invite_skin_list .invite_skin_photo{
+.macrd_skin .skin_photo_upload{
     width: 100%;			
     font-size: 0;
 }
-.invite_skin_list .invite_skin_photo > div{
+.macrd_skin .skin_photo_upload > div{
 
     width: calc( calc(100% - 20px) / 3 );
     display: inline-block;
     margin-right:10px;
     
 }
-.invite_skin_list .invite_skin_photo > div:last-child{
+.macrd_skin .skin_photo_upload > div:last-child{
     margin-right:0;
     
 }
-.invite_skin_list .invite_skin_photo > div div:last-child{
-    /* border:1px solid red; */
+.macrd_skin .skin_photo_upload > div > div:last-child{ 
     padding-top:15px;
 }
-.invite_skin_list .invite_skin_photo > div div:last-child img{
+
+.macrd_skin .skin_photo_upload > div > div:last-child img{
     padding-left:10px;
-    padding-right:7px;
-    /* padding-top:15px; */						
+    padding-right:7px;						
 } 
 
-.skin_photo_effect{
+.macrd_skin .skin_photo_effect{
     display: inline-block;
-    width: 100%;
-    /* border: 1px solid red; */
+    width: 100%;  
     font-size:0;
 }
-.skin_photo_effect select{
+
+.macrd_skin .skin_photo_effect select{
     font-size:12px;
     width: calc( calc(100% - 17px) / 2 );
     margin-right:17px;
     padding-left:10px;
 }						
 
-
-
-.skin_photo_effect select:last-child{
+.macrd_skin .skin_photo_effect select:last-child{
     margin-right:0;
 }
 
-/* 예식정보 */
-.wedding_date{
+/* -------------------- 예식정보 */
+
+.mcard_infomation .infomation_date_form{
     /* border:1px solid red; */
     font-size: 0;
 }
-.wedding_date input{
+.mcard_infomation .infomation_date_form input{
     padding-left:10px;
 }
 
-.wedding_date input:first-child{
+.mcard_infomation .infomation_date_form input:first-child{
     border:1px solid #e8e8e8;
     width: calc(100% - 10px);
     height: 33px;
     margin-right:10px;										
 }
 
-.wedding_date div{
+.mcard_infomation .infomation_date_form div{
     display: inline-block;
     width: calc( calc(100% - 10px) / 2 );
     /* border:1px solid green; */
     vertical-align: text-top;
 }
 
-.wedding_date div:first-child{
+.mcard_infomation .infomation_date_form div:first-child{
     margin-right:10px;
 }
 
-/* .wedding_date .time_select {
-    width: 50%;
-    border:1px solid red;
-} */
 
-.wedding_date div:nth-child(2) select{					
+.mcard_infomation .infomation_date_form div:nth-child(2) select{					
     border:1px solid #e8e8e8;
     width: calc( calc(100% - 13px) / 2 );
     height: 33px;
 }
 
-.wedding_date select:first-child{
+.mcard_infomation .infomation_date_form select:first-child{
     margin-right:10px;
 }
 
-.wedding_date div:nth-child(3){
+.mcard_infomation .infomation_date_form div:nth-child(3){
     width: 100%;
 } 
 
-.wedding_date div:nth-child(3) input{
+.mcard_infomation .infomation_date_form div:nth-child(3) input{
     width: 100%;
     margin-top:10px;	
 }
 
-/* 초대인사말 */
-.invite_greeting input{
+/* -------------------- 초대인사말 */
+.mcard_invite input{
     width: 100%;
 }
         
-.invite_greeting .greeting_form button{
+.mcard_invite .invite_form button{
     border:1px solid #c6d7fa;
     background-color: #f3f5fa;
     margin-top:10px;
@@ -559,31 +661,12 @@ border: 1px solid red;
 }
 
 /* border, 여백 값 외 원형 문자 기본 스타일은 .circle_span 에 설정되어있음 */
-.invite_greeting span{
+.mcard_invite span{
     border-radius: 50%;
     margin-left:5px;
 }
 
-.half_block {
-    font-size: 0;
-    /* border:1px solid red; */
-}
-
-.half_block div{
-    display: inline-block;
-    width: calc(100% / 2);
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    border:1px solid #dddddd;
-    background-color: #fff;
-    color:#888888;
-    font-size:13px;
-    vertical-align: middle;
-}
-
-
-.greeting_form textarea{
+.mcard_invite .invite_form textarea{
     width: 100%;
     height: 150px;
     background-color: #ffffff;
@@ -592,21 +675,17 @@ border: 1px solid red;
     resize: none;
 }
 
-.phone_wrap:last-child{
-    margin-top:20px;
-}
-.groom{
+.mcard_invite .groom_bride_form{
     width: 100%;
-    /* border:1px solid red; */
     padding-top:20px;
 }
 
-.groom_bride{
+.mcard_invite .groom_bride{
     width: 100%;
     font-size: 0;
 }
 
-.groom_bride div {
+.mcard_invite .groom_bride div {
     display: inline-block;
     width: calc( calc(100% - 20px) / 3 );
     height: 38px;
@@ -616,127 +695,125 @@ border: 1px solid red;
     /* border:1px solid red; */
 }
 
-.groom_bride div:last-child{
+.mcard_invite .groom_bride div:last-child{
     line-height: 38px;
     margin-right:0;
 }
-.groom_bride div select{
+.mcard_invite .groom_bride div select{
     width: 100%;
     background-color: #fff;
 }
-.groom_bride input{
+.mcard_invite .groom_bride input{
     background-color: #ffffff;
 }
 
-.phone_messege{
-    /* border:1px solid red; */
-}			
-.groom_phone_list{
-    display: inline-block;
+
+/* -------------------- 축하연락처 */
+
+.mcard_contact .contact_list{
     width: 100%;
-    /* border:1px solid green; */
+    display: inline-block;
     font-size: 0;
-
 }
 
-.groom_phone_list div{
+.mcard_contact .contact_list_left{
     display: inline-block;
-    /* width: calc( calc(100% - 20px) / 2 ); */
-    width: calc(100% / 2 - 5px);
-    vertical-align: top;
-    border-radius: 3px;
-}
-.groom_phone_list div:first-child{
+    width: calc(100% / 2 );
     margin-right:10px;
-    /* border:1px solid navy; */
-    height: 38px;
-}
-.groom_phone_list div:first-child div {
-    width: calc( calc(100% - 10px) / 2 );
-    /* background: skyblue; */
-
+    font-size: 0;
+     
 }
 
-.groom_phone_list input{
-    width: 100%;
-    height: 38px;
-    background-color: #ffffff;
+.mcard_contact .contact_list_left div{
+    display: inline-block;
+    width: calc( calc(100% - 10px) / 2 );   
+    font-size: 12px;
+    vertical-align: top;
+    
 }
-.groom_phone_list button{
-    width: 100%;
+
+.mcard_contact .contact_list_left div:first-child{
     height: 38px;
-    border:none;
+    margin-right:10px;
+    border: 1px solid #dddddd;
+    line-height: 38px;
+}
+
+
+.mcard_contact .contact_list_right{
+    display: inline-block;
+    width:  calc(50% - 10px);
+    vertical-align: top;}
+
+
+.mcard_contact .contact_list input{
+    width: 100%;
+}
+
+.mcard_contact .contact_list div{
     border-radius: 3px;
 }
-.groom_phone_list div:first-child div input{
-    background-color: transparent;
+
+.mcard_contact .contact_list_right > div input{
+    border-radius: 3px;
+}
+.mcard_contact .contact_list_left > div input{
+    border-radius: 3px;
+}
+.mcard_contact .contact_list_left div:first-child, .contact_list_right div input{
+    background-color: #fff;
 }
 
-.groom_phone_list > div:last-child div{						
-    width: 100%;
-    /* border:1px solid yellow; */
-    } 
-
-.groom_phone_list div button{
-    height: 38px;
-    border:1px solid #dddddd;
-    background: url("img/check_off.png")no-repeat 10px center;
-    background-color: #ffffff;;
-    background-size: 15px;
-    font-size: 12px;
-    padding-left:30px;
-            
+.contact_list:nth-child(3){
+    margin-bottom:20px;
 }
 
-.groom_phone_list div > div:last-child{
-    height: 38px;
-    /* border:1px solid green; */
-}
+.contact_list_right input::placeholder{
+    color: #888888;
+} 
 
+/* -------------------- 달력	 */
 
-
-/* 달력	 */
-.calendar_section > div{
+.mcard_calendar > div{
     text-align: center;
 }
-.calendar_section img{
+.mcard_calendar img{
     width: 158px;
 }
 
+/* -------------------- 사진갤러리 */
 
-
-/* 사진갤러리 */
-.invite_gallery_photo{
+.mcard_gallery .gallery_photo_upload{
     /* border:1px solid green; */
     font-size: 0;
 }
-.invite_gallery_photo > div{
+.mcard_gallery .gallery_photo_upload > div{
     display: inline-block;
     width: calc( calc(100% - 20px) / 3 );
     margin-right:10px;
 
 }
 
-.invite_gallery_photo > div:nth-child(3n){
+.mcard_gallery .gallery_photo_upload > div:nth-child(3n){
     margin-right:0;
 }
 
 
-.gallery_photo_block > div:nth-child(2){
+.mcard_gallery .gallery_modify > div:nth-child(2){
     /* border:1px solid red; */
     padding-top:14px;
     padding-bottom:18px;
     text-align: center;
 }
 
-.gallery_photo_block > div:nth-child(2) img{					
+.mcard_gallery .gallery_modify > div:nth-child(2) img{					
     margin-right:12px;
 }
-.gallery_photo_block > div:nth-child(2) img:last-child{
+.mcard_gallery .gallery_modify > div:nth-child(2) img:last-child{
     margin-right:0;
 }
 
-.upload_btn{
+.mcard_gallery .upload_btn{
 
     width: 100%;
     border:1px solid #c6d7fa;
@@ -744,105 +821,55 @@ border: 1px solid red;
 }
 
 
-/* 오시는길 */
-.btn_100per{
-    width: 100%;
-    background-color: #f3f5fa;
-    border:1px solid #afc9f5;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-    
+/* -------------------- 오시는길 */
 
-.switch_btn{
-    width: 38px;
-    height: 20px;
-    vertical-align: middle;
-    padding-right:10px;
-    
-    
-}
-
-.invite_way input{
+.mcard_location input{
     width: 100%;
     margin-top: 15px;
-    /* margin-bottom: 16px; */
     background-color: #ffffff;
 }
 
-.hall_address_btn{
-    /* width: 100%;
-    background-color: #f3f5fa;
-    border:1px solid #afc9f5; */
-    background-image:url("img/arrow_gps.png");
+.address_btn{
+    background-image:url("../img/arrow_gps.png");
     background-repeat: no-repeat;
     background-position:32% center;
     background-size: 13px 10px;
 }
 
-.invite_way_map{
+.mcard_location  .location_map{
     width: 100%;
     overflow: hidden;
     font-size: 0;
     /* border:1px solid #dddddd; */
     margin-top:10px;
     margin-bottom:20px;
-    
+    border-radius: 3px;
 }
 
-.invite_way_map div{
+.mcard_location .location_map div{
     border:1px solid #dddddd;
     overflow: hidden;
 }
-.invite_way_map div:first-child img{
+.mcard_location .location_map div:first-child img{
     height: 150px;
+ 
 }
-.invite_way_map div:nth-child(2){
+.mcard_location .location_map div:nth-child(2){
     height: 38px;
     background: #fff;
     line-height: 38px;
     font-size: 12px;
-    padding-left:20px;
+    /* padding-left:20px; */
 }
 
-.invite_way_map button{
-    height: 18px;
-    vertical-align: middle;
-
-}
-
-.weddinghall_map{
-    
-}
-.third_block{
-    font-size:0;
-    margin-bottom:20px;
-
-}
-.third_block > div{
-    display: inline-block;
-    width: calc(100% / 3);
-    height: 38px;
-    /* line-height: 38px; */
-    text-align: center;
-    border:1px solid #dddddd;
-    background-color: #fff;
-    color:#888888;
-    font-size:13px;
-    /* vertical-align: top; */
-    
-}
-
-.third_block > div button{
-    
-    background-position: left 11px;
+.mcard_location .location_map button{   
     vertical-align: middle;
 }
 
-.map_attention{
+
+.mcard_location .map_attention{
     line-height: 20px;
-    margin-top:20px;
-    /* margin-bottom:15px; */
+    margin-top:20px;    
     padding-top: 20px;
     padding-bottom: 10px;
     padding-right: 10px;
@@ -850,21 +877,20 @@ border: 1px solid red;
     background-color: #f0f0f0;
 }
 
-.prev_map{
-    overflow: hidden;
-    /* margin-top:13px; */
+.mcard_location .prev_map{
+    overflow: hidden;  
     margin-bottom:13px;
     height: 170px;
     background-color: #ffffff;
     text-align: center;
     border:1px solid #dddddd;
 }
-.prev_map img{
+.mcard_location .prev_map img{
     height: 100%;
 }
 
-.prev_box{
-    /* margin-top:15px; */
+.mcard_location .prev_box{
+
     margin-bottom: 15px;
     height: 150px;
     line-height: 150px;
@@ -874,70 +900,106 @@ border: 1px solid red;
     color:#888888;
 }
 
-/* 좌 우 30% 70% 박스 */
-.block_30_70{
-    font-size:0;
-}
-.block_30_70 > div{
-    display: inline-block;
-    vertical-align: text-bottom;
-}
-.block_30_70 > div:first-child{
-    width: 30%;
-}
 
-.block_30_70 > div:nth-child(2){
-    width: calc(70% - 10px);
-    margin-left:10px;
-    
-}
-
-
-/* 교통편 및 주차안내					 */
-.parking_info{
+/* 교통편 및 주차안내 */
+.mcard_location .parking_info{
     margin-top:10px;
 }		
 
-.parking_info_list > div:first-child select{
+.mcard_location .parking_info_list > div:first-child select{
     width: 100%;
     height: 38px;							
     font-size:12px;	
             
 }
 
-/* 안내사항 */
-.notice_info_list{
+/* -------------------- 안내사항 */
+.mcard_guide_notice .notice_list{
     font-size: 0;
     margin-top:10px;
 }
-.notice_info_list > div{
+.mcard_guide_notice .notice_list > div{
     display: inline-block;
     
 }
-.notice_info_list > div input{
+.mcard_guide_notice .notice_list > div input{
     width: 100%;
     background-color: #fff;
     color:#888888;
 }
 
 
-/* 축하의 마음전하기 */
-.account_info_list{
+/* -------------------- 축하의 마음전하기 */
+.mcard_account .account_info_list{
     font-size: 0;
     margin-top:10px;
 }
-.account_info_list > div{
+.mcard_account .account_info_list > div{
     display: inline-block;
-    
+    font-size: 12px;;
+  
 }
-.account_info_list > div select{
+
+.mcard_account .account_info_list > div:first-child{   
+    height: 39px;
+    border:1px solid #dddddd;
+    border-radius: 3px;
+    line-height: 38px;;
+    background-color: #ffffff;
+}
+
+.mcard_account .account_info_list > div select{
     width: 100%;
-    height: 38px;							
+   							
     font-size:12px;	
+    border:none;
             
 }
-.account_info_list > div input{
+.mcard_account .account_info_list > div input{
     width: 100%;
     background-color: #fff;
     color:#888888;
+    border-radius: 3px;
+}
+
+.color888{
+    color:#888888;
+}
+
+.mcard_account .account_info_list > div input::placeholder{
+    color:#888888;
+}
+
+.mcard_account .account_hidden{
+    display: none;
+}
+
+
+/* -------------------- 축하 메시지 */
+
+.mcard_messege div{
+    width: 156px;
+    height: 173px;
+    margin-left: auto;
+    margin-right:auto;
+    border:1px solid #dddddd;
+}
+.mcard_messege img{
+    width: 100%;   
+ }
+
+
+
+/* -------------------- 예식일 연기 안내 */
+
+.drop_btn {
+    width: 100%;
+    border:1px solid #ddd;
+    background: url('../img/arrow_down.png');
+    background-repeat: no-repeat;
+    background-size: 17px 10px;
+    background-position: 95% center;
+    padding-left:10px;
+    padding-right:10px;
+    text-align: left;
 }
