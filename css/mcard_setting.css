@@ -393,20 +393,20 @@ div.on .switch_btn{
     text-align: center;
 } */
 
-.mcard_gift .mcard_gift_list{
+.mcard_gift .gift_list{
     display: inline-block;
     width: calc( calc(100% - 20px) / 3 );
     /* height: 100%; */
     margin-right: 10px;                                                                    
 }
 
-.mcard_gift .mcard_gift_list .gift_preview{
+.mcard_gift .gift_list .gift_preview{
     text-align: center;  
     height: 130px;
     position: relative;
 }
 
-.mcard_gift .mcard_gift_list .gift_preview img{
+.mcard_gift .gift_list .gift_preview img{
     width: 47px;
     text-align: center;
     padding-top:20px;    
@@ -414,7 +414,7 @@ div.on .switch_btn{
    
 }
 
-.mcard_gift .mcard_gift_list .gift_preview::before{
+.mcard_gift .gift_list .gift_preview::before{
     content: 'test';
     width: 100%; height: 100%;
     background-color: #000000;
@@ -426,25 +426,25 @@ div.on .switch_btn{
 
 }
 
-.mcard_gift .mcard_gift_list:last-child{
+.mcard_gift .gift_list:last-child{
     margin-right: 0;
 }
 
 
  /* 선물 이미지 배경색 변경 */
-.mcard_gift_list:first-child .gift_preview{
+.gift_list:first-child .gift_preview{
     background-color: #ccc;
 }
-.mcard_gift_list:nth-child(2) .gift_preview{
+.gift_list:nth-child(2) .gift_preview{
     background-color: #dbe4d4;
 }
-.mcard_gift .mcard_gift_list:nth-child(3) .gift_preview{
+.mcard_gift .gift_list:nth-child(3) .gift_preview{
     background-color: #d1d2cd;  
 }
 
 
 /* 선물 텍스트 */
-.mcard_gift .mcard_gift_list .gift_txt{
+.mcard_gift .gift_list .gift_txt{
     display: inline-block;
     font-size:13px;
     margin-top:13px;
@@ -453,31 +453,31 @@ div.on .switch_btn{
     text-align: left;
 }
 
-.mcard_gift .mcard_gift_list .gift_price{
+.mcard_gift .gift_list .gift_price{
     border:1px solid blue;
     
 }
 
-.mcard_gift .mcard_gift_list .gift_select{
+.mcard_gift .gift_list .gift_select{
     width: 90%;
     font-size:13px;
     text-align: left;
 }
 
-.mcard_gift .mcard_gift_list .gift_select select{
+.mcard_gift .gift_list .gift_select select{
     width: 90%;
     height: 28px;
     font-size:12px;  
 }
 
-.section > div:last-child .gift_sum{
+.mcard_gift .gift_sum{
     text-decoration: underline;
     padding-top:12px;
     padding-bottom:18px;
-  
+    font-size:12px;
 }
 
-.section > div:last-child .buy_btn{
+.mcard_gift  .buy_btn{
     width: 100%;
     height: 38px;
     color:#ffffff;
@@ -486,7 +486,7 @@ div.on .switch_btn{
     margin-bottom:22px;
     border-radius: 3px;
 }
-.section > div:last-child .present_like{
+.mcard_gift .present_like{
     width: 100%;
     padding-left:11px;
     padding-right:11px;
@@ -495,21 +495,62 @@ div.on .switch_btn{
     background-color: #f0f0f0;
     
 }
-.section > div:last-child .present_like{
+.mcard_gift .present_like{
     font-size:14px;
     vertical-align: middle;
 }				
 
-
-
-.section > div:last-child .present_like p{
+.mcard_gift  .present_like p{
     font-size:13px;
     line-height: 20px;                    
     /* letter-spacing: 0.5px; */
     
 }
-.section > div:last-child .present_like p:last-child{
+.mcard_gift  .present_like p:last-child{
     margin-top:-4px;
+}
+
+.mcard_gift .gift_use_list{
+    border:1px solid #dddddd;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:10px;
+    padding-left:10px;
+    background: #ffffff;
+}
+
+.mcard_gift .gift_use_list div{
+    
+    
+    position: relative;
+    font-size: 12px;;
+}
+.mcard_gift .gift_use_list .receipt_btn{
+    width: 52px;
+    height: 19px;
+    background-color: #f7f8f8;
+    border:1px solid #dfdfdf;
+    border-radius: 30px;
+    vertical-align: middle;
+    font-size: 11px;
+    position: absolute;
+    top: 0;right: 0;
+}
+
+.gift_use_list > div:nth-child(1){
+    
+    padding-bottom: 16px;
+}
+.gift_use_list > div:nth-child(2){
+  
+}
+
+.gift_use_list > div:nth-child(2) button{
+    height: 14px;
+    padding:0;
+    color:#3e6fef;
+    border-bottom: 1px solid #3e6fef;
+    border-radius: 0;
 }
 
 /* -------------------- 테마설정  */

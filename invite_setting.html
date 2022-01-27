@@ -3040,82 +3040,86 @@ function sample_cards_update() {
 
 							<div class="mcard_gift">
 
-								<div class="mcard_gift_list">
-								
-										<div class="gift_preview">
-											<img src="img/gift_bananamilk_w.png" alt="bananamilk">
-										</div>
+								<div class="gift_list_wrap">
+									<div class=gift_list_top>
+										<div class="gift_list">
+										
+												<div class="gift_preview">
+													<img src="img/gift_bananamilk.png" alt="bananamilk">
+												</div>
 
-										<div class="gift_txt">
-												빙그레 바나나맛 우유 240ml<br />
-												각 990원
-										</div>
-								
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="10">10개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div>
-									<!--gift_select-->
-								
-								</div> 
-								<!--mcard_gife_list 1 -->
+												<div class="gift_txt">
+														빙그레 바나나맛 우유 240ml<br />
+														각 990원
+												</div>
+										
+											<div class="gift_select">
+												<select name="gift_select" id="gift_select">
+													<option value="10">10개</option>
+													<option value="10">20개</option>
+													<option value="10">30개</option>
+												</select>
+											</div>
+											<!--gift_select-->
+										
+										</div> 
+										<!--mcard_gife_list 1 -->
 
-								<div class="mcard_gift_list">
-									
-									<div class="gift_preview">
-									<img src="img/gift_cafelatte_w.png" alt="cafelatte">
-									</div>
+										<div class="gift_list">
+											
+											<div class="gift_preview">
+											<img src="img/gift_cafelatte.png" alt="cafelatte">
+											</div>
+										
+											<div class="gift_txt">
+													매일유업 마이 카페라떼 마일드 220ml <br />
+													각 1,500원                                          
+											</div>						
 								
-									<div class="gift_txt">
-											매일유업 마이 카페라떼 마일드 220ml <br />
-											각 1,500원                                          
-									</div>						
+																		
+											<div class="gift_select">
+												<select name="gift_select" id="gift_select">
+													<option value="0">0개</option>
+													<option value="10">20개</option>
+													<option value="10">30개</option>
+												</select>
+											</div> 
+											<!--gift_select-->
+										
+										</div>
+										<!--mcard_gife_list 2 -->
+
+										<div class="gift_list">
+
+											<div class="gift_preview">
+												<img src="img/gift_starbucks.png" alt="starbucks">
+											</div>
+										
+											<div class="gift_txt">
+													스타벅스 아이스 카페 아메리카도 Tall <br />
+													각 4,100원
+											</div>
+											
+											<div class="gift_select">
+												<select name="gift_select" id="gift_select">
+													<option value="10">0개</option>
+													<option value="10">20개</option>
+													<option value="10">30개</option>
+												</select>
+											</div>
+										</div>
+										<!--mcard_gife_list 3 -->
+									</div>	
 						
-																
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="0">0개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div> 
-									<!--gift_select-->
-								
+						
+									<div class="gift_sum">
+										합 49,500원
+									</div>
+									<!--gift_price_sum 끝-->
 								</div>
-								<!--mcard_gife_list 2 -->
+								<!--gift_list_wrap-->
 
-								<div class="mcard_gift_list">
-
-									<div class="gift_preview">
-										<img src="img/gift_starbucks_w.png" alt="starbucks">
-									</div>
-								
-									<div class="gift_txt">
-											스타벅스 아이스 카페 아메리카도 Tall <br />
-											각 4,100원
-									</div>
-									
-									<div class="gift_select">
-										<select name="gift_select" id="gift_select">
-											<option value="10">0개</option>
-											<option value="10">20개</option>
-											<option value="10">30개</option>
-										</select>
-									</div>
-								</div>
-								<!--mcard_gife_list 3 -->
-							</div>
-							<!-- mcard_gift 끝 -->
-
-							<div class="gift_sum">
-								합 49,500원
-							</div>
-							<!--gift_price_sum 끝-->
-
-							<button type="button" class="buy_btn">선택 선물 구입하기</button>
+								<button type="button" class="buy_btn">선택 선물 구입하기</button>
 							
 							<div class="present_like">
 								<span class="circle_span">i</span> 선물하기, 이런 점이 좋아요!<br />
@@ -3126,7 +3130,38 @@ function sample_cards_update() {
 									-  받아가지 않은 선물은 100% 환불<br />
 								</p>                                
 							</div>      
-							<!--present_like 끝-->                              
+							<!--present_like 끝-->    
+
+							</div>
+							<!-- mcard_gift 선물 설정 끝 -->
+
+
+							<!--선물하기 : 이용내역-->
+							<div class="mcard_gift mcard_gift_hidden">					
+												
+							
+							<div class="gift_use_list">
+								
+								<!--div 1-->
+								<div>
+									2021.10.20
+									<button type="button" class="receipt_btn">영수증</button>
+								</div>
+
+								<!--div 2-->
+								<div>
+								<div>상품<span>빙그레 바나나맛 우유 240ml</span></div>
+								<div>주문<span>50개 / 49,500원</span></div>
+								<div>상태<span>미사용 10개 (9,900원)</span></div>
+								<button type="button">미사용 금액 환불</button>
+								</div>
+							</div>
+							<!--gift_use_list-->
+
+							</div>
+							<!-- mcard_gift 이용내역 끝-->
+
+
 						</div>
 						<!--선물하기 섹션 내용 끝-->
 
